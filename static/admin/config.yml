@@ -29,8 +29,10 @@ collections:
       - {label: "Price", name: "price", widget: "number", valueType: "float"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Address", name: "address", widget: "object", fields: 
-        - {label: "Street Address", name: "street", widget: "string"}
-        - {label: "City", name: "city", widget: "string"}
-        - {label: "Postal Code", name: "post-code", widget: "string"}
-        }
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        fields: 
+          - {label: "Street Address", name: "street", widget: "string"}
+          - {label: "City", name: "city", widget: "string"}
+          - {label: "Postal Code", name: "post-code", widget: "string"}
