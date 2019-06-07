@@ -26,6 +26,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Price", name: "price", widget: "number", valueType: "float"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
