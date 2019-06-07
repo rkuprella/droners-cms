@@ -7,7 +7,7 @@
       <nav class="nav">
         <g-link
           class="nav__link"
-          :to="page.node.slug"
+          :to="'/' + page.node.slug"
           v-for="page in $static.allContentPage.edges"
           :key="page.node.slug"
         >{{ page.node.title }}</g-link>
