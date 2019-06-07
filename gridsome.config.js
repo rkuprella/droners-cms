@@ -23,6 +23,17 @@ module.exports = {
           // remark options
         }
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'markdown/product/**/*.md',
+        route: '/:slug',
+        typeName: 'Product',
+        remark: {
+          // remark options
+        }
+      }
     }
   ]
 }

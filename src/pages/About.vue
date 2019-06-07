@@ -1,14 +1,37 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <h1>Products</h1>
+    <div
+      v-for="product in $static.allProduct.edges"
+      :key="product.node.slug"
+      style="width:25%; height:250px; overflow:hidden"
+    >
+      <h2>{{ product.node.title }}</h2>
+      <div>{{ product.node.price }} €</div>
+      <g-image :src="product.node.featuredImage" :alt="product.node.title"/>
+    </div>
   </Layout>
 </template>
+
+<static-query>
+query {
+  allProduct {
+    edges {
+      node {
+        title
+        slug
+        featuredImage
+        price
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: "About us"
   }
-}
+};
 </script>
