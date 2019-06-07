@@ -1,7 +1,7 @@
 ---
 title: Page One
 slug: page1
+date: 2019-06-07T02:00:02.878Z
 featuredImage: /uploads/Rihanna.jpg
 ---
-
-Content for **page one**. Lorem ipsum dolor sit amet.
+Awesome Content for **page one**. Lorem ipsum dolor sit amet.
