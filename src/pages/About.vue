@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Products</h1>
+    <h1>Products Overview</h1>
     <div
       v-for="product in $static.allProduct.edges"
       :key="product.node.slug"
