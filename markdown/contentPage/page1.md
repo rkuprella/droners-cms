@@ -1,8 +1,7 @@
 ---
 title: Page One
 slug: page1
+featuredImage: /uploads/Rihanna.jpg
 ---
-
-# Page One
 
 Content for **page one**. Lorem ipsum dolor sit amet.

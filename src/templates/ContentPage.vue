@@ -1,5 +1,7 @@
 <template>
   <Layout>
+    <h2>{{ $page.contentPage.title }}</h2>
+    <g-image :src="$page.contentPage.featuredImage" :alt="$page.contentPage.title"/>
     <div v-html="$page.contentPage.content"></div>
   </Layout>
 </template>
@@ -9,6 +11,7 @@ query ContentPage ($path: String!) {
   contentPage: contentPage (path: $path) {
     title
     content
+    featuredImage (width: 200, height: 200, quality: 90)
   }
 }
 </page-query>
