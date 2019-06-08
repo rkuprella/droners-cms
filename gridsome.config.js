@@ -34,17 +34,6 @@ module.exports = {
           // remark options
         }
       }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'markdown/profile/**/*.md',
-        route: '/:slug',
-        typeName: 'Profile',
-        remark: {
-          // remark options
-        }
-      }
     }
   ]
 }

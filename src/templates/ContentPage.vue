@@ -1,8 +1,9 @@
 <template>
   <Layout>
-    <h2>{{ $page.contentPage.title }}</h2>
-    <g-image :src="$page.contentPage.featuredImage" :alt="$page.contentPage.title"/>
-    <div v-html="$page.contentPage.content"></div>
+    <div class="container">
+      <g-image :src="$page.contentPage.featuredImage" :alt="$page.contentPage.title"/>
+      <div v-html="$page.contentPage.content" class="content"></div>
+    </div>
   </Layout>
 </template>
 

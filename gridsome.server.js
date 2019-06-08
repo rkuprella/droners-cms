@@ -6,8 +6,42 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(({ addContentType }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api
+  api.loadSource(store => {
+    // Social Media
+    const socialMedia = store.addContentType({
+      typeName: 'SocialMedia'
+    })
+    socialMedia.addNode({
+      id: 1,
+      title: 'Facebook',
+      fields: { link: 'https://www.facebook.com/DRONERSde/', icon: 'facebook-f' }
+    })
+    socialMedia.addNode({
+      id: 2,
+      title: 'Instagram',
+      fields: { link: 'https://www.instagram.com/DRONERSde/', icon: 'instagram' }
+    })
+    socialMedia.addNode({
+      id: 3,
+      title: 'Twitter',
+      fields: { link: 'https://www.twitter.com/DRONERSde/', icon: 'twitter' }
+    })
+    socialMedia.addNode({
+      id: 4,
+      title: 'Youtube',
+      fields: { link: 'https://www.youtube.com/DRONERSde/', icon: 'youtube' }
+    })
+
+    // Locations
+    const location = store.addContentType({
+      typeName: 'Location',
+      route: '/:slug'
+    })
+    location.addNode({
+      id: 1,
+      title: 'Unna',
+      fields: { slug: 'unna', street: 'Hochstraße 10', zip: '59425', city: 'Unna', phone: '0176 43956945' }
+    })
   })
 
   api.createPages(({ createPage }) => {
