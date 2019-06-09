@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container" style="padding-top:100px">
+    <div class="container" style="padding-top:100px; min-height:90vh">
       <h2 class="is-size-3 has-text-info">Shop</h2>
       <a href="#" class="button is-info snipcart-checkout">
         <font-awesome :icon="['fa', 'shopping-cart']" size="lg"/>
