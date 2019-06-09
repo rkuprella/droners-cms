@@ -1,7 +1,14 @@
 <template>
   <Layout>
-    <div class="container">
-      <h1>Products Overview</h1>
+    <div class="container" style="padding-top:100px">
+      <h2 class="is-size-3 has-text-info">Shop</h2>
+      <a href="#" class="button is-info snipcart-checkout">
+        <font-awesome :icon="['fa', 'shopping-cart']" size="lg"/>
+        <div class="snipcart-summary">
+          <span class="snipcart-total-items" style="margin-left:10px"></span>
+        </div>
+      </a>
+
       <div class="columns is-multiline">
         <div class="column" v-for="product in $static.allProduct.edges" :key="product.node.slug">
           <div class="card">
@@ -15,6 +22,14 @@
                 <h2>{{ product.node.title }}</h2>
                 <div>{{ product.node.price }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
+                <button
+                  class="button is-success snipcart-add-item"
+                  :data-item-id="product.node.id"
+                  :data-item-name="product.node.title"
+                  :data-item-image="product.node.featuredImage"
+                  :data-item-price="product.node.price"
+                  :data-item-url="product.node.slug"
+                >In den Warenkorb</button>
               </div>
             </div>
           </div>
@@ -29,6 +44,7 @@ query {
   allProduct {
     edges {
       node {
+        id
         title
         slug
         featuredImage
@@ -42,7 +58,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: "About us"
+    title: "Shop"
   }
 };
 </script>
