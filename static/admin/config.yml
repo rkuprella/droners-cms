@@ -16,10 +16,11 @@ collections:
       - {label: "Inhaber", name: "owner", widget: "string", required: false}
       - {label: "E-Mail", name: "email", widget: "string", required: false}
       - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
-      - label: "Anschrift des Inhabers"
-        name: "address1"
+      - label: "Geschäftsadresse"
+        name: "businessAddress"
         widget: "object"
         fields: 
+          - {label: "Firma", name: "company", widget: "string", required: false}
           - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
           - {label: "PLZ", name: "zip", widget: "string", required: false}
           - {label: "Stadt", name: "city", widget: "string", required: false}
@@ -31,13 +32,33 @@ collections:
           - {label: "Amtsgericht", name: "court", widget: "string", required: false}
           - {label: "Handelsregisternummer", name: "hra", widget: "string", required: false}
           - {label: "UstId-Nr", name: "ustidnr", widget: "string", required: false}
-      - label: "Anschrift der Location"
-        name: "address2"
+      - label: "Adresse der Location"
+        name: "locationAddress"
         widget: "object"
         fields: 
           - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
           - {label: "PLZ", name: "zip", widget: "string", required: false}
           - {label: "Stadt", name: "city", widget: "string", required: false}
+      - label: "Öffnungszeiten"
+        name: "openingHours"
+        widget: "object"
+        fields: 
+          - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
+          - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
+          - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
+          - {label: "Dienstags bis", name: "tuesdayTo", widget: "string", required: false}
+          - {label: "Mittwochs von", name: "wednesdayFrom", widget: "string", required: false}
+          - {label: "Mittwochs bis", name: "wednesdayTo", widget: "string", required: false}
+          - {label: "Donnerstags von", name: "thursdayFrom", widget: "string", required: false}
+          - {label: "Donnerstags bis", name: "thursdayTo", widget: "string", required: false}
+          - {label: "Freitags von", name: "fridayFrom", widget: "string", required: false}
+          - {label: "Freitags bis", name: "fridayTo", widget: "string", required: false}
+          - {label: "Samstags von", name: "saturdayFrom", widget: "string", required: false}
+          - {label: "Samstags bis", name: "saturdayTo", widget: "string", required: false}
+          - {label: "Sonntags von", name: "sundayFrom", widget: "string", required: false}
+          - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
+          - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
+          - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
       - label: "Datenschutz"
         name: "dataProtection"
         widget: "object"
@@ -80,7 +101,7 @@ collections:
         collection: "categories"
         searchFields: ["title"]
         valueField: "title"
-        displayFields: ["title", "description"]
+        displayFields: ["title"]
         required: false
   - name: "product" # Used in routes, e.g., /admin/collections/blog
     label: "Produkte" # Used in the UI
@@ -90,7 +111,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Verfügbar", name: "available", widget: "boolean", default: true}
       - {label: "Name", name: "title", widget: "string"}
-      # - {label: "Kategorie", name: "category", widget: "select", multiple: true, options: ["Drohnen", "Akkus", "Sets"], default: ["Drohnen"]}
       - label: "Kategorie(n)"
         name: "category"
         widget: "relation"
@@ -98,7 +118,7 @@ collections:
         collection: "categories"
         searchFields: ["title"]
         valueField: "title"
-        displayFields: ["title", "description"]
+        displayFields: ["title"]
         required: false
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Preis", name: "price", widget: "number", valueType: "float"}
