@@ -7,6 +7,9 @@ slug: maja
 price: 242
 featuredImage: /uploads/Rihanna4.jpg
 discount:
-  discountActive: false
+  dateFrom: 2019-07-08T22:25:55.663Z
+  dateTo: 2019-07-18T22:26:01.176Z
+  discountActive: true
+  discountPercentage: 10
 ---
 Wut?
