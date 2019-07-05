@@ -39,7 +39,7 @@ collections:
           - {label: "PLZ", name: "zip", widget: "string", required: false}
           - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Datenschutz"
-        name: "data-protection"
+        name: "dataProtection"
         widget: "object"
         fields: 
           - {label: "Datenschutz-Beauftragter", name: "officer", widget: "string", required: false}
@@ -47,7 +47,7 @@ collections:
           - {label: "PLZ", name: "zip", widget: "string", required: false}
           - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Social Media"
-        name: "social-media"
+        name: "socialMedia"
         widget: "object"
         fields: 
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
@@ -65,6 +65,22 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "categories" # Used in routes, e.g., /admin/collections/blog
+    label: "Kategorien (Shop)" # Used in the UI
+    folder: "markdown/categories" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Kategoriebild", name: "featuredImage", widget: "image"}
+      - {label: "Beschreibung der Kategorie", name: "description", widget: "string"}
+      - label: "Übergeordnete Kategorie"
+        name: "subcategory"
+        widget: "relation"
+        collection: "categories"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title", "description"]
   - name: "product" # Used in routes, e.g., /admin/collections/blog
     label: "Produkte" # Used in the UI
     folder: "markdown/product" # The path to the folder where the documents are stored
@@ -82,5 +98,5 @@ collections:
         name: "discount"
         widget: "object"
         fields: 
-          - {label: "Aktiv", name: "discount-active", widget: "boolean", required: false}
-          - {label: "% Rabatt", name: "discount-percentage", widget: "number", valueType: "float", required: false}
+          - {label: "Aktiv", name: "discountActive", widget: "boolean", default: false}
+          - {label: "Rabatt in Prozent", name: "discountPercentage", widget: "number", valueType: "float", required: false}
