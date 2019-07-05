@@ -1,4 +1,5 @@
 ---
+available: false
 title: Beta FPV
 slug: beta-fpv
 price: 24.99

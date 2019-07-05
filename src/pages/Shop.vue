@@ -3,7 +3,7 @@
     <div class="container" style="padding-top:100px; min-height:90vh">
       <h2 class="is-size-3 has-text-info">Shop</h2>
       <a href="#" class="button is-info snipcart-checkout">
-        <font-awesome :icon="['fa', 'shopping-cart']" size="lg"/>
+        <font-awesome :icon="['fa', 'shopping-cart']" size="lg" />
         <div class="snipcart-summary">
           <span class="snipcart-total-items" style="margin-left:10px"></span>
         </div>
@@ -14,7 +14,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-square">
-                <g-image :src="product.node.featuredImage" :alt="product.node.title"/>
+                <g-image :src="product.node.featuredImage" :alt="product.node.title" />
               </figure>
             </div>
             <div class="card-content">
@@ -22,7 +22,8 @@
                 <h2>{{ product.node.title }}</h2>
                 <div>{{ product.node.price }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
-                <button :disabled="product.node.available"
+                <button
+                  :disabled="product.node.available"
                   class="button is-success snipcart-add-item"
                   :data-item-id="product.node.id"
                   :data-item-name="product.node.title"
@@ -50,10 +51,6 @@ query {
         featuredImage
         price
         available
-        discount {
-          discount-active
-          discount-percentage
-        }
       }
     }
   }
