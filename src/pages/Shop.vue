@@ -21,6 +21,7 @@
               <div class="content">
                 <h2>{{ product.node.title }}</h2>
                 <div v-show="!product.node.available" style="color:red">Out of stock</div>
+                <div v-show="product.node.category">{{ product.node.category }}</div>
                 <div>{{ product.node.price }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
                 <button
@@ -52,6 +53,7 @@ query {
         featuredImage
         price
         available
+        category
       }
     }
   }
