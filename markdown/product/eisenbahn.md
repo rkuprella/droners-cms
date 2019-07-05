@@ -2,6 +2,8 @@
 available: true
 layout: blog
 title: Eisenbahn
+category:
+  - Akkus
 slug: eisenbahn
 price: 11.99
 featuredImage: /uploads/Rihanna.jpg
