@@ -23,7 +23,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Verfügbar", name: "available", widget: "boolean", default: true}   
+      - {label: "Verfügbar", name: "available", widget: "boolean", default: true}
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
@@ -33,6 +33,7 @@ collections:
       - label: "Discount"
         name: "discount"
         widget: "object"
+        required: false
         fields: 
           - {label: "Discount active", name: "discount-active", widget: "boolean"}
           - {label: "Discount percentage", name: "discount-percentage", widget: "number", valueType: "float"}
