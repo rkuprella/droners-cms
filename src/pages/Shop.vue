@@ -22,7 +22,7 @@
                 <h2>{{ product.node.title }}</h2>
                 <div>{{ product.node.price }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
-                <button
+                <button :disabled="product.node.available"
                   class="button is-success snipcart-add-item"
                   :data-item-id="product.node.id"
                   :data-item-name="product.node.title"
@@ -49,6 +49,11 @@ query {
         slug
         featuredImage
         price
+        available
+        discount {
+          discount-active
+          discount-percentage
+        }
       }
     }
   }
