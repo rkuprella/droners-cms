@@ -66,22 +66,21 @@ collections:
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "product" # Used in routes, e.g., /admin/collections/blog
-    label: "Product" # Used in the UI
+    label: "Produkte" # Used in the UI
     folder: "markdown/product" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Verfügbar", name: "available", widget: "boolean", default: true}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Kategorie", name: "category", widget: "select", multiple: true, options: ["Drohnen", "Akkus", "Sets"], default: ["Drohnen"]}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Price", name: "price", widget: "number", valueType: "float"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"} 
-      - label: "Discount"
+      - {label: "Preis", name: "price", widget: "number", valueType: "float"}
+      - {label: "Produktbild", name: "featuredImage", widget: "image"}
+      - {label: "Beschreibung", name: "body", widget: "markdown"} 
+      - label: "Rabatt"
         name: "discount"
         widget: "object"
         fields: 
-          - {label: "Discount active", name: "discount-active", widget: "boolean", required: false}
-          - {label: "Discount percentage", name: "discount-percentage", widget: "number", valueType: "float", required: false}
+          - {label: "Aktiv", name: "discount-active", widget: "boolean", required: false}
+          - {label: "% Rabatt", name: "discount-percentage", widget: "number", valueType: "float", required: false}
