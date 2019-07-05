@@ -86,9 +86,9 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "categories" # Used in routes, e.g., /admin/collections/blog
-    label: "Kategorie" # Used in the UI
-    folder: "markdown/categories" # The path to the folder where the documents are stored
+  - name: "category" # Used in routes, e.g., /admin/collections/blog
+    label: "Produkt Kategorie" # Used in the UI
+    folder: "markdown/category" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -98,11 +98,20 @@ collections:
       - label: "Übergeordnete Kategorie"
         name: "subcategory"
         widget: "relation"
-        collection: "categories"
+        collection: "category"
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
         required: false
+  - name: "manufacturer" # Used in routes, e.g., /admin/collections/blog
+    label: "Produkt Hersteller" # Used in the UI
+    folder: "markdown/manufacturer" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Hersteller", name: "description", widget: "string"}
   - name: "product" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt" # Used in the UI
     folder: "markdown/product" # The path to the folder where the documents are stored
@@ -115,7 +124,16 @@ collections:
         name: "category"
         widget: "relation"
         multiple: true
-        collection: "categories"
+        collection: "category"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+        required: false
+        - label: "Hersteller"
+        name: "manufacturer"
+        widget: "relation"
+        multiple: true
+        collection: "manufacturer"
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
