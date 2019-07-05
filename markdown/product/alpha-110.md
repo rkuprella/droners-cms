@@ -2,6 +2,8 @@
 available: true
 layout: blog
 title: Alpha 110
+category:
+  - Drohnen
 slug: alpha-110
 price: 98.99
 featuredImage: /uploads/Rihanna-2.jpg
