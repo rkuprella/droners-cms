@@ -33,7 +33,6 @@ collections:
       - label: "Discount"
         name: "discount"
         widget: "object"
-        required: false
         fields: 
-          - {label: "Discount active", name: "discount-active", widget: "boolean"}
-          - {label: "Discount percentage", name: "discount-percentage", widget: "number", valueType: "float"}
+          - {label: "Discount active", name: "discount-active", widget: "boolean", required: false}
+          - {label: "Discount percentage", name: "discount-percentage", widget: "number", valueType: "float", required: false}
