@@ -132,7 +132,6 @@ collections:
         - label: "Hersteller"
           name: "manufacturer"
           widget: "relation"
-          multiple: true
           collection: "manufacturer"
           searchFields: ["title"]
           valueField: "title"
