@@ -1,5 +1,5 @@
 ---
-available: true
+available: false
 layout: blog
 title: Alpha 110
 category:
