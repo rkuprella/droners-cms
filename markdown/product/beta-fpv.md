@@ -1,5 +1,5 @@
 ---
-available: false
+available: true
 title: Beta FPV
 category:
   - Drohnen
