@@ -1,13 +1,13 @@
 ---
 available: true
-title: Eisenbahn
+title: Eisenbahn mit schneller Tutut
 category:
-  - Akkus
+  - RC Cars
+  - Drohnen
 slug: eisenbahn
 price: 11.99
 featuredImage: /uploads/Rihanna.jpg
 discount:
-  discount-active: true
-  discount-percentage: 15
+  discountActive: false
 ---
 Nothing to tell here.
