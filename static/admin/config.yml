@@ -130,14 +130,14 @@ collections:
         displayFields: ["title"]
         required: false
         - label: "Hersteller"
-        name: "manufacturer"
-        widget: "relation"
-        multiple: true
-        collection: "manufacturer"
-        searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title"]
-        required: false
+          name: "manufacturer"
+          widget: "relation"
+          multiple: true
+          collection: "manufacturer"
+          searchFields: ["title"]
+          valueField: "title"
+          displayFields: ["title"]
+          required: false
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Preis", name: "price", widget: "number", valueType: "float"}
       - {label: "Produktbild", name: "featuredImage", widget: "image"}
