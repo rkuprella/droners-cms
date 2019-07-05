@@ -6,6 +6,45 @@ media_folder: "static/uploads"
 public_folder: "uploads"
 
 collections:
+  - name: "impressum" # Used in routes, e.g., /admin/collections/blog
+    label: "Impressum" # Used in the UI
+    folder: "markdown" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Inhaber", name: "owner", widget: "string"}
+      - {label: "E-Mail", name: "email", widget: "string"}
+      - label: "Anschrift des Inhabers"
+        name: "address1"
+        widget: "object"
+        fields: 
+          - {label: "Strasse und Hausnummer", name: "street", widget: "string"}
+          - {label: "PLZ", name: "zip", widget: "string"}
+          - {label: "Stadt", name: "city", widget: "string"}
+          - {label: "Geschäftl. Telefonnummer", name: "phone", widget: "string"}
+      - label: "Handelsregister"
+        name: "register"
+        widget: "object"
+        fields: 
+          - {label: "Amtsgericht", name: "court", widget: "string"}
+          - {label: "Handelsregisternummer", name: "hra", widget: "string"}
+          - {label: "UstId-Nr", name: "ustidnr", widget: "string"}
+      - label: "Adresse"
+        name: "address2"
+        widget: "object"
+        fields: 
+          - {label: "Strasse und Hausnummer", name: "street", widget: "string"}
+          - {label: "PLZ", name: "zip", widget: "string"}
+          - {label: "Stadt", name: "city", widget: "string"}
+          - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string"}
+      - label: "Datenschutz"
+        name: "data-protection"
+        widget: "object"
+        fields: 
+          - {label: "Datenschutz-Beauftragter", name: "officer", widget: "string"}
+          - {label: "Strasse und Hausnummer", name: "street", widget: "string"}
+          - {label: "PLZ", name: "zip", widget: "string"}
+          - {label: "Stadt", name: "city", widget: "string"}
   - name: "contentPage" # Used in routes, e.g., /admin/collections/blog
     label: "ContentPage" # Used in the UI
     folder: "markdown/contentPage" # The path to the folder where the documents are stored
