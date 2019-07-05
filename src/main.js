@@ -28,7 +28,7 @@ export default function (Vue, { router, head, isClient }) {
     src: 'https://cdn.snipcart.com/scripts/2.0/snipcart.js',
     body: true,
     id: 'snipcart',
-    'data-api-key': 'MTNkYjg1NTItM2EwZi00MWRiLTkwYjMtNGZlNDUyN2NkY2IwNjM2OTU2NDMwNDMyODYxMDk1',
+    'data-api-key': 'NTMwZGU3NzAtOWY4MC00NmM2LTg5MmEtMjM3ZTMwMTFkYTk1NjM2OTUwMjU3Mzk0NTU2MTgz',
   });
 
   Vue.component('Layout', DefaultLayout)
