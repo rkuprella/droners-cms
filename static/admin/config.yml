@@ -87,7 +87,7 @@ collections:
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "categories" # Used in routes, e.g., /admin/collections/blog
-    label: "Kategorien (Shop)" # Used in the UI
+    label: "Kategorie" # Used in the UI
     folder: "markdown/categories" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -104,7 +104,7 @@ collections:
         displayFields: ["title"]
         required: false
   - name: "product" # Used in routes, e.g., /admin/collections/blog
-    label: "Produkte" # Used in the UI
+    label: "Produkt" # Used in the UI
     folder: "markdown/product" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
