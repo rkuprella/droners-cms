@@ -81,6 +81,7 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title", "description"]
+        required: false
   - name: "product" # Used in routes, e.g., /admin/collections/blog
     label: "Produkte" # Used in the UI
     folder: "markdown/product" # The path to the folder where the documents are stored
