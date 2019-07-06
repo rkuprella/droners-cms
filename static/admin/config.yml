@@ -97,10 +97,10 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Webseite", name: "website", widget: "string"}
-      - {label: "E-Mail", name: "email", widget: "string"}
-      - {label: "Instagram", name: "instagram", widget: "string"}
+      - {label: "Name", name: "name", widget: "string", required: false}
+      - {label: "Webseite", name: "website", widget: "string", required: false}
+      - {label: "E-Mail", name: "email", widget: "string", required: false}
+      - {label: "Instagram", name: "instagram", widget: "string", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
     folder: "markdown/category" # The path to the folder where the documents are stored
