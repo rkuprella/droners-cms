@@ -1,6 +1,8 @@
 ---
 title: Page Two
 slug: page2
+footer: false
+position: 2
 featuredImage: /uploads/Rihanna4.jpg
 ---
 
