@@ -63,7 +63,7 @@ query {
     siteName
   }
 
-  allContentPage {
+  allContentPage(filter: { footer: { eq: false }}) {
     edges {
       node {
         title
