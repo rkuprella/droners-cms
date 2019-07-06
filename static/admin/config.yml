@@ -11,11 +11,11 @@ logo_url: https://jolly-ramanujan-fbfd07.netlify.com/assets/static/logo.7b22250.
 collections:
   - name: "settings" # Used in routes, e.g., /admin/collections/blog
     label: "Einstellungen" # Used in the UI
+    delete: false
     files:
       - label: "Impressum"
         name: "impressum"
         file: "markdown/settings/impressum.yml"
-        delete: false
         fields:
           - {label: "Inhaber", name: "owner", widget: "string", required: false}
           - {label: "E-Mail", name: "email", widget: "string", required: false}
@@ -45,7 +45,6 @@ collections:
               - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Location"
         name: "location"
-        delete: false
         file: "markdown/settings/location.yml"
         fields:
           - {label: "Firma", name: "company", widget: "string", required: false}
@@ -82,7 +81,6 @@ collections:
               - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
       - label: "Social Media"
         name: "socialMedia"
-        delete: false
         file: "markdown/settings/social-media.yml"
         fields: 
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
