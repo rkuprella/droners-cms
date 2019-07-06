@@ -26,7 +26,9 @@
                     <li v-for="(category, i) in product.node.category" :key="i">{{ category }}</li>
                   </ul>
                 </div>
-                <div style="color:blue">{{ product.node.discount.active }}</div>
+                <div
+                  style="color:blue"
+                >{{ product.node.discount.active }} - {{ product.node.price }}</div>
                 <div>{{ addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage) }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
                 <button
@@ -80,8 +82,8 @@ export default {
   methods: {
     addDiscount(price, active, percentage) {
       return active && percentage != null
-        ? (price * (100 - percentage)) / 100
-        : price;
+        ? ((price * (100 - percentage)) / 100).toFixed(2)
+        : price.toFixed(2);
     }
   }
 };
