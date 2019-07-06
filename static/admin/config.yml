@@ -94,7 +94,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Name", name: "title", widget: "string"}
-      - {label: "Slug", name: "{{slug}}", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Footer Menü", name: "footer", widget: "boolean"}
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
