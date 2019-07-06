@@ -93,6 +93,9 @@ export default {
     return {
       mobile: false
     };
+  },
+  computed: {
+    
   }
 };
 </script>
