@@ -1,5 +1,5 @@
 ---
-title: Page Two
+title: Page Two Taute
 slug: page2
 footer: false
 position: 2
