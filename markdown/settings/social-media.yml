@@ -1,1 +1,5 @@
 facebook: ''
+team:
+  - name: Rob
+    photo: /uploads/lego-quabbe.png
+    position: IT
