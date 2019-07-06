@@ -16,11 +16,10 @@ collections:
         name: "impressum"
         file: "markdown/settings/impressum.yml"
         fields:
-          - {label: "Firma", name: "company", widget: "string", default: "Droners"}
           - {label: "Inhaber", name: "owner", widget: "string", required: false}
           - {label: "E-Mail", name: "email", widget: "string", required: false}
           - label: "Geschäftsadresse"
-            name: "businessAddress"
+            name: "address"
             widget: "object"
             fields: 
               - {label: "Firma", name: "company", widget: "string", required: false}
@@ -45,12 +44,14 @@ collections:
               - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Location"
         name: "location"
-        file: "location"
+        file: "markdown/settings/location.yml"
         fields:
+          - {label: "Firma", name: "company", widget: "string", required: false}
+          - {label: "Slogan", name: "slogan", widget: "string", required: false}
           - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
           - {label: "Kontakt E-Mail", name: "email", widget: "string", required: false}
           - label: "Adresse"
-            name: "locationAddress"
+            name: "address"
             widget: "object"
             fields: 
               - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
