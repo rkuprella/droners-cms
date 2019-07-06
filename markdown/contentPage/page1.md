@@ -1,8 +1,18 @@
 ---
 title: Page One
 slug: page1
-date: 2019-06-07T02:00:02.878Z
+footer: false
+position: 1
 featuredImage: /uploads/Rihanna.jpg
+components:
+  - questions:
+      - answer: Der FC Bayern München.
+        question: Wer wird Weltmeister?
+      - answer: Warm.
+        question: Wie wird morgen das Wetter?
+    type: faq
+  - content: nope
+    type: content
 ---
 Awesome Content for **page one**. Lorem ipsum dolor sit amet.
 
