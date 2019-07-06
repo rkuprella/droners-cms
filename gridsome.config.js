@@ -35,16 +35,16 @@ module.exports = {
         }
       }
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'markdown/settings/**/*.yml',
-        route: '/:slug',
-        typeName: 'Settings',
-        remark: {
-          // remark options
-        }
-      }
-    }
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     path: 'markdown/settings/**/*.yml',
+    //     route: '/:slug',
+    //     typeName: 'Settings',
+    //     remark: {
+    //       // remark options
+    //     }
+    //   }
+    // }
   ]
 }
