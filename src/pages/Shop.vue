@@ -34,7 +34,7 @@
                   :data-item-id="product.node.id"
                   :data-item-name="product.node.title"
                   :data-item-image="product.node.featuredImage"
-                  :data-item-price="product.node.price"
+                  :data-item-price="addDiscount(product.node.price)"
                   :data-item-url="product.node.slug"
                 >In den Warenkorb</button>
               </div>
@@ -58,6 +58,10 @@ query {
         price
         available
         category
+        discount.discountActive
+        discount.discountPercentage
+        discount.dateFrom
+        discount.dateTo
       }
     }
   }
@@ -68,6 +72,11 @@ query {
 export default {
   metaInfo: {
     title: "Shop"
+  },
+  computed: {
+    addDiscount(price) {
+      return this.price;
+    }
   }
 };
 </script>
