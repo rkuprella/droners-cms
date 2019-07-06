@@ -11,8 +11,6 @@ logo_url: https://jolly-ramanujan-fbfd07.netlify.com/assets/static/logo.7b22250.
 collections:
   - name: "settings" # Used in routes, e.g., /admin/collections/blog
     label: "Einstellungen" # Used in the UI
-    folder: "markdown" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
     files:
       - label: "Impressum"
         name: "impressum"
