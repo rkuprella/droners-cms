@@ -9,7 +9,7 @@ featuredImage: /uploads/Rihanna4.jpg
 discount:
   dateFrom: 2019-07-08T22:25:55.663Z
   dateTo: 2019-07-18T22:26:01.176Z
-  discountActive: true
-  discountPercentage: 10
+  active: true
+  percentage: 10
 ---
 Wut?

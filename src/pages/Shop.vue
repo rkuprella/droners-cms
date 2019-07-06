@@ -58,6 +58,13 @@ query {
         price
         available
         category
+        manufacturer
+        discount {
+          active
+          percentage
+          dateFrom
+          dateTo
+        }
       }
     }
   }
