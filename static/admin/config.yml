@@ -15,6 +15,7 @@ collections:
       - label: "Impressum"
         name: "impressum"
         file: "markdown/settings/impressum.yml"
+        delete: false
         fields:
           - {label: "Inhaber", name: "owner", widget: "string", required: false}
           - {label: "E-Mail", name: "email", widget: "string", required: false}
@@ -44,6 +45,7 @@ collections:
               - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Location"
         name: "location"
+        delete: false
         file: "markdown/settings/location.yml"
         fields:
           - {label: "Firma", name: "company", widget: "string", required: false}
@@ -80,6 +82,7 @@ collections:
               - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
       - label: "Social Media"
         name: "socialMedia"
+        delete: false
         file: "markdown/settings/social-media.yml"
         fields: 
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
@@ -99,7 +102,7 @@ collections:
       - {label: "Footer Menü", name: "footer", widget: "boolean"}
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
     folder: "markdown/category" # The path to the folder where the documents are stored
