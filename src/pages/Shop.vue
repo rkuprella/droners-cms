@@ -58,10 +58,12 @@ query {
         price
         available
         category
-        discount.discountActive
-        discount.discountPercentage
-        discount.dateFrom
-        discount.dateTo
+        discount {
+          discountActive
+          discountPercentage
+          dateFrom
+          dateTo
+        }
       }
     }
   }
