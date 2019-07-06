@@ -68,7 +68,6 @@ query {
       node {
         title
         slug
-        footer
       }
     }
   }
@@ -93,9 +92,6 @@ export default {
     return {
       mobile: false
     };
-  },
-  computed: {
-    
   }
 };
 </script>
