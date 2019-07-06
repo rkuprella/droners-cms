@@ -93,6 +93,7 @@ collections:
     folder: "markdown/contentPage" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    description: "Die Position bestimmt die Reihenfolge im Menü. Eine Position von 1.1 bedeutet, es handelt sich um die erste Unterseite von Seite 1."
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
@@ -101,7 +102,6 @@ collections:
       - {label: "Footer Menü", name: "footer", widget: "boolean"}
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
-      - {label: "Content", name: "body", widget: "markdown", required: false}
       - label: "Komponenten"
         name: "components"
         widget: "list"
@@ -138,6 +138,7 @@ collections:
             fields:
               - {label: "Template", name: "template", widget: "hidden", default: "markdown"}
               - {label: "Markdown", name: "content", widget: "string", default: "Markdown wird an dieser Position angezeigt."}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
     folder: "markdown/category" # The path to the folder where the documents are stored
@@ -194,7 +195,7 @@ collections:
       - label: "Produktbild"
         name: "featuredImage"
         widget: "image"
-      - {label: "Beschreibung", name: "body", widget: "markdown"} 
+      - {label: "Content", name: "body", widget: "markdown"}
       - label: "Rabatt"
         name: "discount"
         widget: "object"
