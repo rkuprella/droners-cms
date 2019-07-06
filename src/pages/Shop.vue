@@ -77,9 +77,11 @@ export default {
   metaInfo: {
     title: "Shop"
   },
-  computed: {
+  methods: {
     addDiscount(price, active, percentage) {
-      return active ? (price * (100 - percentage)) / 100 : price;
+      return active && percentage != null
+        ? (price * (100 - percentage)) / 100
+        : price;
     }
   }
 };
