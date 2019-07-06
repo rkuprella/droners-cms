@@ -9,71 +9,74 @@ logo_url: https://jolly-ramanujan-fbfd07.netlify.com/assets/static/logo.7b22250.
 
 
 collections:
-  - name: "impressum" # Used in routes, e.g., /admin/collections/blog
-    label: "Impressum" # Used in the UI
+  - name: "settings" # Used in routes, e.g., /admin/collections/blog
+    label: "Einstellungen" # Used in the UI
     folder: "markdown" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Firma", name: "company", widget: "string", default: "Droners"}
-      - {label: "Inhaber", name: "owner", widget: "string", required: false}
-      - {label: "E-Mail", name: "email", widget: "string", required: false}
-      - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
-      - label: "Geschäftsadresse"
-        name: "businessAddress"
-        widget: "object"
-        fields: 
-          - {label: "Firma", name: "company", widget: "string", required: false}
-          - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
-          - {label: "PLZ", name: "zip", widget: "string", required: false}
-          - {label: "Stadt", name: "city", widget: "string", required: false}
-          - {label: "Geschäftl. Telefonnummer", name: "phone", widget: "string", required: false}
-      - label: "Handelsregister"
-        name: "register"
-        widget: "object"
-        fields: 
-          - {label: "Amtsgericht", name: "court", widget: "string", required: false}
-          - {label: "Handelsregisternummer", name: "hra", widget: "string", required: false}
-          - {label: "UstId-Nr", name: "ustidnr", widget: "string", required: false}
-      - label: "Adresse der Location"
-        name: "locationAddress"
-        widget: "object"
-        fields: 
-          - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
-          - {label: "PLZ", name: "zip", widget: "string", required: false}
-          - {label: "Stadt", name: "city", widget: "string", required: false}
-      - label: "Öffnungszeiten"
-        name: "openingHours"
-        widget: "object"
-        fields: 
-          - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
-          - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
-          - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
-          - {label: "Dienstags bis", name: "tuesdayTo", widget: "string", required: false}
-          - {label: "Mittwochs von", name: "wednesdayFrom", widget: "string", required: false}
-          - {label: "Mittwochs bis", name: "wednesdayTo", widget: "string", required: false}
-          - {label: "Donnerstags von", name: "thursdayFrom", widget: "string", required: false}
-          - {label: "Donnerstags bis", name: "thursdayTo", widget: "string", required: false}
-          - {label: "Freitags von", name: "fridayFrom", widget: "string", required: false}
-          - {label: "Freitags bis", name: "fridayTo", widget: "string", required: false}
-          - {label: "Samstags von", name: "saturdayFrom", widget: "string", required: false}
-          - {label: "Samstags bis", name: "saturdayTo", widget: "string", required: false}
-          - {label: "Sonntags von", name: "sundayFrom", widget: "string", required: false}
-          - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
-          - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
-          - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
-          - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false, required: false}
-      - label: "Datenschutz"
-        name: "dataProtection"
-        widget: "object"
-        fields: 
-          - {label: "Datenschutz-Beauftragter", name: "officer", widget: "string", required: false}
-          - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
-          - {label: "PLZ", name: "zip", widget: "string", required: false}
-          - {label: "Stadt", name: "city", widget: "string", required: false}
+    files:
+      - label: "Impressum"
+        name: "impressum"
+        file: "markdown/settings/impressum.yml"
+        fields:
+          - {label: "Firma", name: "company", widget: "string", default: "Droners"}
+          - {label: "Inhaber", name: "owner", widget: "string", required: false}
+          - {label: "E-Mail", name: "email", widget: "string", required: false}
+          - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
+          - label: "Geschäftsadresse"
+            name: "businessAddress"
+            widget: "object"
+            fields: 
+              - {label: "Firma", name: "company", widget: "string", required: false}
+              - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
+              - {label: "PLZ", name: "zip", widget: "string", required: false}
+              - {label: "Stadt", name: "city", widget: "string", required: false}
+              - {label: "Geschäftl. Telefonnummer", name: "phone", widget: "string", required: false}
+          - label: "Handelsregister"
+            name: "register"
+            widget: "object"
+            fields: 
+              - {label: "Amtsgericht", name: "court", widget: "string", required: false}
+              - {label: "Handelsregisternummer", name: "hra", widget: "string", required: false}
+              - {label: "UstId-Nr", name: "ustidnr", widget: "string", required: false}
+          - label: "Adresse der Location"
+            name: "locationAddress"
+            widget: "object"
+            fields: 
+              - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
+              - {label: "PLZ", name: "zip", widget: "string", required: false}
+              - {label: "Stadt", name: "city", widget: "string", required: false}
+          - label: "Öffnungszeiten"
+            name: "openingHours"
+            widget: "object"
+            fields: 
+              - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
+              - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
+              - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
+              - {label: "Dienstags bis", name: "tuesdayTo", widget: "string", required: false}
+              - {label: "Mittwochs von", name: "wednesdayFrom", widget: "string", required: false}
+              - {label: "Mittwochs bis", name: "wednesdayTo", widget: "string", required: false}
+              - {label: "Donnerstags von", name: "thursdayFrom", widget: "string", required: false}
+              - {label: "Donnerstags bis", name: "thursdayTo", widget: "string", required: false}
+              - {label: "Freitags von", name: "fridayFrom", widget: "string", required: false}
+              - {label: "Freitags bis", name: "fridayTo", widget: "string", required: false}
+              - {label: "Samstags von", name: "saturdayFrom", widget: "string", required: false}
+              - {label: "Samstags bis", name: "saturdayTo", widget: "string", required: false}
+              - {label: "Sonntags von", name: "sundayFrom", widget: "string", required: false}
+              - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
+              - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
+              - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
+              - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false, required: false}
+          - label: "Datenschutz"
+            name: "dataProtection"
+            widget: "object"
+            fields: 
+              - {label: "Datenschutz-Beauftragter", name: "officer", widget: "string", required: false}
+              - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
+              - {label: "PLZ", name: "zip", widget: "string", required: false}
+              - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Social Media"
         name: "socialMedia"
-        widget: "object"
+        file: "markdown/settings/social-media.yml"
         fields: 
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
           - {label: "Instagram", name: "instagram", widget: "string", required: false}
@@ -143,7 +146,13 @@ collections:
         required: false
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Preis", name: "price", widget: "number", valueType: "float"}
-      - {label: "Produktbilder", name: "featuredImage", widget: "image", allow_multiple: true}
+      - label: "Produktbilder"
+        name: "featuredImage"
+        widget: "image"
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
       - {label: "Beschreibung", name: "body", widget: "markdown"} 
       - label: "Rabatt"
         name: "discount"
