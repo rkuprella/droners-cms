@@ -34,7 +34,7 @@
                   :data-item-id="product.node.id"
                   :data-item-name="product.node.title"
                   :data-item-image="product.node.featuredImage"
-                  :data-item-price="addDiscount(product.node.price)"
+                  :data-item-price="product.node.price"
                   :data-item-url="product.node.slug"
                 >In den Warenkorb</button>
               </div>
@@ -59,8 +59,8 @@ query {
         available
         category
         discount {
-          discountActive
-          discountPercentage
+          active
+          percentage
           dateFrom
           dateTo
         }

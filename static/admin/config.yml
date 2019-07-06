@@ -145,7 +145,7 @@ collections:
         name: "discount"
         widget: "object"
         fields: 
-          - {label: "Aktiv", name: "discountActive", widget: "boolean", default: false}
-          - {label: "Rabatt in Prozent", name: "discountPercentage", widget: "number", valueType: "float", required: false}
+          - {label: "Aktiv", name: "active", widget: "boolean", default: false}
+          - {label: "Rabatt in Prozent", name: "percentage", widget: "number", valueType: "float", required: false}
           - {label: "Von", name: "dateFrom", widget: "date", dateFormat: true, required: false}
           - {label: "Bis", name: "dateTo", widget: "date", dateFormat: true, required: false}
