@@ -68,7 +68,6 @@ query {
       node {
         title
         slug
-        position
         footer
       }
     }
