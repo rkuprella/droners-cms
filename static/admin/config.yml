@@ -19,7 +19,6 @@ collections:
           - {label: "Firma", name: "company", widget: "string", default: "Droners"}
           - {label: "Inhaber", name: "owner", widget: "string", required: false}
           - {label: "E-Mail", name: "email", widget: "string", required: false}
-          - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
           - label: "Geschäftsadresse"
             name: "businessAddress"
             widget: "object"
@@ -36,13 +35,6 @@ collections:
               - {label: "Amtsgericht", name: "court", widget: "string", required: false}
               - {label: "Handelsregisternummer", name: "hra", widget: "string", required: false}
               - {label: "UstId-Nr", name: "ustidnr", widget: "string", required: false}
-          - label: "Adresse der Location"
-            name: "locationAddress"
-            widget: "object"
-            fields: 
-              - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
-              - {label: "PLZ", name: "zip", widget: "string", required: false}
-              - {label: "Stadt", name: "city", widget: "string", required: false}
           - label: "Datenschutz"
             name: "dataProtection"
             widget: "object"
@@ -51,10 +43,24 @@ collections:
               - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
               - {label: "PLZ", name: "zip", widget: "string", required: false}
               - {label: "Stadt", name: "city", widget: "string", required: false}
+      - label: "Location"
+        name: "location"
+        file: "location"
+        fields:
+          - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
+          - {label: "Kontakt E-Mail", name: "email", widget: "string", required: false}
+          - label: "Adresse"
+            name: "locationAddress"
+            widget: "object"
+            fields: 
+              - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
+              - {label: "PLZ", name: "zip", widget: "string", required: false}
+              - {label: "Stadt", name: "city", widget: "string", required: false}
       - label: "Öffnungszeiten"
         name: "openingHours"
         file: "markdown/settings/opening-hours.yml"
         fields: 
+          - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false}
           - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
           - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
           - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
@@ -71,7 +77,6 @@ collections:
           - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
           - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
           - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
-          - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false, required: false}
       - label: "Social Media"
         name: "socialMedia"
         file: "markdown/settings/social-media.yml"
@@ -97,7 +102,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "title", widget: "string", required: false}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Webseite", name: "website", widget: "string", required: false}
       - {label: "E-Mail", name: "email", widget: "string", required: false}
       - {label: "Instagram", name: "instagram", widget: "string", required: false}

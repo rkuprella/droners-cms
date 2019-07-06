@@ -1,8 +1,9 @@
 <template>
   <div class="navigation">
-    <MobileNav v-if="mobile"/>
+    <MobileNav v-if="mobile" />
     <nav
       class="navbar is-spaced is-dark is-transparent"
+      :class="{ gap : gap }"
       role="navigation"
       aria-label="main navigation"
       style="position:absolute; top:0; left:0; width:100%"
@@ -81,6 +82,12 @@ export default {
   components: {
     MobileNav
   },
+  props: {
+    gap: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       mobile: false
@@ -90,4 +97,7 @@ export default {
 </script>
 
 <style>
+.gap {
+  margin-top: 44px;
+}
 </style>
