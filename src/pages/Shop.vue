@@ -58,12 +58,6 @@ query {
         price
         available
         category
-        discount {
-          active
-          percentage
-          dateFrom
-          dateTo
-        }
       }
     }
   }
@@ -74,11 +68,6 @@ query {
 export default {
   metaInfo: {
     title: "Shop"
-  },
-  computed: {
-    addDiscount(price) {
-      return this.price;
-    }
   }
 };
 </script>
