@@ -26,7 +26,8 @@
                     <li v-for="(category, i) in product.node.category" :key="i">{{ category }}</li>
                   </ul>
                 </div>
-                <div>{{ product.node.price }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div style="color:blue">{{ product.node.discount.active }}</div>
+                <div>{{ addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage) }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris.
                 <button
                   :disabled="!product.node.available"
@@ -34,7 +35,7 @@
                   :data-item-id="product.node.id"
                   :data-item-name="product.node.title"
                   :data-item-image="product.node.featuredImage"
-                  :data-item-price="product.node.price"
+                  :data-item-price="addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage)"
                   :data-item-url="product.node.slug"
                 >In den Warenkorb</button>
               </div>
@@ -75,6 +76,11 @@ query {
 export default {
   metaInfo: {
     title: "Shop"
+  },
+  computed: {
+    addDiscount(price, active, percentage) {
+      return active ? (price * (100 - percentage)) / 100 : price;
+    }
   }
 };
 </script>
