@@ -97,11 +97,30 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Seitenbeschreibung", name: "meta", widget: "string", required: false}
+      - {label: "Seitenbeschreibung", name: "meta", widget: "text", required: false}
       - {label: "Footer Menü", name: "footer", widget: "boolean"}
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
+      - label: "Komponenten"
+      name: "components"
+      widget: "list"
+      types:
+        - label: "Carousel"
+          name: "carousel"
+          widget: object
+          fields:
+            - {label: "Template", name: "template", widget: "hidden", default: "carousel"}
+            - label: "Images"
+              name: "images"
+              widget: "list"
+              field: {label: "Image", name: "image", widget: "image"}
+        - label: "Spotlight"
+          name: "spotlight"
+          widget: object
+          fields:
+            - {label: "Template", name: "template", widget: "hidden", default: "spotlight"}
+            - {label: "Text", name: "text", widget: "text", default: "Hello World"}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
     folder: "markdown/category" # The path to the folder where the documents are stored
@@ -159,27 +178,6 @@ collections:
         name: "featuredImage"
         widget: "image"
       - {label: "Beschreibung", name: "body", widget: "markdown"} 
-      - label: "Komponenten"
-        name: "components"
-        widget: "list"
-        types:
-          - label: "Carousel"
-            name: "carousel"
-            widget: object
-            fields:
-              - {label: Header, name: header, widget: string, default: "Image Gallery"}
-              - {label: Template, name: template, widget: string, default: "carousel.html"}
-              - label: Images
-                name: images
-                widget: list
-                field: {label: Image, name: image, widget: image}
-          - label: "Spotlight"
-            name: "spotlight"
-            widget: object
-            fields:
-              - {label: Header, name: header, widget: string, default: "Spotlight"}
-              - {label: Template, name: template, widget: string, default: "spotlight.html"}
-              - {label: Text, name: text, widget: text, default: "Hello World"}
       - label: "Rabatt"
         name: "discount"
         widget: "object"
