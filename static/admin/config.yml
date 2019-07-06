@@ -12,6 +12,7 @@ collections:
   - name: "settings" # Used in routes, e.g., /admin/collections/blog
     label: "Einstellungen" # Used in the UI
     delete: false
+    description: "Was sagt der Hase zum Igel? Ich bin schon da."
     files:
       - label: "Impressum"
         name: "impressum"
