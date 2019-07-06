@@ -97,7 +97,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "name", widget: "string", required: false}
+      - {label: "Name", name: "title", widget: "string", required: false}
       - {label: "Webseite", name: "website", widget: "string", required: false}
       - {label: "E-Mail", name: "email", widget: "string", required: false}
       - {label: "Instagram", name: "instagram", widget: "string", required: false}
@@ -167,9 +167,9 @@ collections:
             name: "photographer"
             widget: "relation"
             collection: "photographer"
-            searchFields: ["name"]
-            valueField: "name"
-            displayFields: ["name"]
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
             required: false
       - {label: "Beschreibung", name: "body", widget: "markdown"} 
       - label: "Rabatt"
