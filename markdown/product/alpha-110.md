@@ -7,13 +7,13 @@ slug: alpha-110
 price: 98.99
 featuredImage: /uploads/Rihanna-2.jpg
 components:
+  - header: Test 2
+    template: Test 2
+    type: carousel
   - header: Test
     template: Test
     text: Test
     type: spotlight
-  - header: Test 2
-    template: Test 2
-    type: carousel
 discount:
   active: false
   dateFrom: 2019-07-01T22:25:55.663Z
