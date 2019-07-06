@@ -57,27 +57,27 @@ collections:
               - {label: "Strasse und Hausnummer", name: "street", widget: "string", required: false}
               - {label: "PLZ", name: "zip", widget: "string", required: false}
               - {label: "Stadt", name: "city", widget: "string", required: false}
-      - label: "Öffnungszeiten"
-        name: "openingHours"
-        file: "markdown/settings/opening-hours.yml"
-        fields: 
-          - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false}
-          - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
-          - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
-          - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
-          - {label: "Dienstags bis", name: "tuesdayTo", widget: "string", required: false}
-          - {label: "Mittwochs von", name: "wednesdayFrom", widget: "string", required: false}
-          - {label: "Mittwochs bis", name: "wednesdayTo", widget: "string", required: false}
-          - {label: "Donnerstags von", name: "thursdayFrom", widget: "string", required: false}
-          - {label: "Donnerstags bis", name: "thursdayTo", widget: "string", required: false}
-          - {label: "Freitags von", name: "fridayFrom", widget: "string", required: false}
-          - {label: "Freitags bis", name: "fridayTo", widget: "string", required: false}
-          - {label: "Samstags von", name: "saturdayFrom", widget: "string", required: false}
-          - {label: "Samstags bis", name: "saturdayTo", widget: "string", required: false}
-          - {label: "Sonntags von", name: "sundayFrom", widget: "string", required: false}
-          - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
-          - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
-          - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
+          - label: "Öffnungszeiten"
+            name: "openingHours"
+            widget: "object"
+            fields: 
+              - {label: "Vorübergehend geschlossen", name: "closed", widget: "boolean", default: false}
+              - {label: "Montags von", name: "mondayFrom", widget: "string", required: false}
+              - {label: "Montags bis", name: "mondayTo", widget: "string", required: false}
+              - {label: "Dienstags von", name: "tuesdayFrom", widget: "string", required: false}
+              - {label: "Dienstags bis", name: "tuesdayTo", widget: "string", required: false}
+              - {label: "Mittwochs von", name: "wednesdayFrom", widget: "string", required: false}
+              - {label: "Mittwochs bis", name: "wednesdayTo", widget: "string", required: false}
+              - {label: "Donnerstags von", name: "thursdayFrom", widget: "string", required: false}
+              - {label: "Donnerstags bis", name: "thursdayTo", widget: "string", required: false}
+              - {label: "Freitags von", name: "fridayFrom", widget: "string", required: false}
+              - {label: "Freitags bis", name: "fridayTo", widget: "string", required: false}
+              - {label: "Samstags von", name: "saturdayFrom", widget: "string", required: false}
+              - {label: "Samstags bis", name: "saturdayTo", widget: "string", required: false}
+              - {label: "Sonntags von", name: "sundayFrom", widget: "string", required: false}
+              - {label: "Sonntags bis", name: "sundayTo", widget: "string", required: false}
+              - {label: "Feiertags von", name: "holidayFrom", widget: "string", required: false}
+              - {label: "Feiertags bis", name: "holidayTo", widget: "string", required: false}
       - label: "Social Media"
         name: "socialMedia"
         file: "markdown/settings/social-media.yml"
@@ -87,26 +87,17 @@ collections:
           - {label: "Youtube", name: "youtube", widget: "string", required: false}
           - {label: "Twitter", name: "twitter", widget: "string", required: false}
   - name: "contentPage" # Used in routes, e.g., /admin/collections/blog
-    label: "ContentPage" # Used in the UI
+    label: "Seite" # Used in the UI
     folder: "markdown/contentPage" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "photographer" # Used in routes, e.g., /admin/collections/blog
-    label: "Fotograf" # Used in the UI
-    folder: "markdown/photographer" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "title", widget: "string"}
-      - {label: "Webseite", name: "website", widget: "string", required: false}
-      - {label: "E-Mail", name: "email", widget: "string", required: false}
-      - {label: "Instagram", name: "instagram", widget: "string", required: false}
+      - {label: "Slug", name: "{{slug}}", widget: "string"}
+      - {label: "Position", name: "position", widget: "number", valueType: "float"}
+      - {label: "Hintergrundbild", name: "featuredImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
     folder: "markdown/category" # The path to the folder where the documents are stored
@@ -163,20 +154,6 @@ collections:
       - label: "Produktbild"
         name: "featuredImage"
         widget: "image"
-      - label: "Galerie"
-        name: "gallery"
-        widget: "list"
-        fields:
-          - {label: "Beschreibung", name: "description", widget: "string", required: false}
-          - {label: "Foto", name: "photo", widget: "image"}
-          - label: "Fotograf"
-            name: "photographer"
-            widget: "relation"
-            collection: "photographer"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
-            required: false
       - {label: "Beschreibung", name: "body", widget: "markdown"} 
       - label: "Rabatt"
         name: "discount"
