@@ -2,7 +2,7 @@
 layout: blog
 title: Page Three
 slug: page-three
-footer: true
+menu: main
 position: 1
 featuredImage: /uploads/Rihanna.jpg
 ---
