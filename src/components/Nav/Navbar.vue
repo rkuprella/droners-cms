@@ -41,7 +41,7 @@
               :to="'/' + page.node.slug"
               v-for="page in $static.allContentPage.edges"
               :key="page.node.slug"
-            >{{ page.node.title }}</g-link>
+            >{{ page.node.title }} {{ page.node.position }}</g-link>
             <g-link class="navbar-item" to="/shop">Shop</g-link>
             <div class="navbar-item">
               <div class="buttons">
