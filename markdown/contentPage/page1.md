@@ -1,7 +1,7 @@
 ---
 title: Page One
 slug: page1
-footer: false
+menu: main
 position: 1
 featuredImage: /uploads/Rihanna.jpg
 components:
