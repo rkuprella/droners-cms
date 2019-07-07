@@ -68,6 +68,7 @@ query {
       node {
         title
         slug
+        position
       }
     }
   }
