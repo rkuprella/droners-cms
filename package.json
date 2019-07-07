@@ -15,6 +15,10 @@
     "@gridsome/transformer-remark": "^0.3.2",
     "@gridsome/transformer-yaml": "^0.2.1",
     "gridsome": "^0.6.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "vuetify": "^1.5.16"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^1.7.2"
   }
 }

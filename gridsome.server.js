@@ -31,17 +31,6 @@ module.exports = function (api) {
       title: 'Youtube',
       fields: { link: 'https://www.youtube.com/DRONERSde/', icon: 'youtube' }
     })
-
-    // Locations
-    const location = store.addContentType({
-      typeName: 'Location',
-      route: '/:slug'
-    })
-    location.addNode({
-      id: 1,
-      title: 'Unna',
-      fields: { slug: 'unna', street: 'Hochstraße 10', zip: '59425', city: 'Unna', phone: '0176 43956945' }
-    })
   })
 
   api.createPages(({ createPage }) => {

@@ -12,7 +12,6 @@ collections:
   - name: "settings" # Used in routes, e.g., /admin/collections/blog
     label: "Einstellungen" # Used in the UI
     delete: false
-    description: "Was sagt der Hase zum Igel? Ich bin schon da."
     files:
       - label: "Impressum"
         name: "impressum"
@@ -93,13 +92,18 @@ collections:
     folder: "markdown/contentPage" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    description: "Die Position bestimmt die Reihenfolge im Menü. Um eine Unterseite zu erstellen, muss die Position mit X.X angegeben werden."
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Seitenbeschreibung", name: "meta", widget: "text", required: false}
-      - {label: "Footer Menü", name: "footer", widget: "boolean", default: false}
+      - label: "Menü"
+        name: "menu"
+        widget: "select"
+        options:
+          - { label: "Hauptmenü", value: "main" }
+          - { label: "Minimenü", value: "top" }
+          - { label: "Footermenü", value: "footer" }
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
       - label: "Komponenten"
@@ -190,7 +194,6 @@ collections:
         valueField: "title"
         displayFields: ["title"]
         required: false
-      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Preis", name: "price", widget: "number", valueType: "float"}
       - label: "Produktbild"
         name: "featuredImage"

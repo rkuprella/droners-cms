@@ -1,7 +1,6 @@
 <template>
-  <div class="layout has-background-dark">
-    <Topbar v-if="home" />
-    <Navbar :gap="home" />
+  <div class="layout">
+    <Navbar :topbar="home" />
     <Sidebar v-if="home" />
     <SocialMedia v-if="home" />
     <slot />
@@ -10,7 +9,6 @@
 </template>
 
 <script>
-import Topbar from "~/components/Nav/Topbar";
 import Navbar from "~/components/Nav/Navbar";
 import Footer from "~/components/Nav/Footer";
 import Sidebar from "~/components/Nav/Sidebar";
@@ -18,7 +16,6 @@ import SocialMedia from "~/components/Nav/SocialMedia";
 
 export default {
   components: {
-    Topbar,
     Navbar,
     Footer,
     Sidebar,
@@ -34,4 +31,7 @@ export default {
 </script>
 
 <style>
+.layout {
+  background: var(--color-bg);
+}
 </style>

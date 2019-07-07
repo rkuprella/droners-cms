@@ -1,8 +1,8 @@
 <template>
   <nav class="sidebar">
-    <div class="sidebar-wrapper has-text-info is-size-5">
+    <div class="sidebar-wrapper">
       <a href="#">FAQ</a>
-      <font-awesome :icon="['fa', 'circle']" style="width:6px; margin:0 10px"/>
+      <font-awesome :icon="['fa', 'circle']" size="xs" />
       <a href="#">Merch</a>
     </div>
   </nav>

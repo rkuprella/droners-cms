@@ -1,11 +1,29 @@
 <template>
-  <footer class="footer has-background-dark">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          <a href="https://droners.de/impressum">Impressum</a>
-        </p>
-      </div>
-    </div>
+  <footer>
+    <a href="https://droners.de/impressum">Impressum</a>
+    <g-link
+      :to="'/' + page.node.slug"
+      v-for="page in $static.allContentPage.edges"
+      :key="page.node.slug"
+    >{{ page.node.title }}</g-link>
   </footer>
 </template>
+
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+
+  allContentPage(sortBy: "position", order: DESC, filter: { footer: { eq: true }}) {
+    edges {
+      node {
+        title
+        slug
+        position
+      }
+    }
+  }
+
+}
+</static-query>

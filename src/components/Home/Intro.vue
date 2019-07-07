@@ -4,7 +4,7 @@
 
 <style>
 .intro {
-  min-height: 90vh;
+  min-height: 100vh;
   background: url("../../assets/img/bg-intro.jpg") 50% 50% no-repeat / cover;
 }
 </style>

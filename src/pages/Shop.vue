@@ -40,6 +40,7 @@
                   :data-item-price="addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage)"
                   :data-item-url="product.node.slug"
                 >In den Warenkorb</button>
+                <v-btn color="success">Success</v-btn>
               </div>
             </div>
           </div>

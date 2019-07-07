@@ -1,57 +1,31 @@
 <template>
-  <div class="navigation">
-    <MobileNav v-if="mobile" />
-    <nav
-      class="navbar is-spaced is-dark is-transparent"
-      :class="{ gap : gap }"
-      role="navigation"
-      aria-label="main navigation"
-      style="position:absolute; top:0; left:0; width:100%"
-    >
+  <div>
+    <nav class="topbar" v-if="topbar">
       <div class="container">
-        <div class="navbar-brand">
-          <g-link class="navbar-item" to="/">
-            <g-image
-              class="brand-logo"
-              src="~/assets/img/logo.png"
-              :alt="$static.metaData.siteName"
-            />
-          </g-link>
+        <ul>
+          <li>Auto</li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar">
+      <div class="navbar-wrapper container center-v">
+        <g-link to="/">
+          <g-image class="brand-logo" src="~/assets/img/logo.png" :alt="$static.metaData.siteName" />
+        </g-link>
+        <div class="center-v">
+          <g-link
+            class="navbar-link"
+            v-for="page in $static.allContentPage.edges"
+            :key="page.node.slug"
+            :to="'/' + page.node.slug"
+          >{{ page.node.title }}</g-link>
 
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-            @click="mobile = !mobile"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+          <g-link class="navbar-link" to="/shop">Shop</g-link>
+          <g-link class="navbar-link navbar-button" to="/booking">Buchen</g-link>
+          <button @click="mobile = !mobile"></button>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start"></div>
-
-          <div class="navbar-end">
-            <g-link
-              class="navbar-item"
-              :to="'/' + page.node.slug"
-              v-for="page in $static.allContentPage.edges"
-              :key="page.node.slug"
-            >{{ page.node.title }} {{ page.node.position }}</g-link>
-            <g-link class="navbar-item" to="/shop">Shop</g-link>
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary is-rounded is-outlined is-uppercase">
-                  <strong>Buchen</strong>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MobileNav v-if="mobile" />
       </div>
     </nav>
   </div>
@@ -63,7 +37,7 @@ query {
     siteName
   }
 
-  allContentPage(filter: { footer: { eq: false }}) {
+  allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "main" }}) {
     edges {
       node {
         title
@@ -84,7 +58,7 @@ export default {
     MobileNav
   },
   props: {
-    gap: {
+    topbar: {
       type: Boolean,
       default: false
     }
@@ -98,7 +72,28 @@ export default {
 </script>
 
 <style>
-.gap {
-  margin-top: 44px;
+.topbar {
+  height: 44px;
+  background: var(--color-blue);
+}
+.navbar {
+  height: 80px;
+}
+.navbar-wrapper {
+  justify-content: space-between;
+}
+.navbar-link {
+  padding: 6px 12px;
+  color: var(--color-light);
+  text-decoration: none;
+}
+.navbar-link:not(:last-of-type) {
+  margin-right: 6px;
+}
+.navbar-button {
+  border: 2px solid var(--color-blue);
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 </style>
