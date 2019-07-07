@@ -37,7 +37,7 @@ query {
     siteName
   }
 
-  allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "main" }}) {
+  allContentPage(sortBy: "position", order: DESC, filter: { footer: { eq: false }}) {
     edges {
       node {
         title
