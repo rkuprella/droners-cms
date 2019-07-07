@@ -1,7 +1,7 @@
 ---
 title: Page Two Taute
 slug: page2
-footer: false
+menu: top
 position: 2
 featuredImage: /uploads/Rihanna4.jpg
 ---
