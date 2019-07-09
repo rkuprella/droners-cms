@@ -15,7 +15,7 @@ query {
     siteName
   }
 
-  allContentPage(sortBy: "position", order: DESC, filter: { footer: { eq: true }}) {
+  allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "footer" }}) {
     edges {
       node {
         title

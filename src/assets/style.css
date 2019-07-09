@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Source+Sans+Pro:300,400,700');
 
 :root {
   --color-light: #fff1d8;
+  --color-light-accent: #f0dab3;
   --color-blue: #42b6ea;
   --color-blue-accent: #65c6f2;
   --color-green: #65e6b4;
@@ -11,6 +12,13 @@
   --color-yellow:#d0c564;
   --color-yellow-accent: #e5dd98;
   --color-bg: #2b222b;
+  --color-bg-accent: #302730;
+  --color-bg-dark: #251d25;
+  --size-xs: 3px;
+  --size-sm: 6px;
+  --size-md: 12px;
+  --size-lg: 24px;
+  --size-xl: 48px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -25,24 +33,49 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
 	margin: 0;
 	padding: 0;
-	border: 0;
+  border: 0;
+  outline: none;
 	font-size: 100%;
 	font: inherit;
   vertical-align: baseline;
   box-sizing:border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-.container {
-  width:80%;
-  max-width:1200px;
-  margin:0 auto;
-  height:100%;
+p {
+  color:var(--color-light);
+  line-height:1.6em;
+  font-weight:300;
+  font-size:1.15em;
+  text-align:justify;
 }
-
+.container {
+  margin:0 var(--size-lg);
+  height:100%;
+  position:relative;
+}
+.hero {
+  padding:60px 0;
+}
+.hero-section {
+  width:100%;
+}
+.hero-content {
+  flex-wrap:wrap;
+}
+.hero-wrapper {
+  width:100%;
+  position:relative;
+}
+.card-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
 .center {
   display:flex;
   align-items:center;
@@ -57,4 +90,21 @@ time, mark, audio, video {
 .center-h {
   display:flex;
   justify-content:center;
+}
+
+@media screen and (min-width: 990px) {
+  .container {
+    width:80%;
+    max-width:1200px;
+    margin:0 auto;
+  }
+
+  .hero {
+    /* height:100vh;
+    min-height:640px; */
+    padding:140px 0;
+  }
+  .hero-wrapper {
+    width:50%;
+  }
 }
