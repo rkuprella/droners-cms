@@ -63,78 +63,78 @@ export default {
   background: var(--color-light);
   color: var(--color-bg);
 }
-.color-red {
+.btn.color-red {
   background: var(--color-red);
 }
-.color-red.inverted {
+.btn.color-red.inverted {
   background: transparent;
   color: var(--color-red);
   border: 2px solid var(--color-red);
 }
-.color-red.inverted:hover,
-.color-red.inverted:focus,
-.color-red.inverted:active {
+.btn.color-red.inverted:hover,
+.btn.color-red.inverted:focus,
+.btn.color-red.inverted:active {
   background: var(--color-red);
   color: var(--color-bg);
 }
 
-.color-blue {
+.btn.color-blue {
   background: var(--color-blue);
 }
-.color-blue.inverted {
+.btn.color-blue.inverted {
   background: transparent;
   color: var(--color-blue);
   border: 2px solid var(--color-blue);
 }
-.color-blue.inverted:hover,
-.color-blue.inverted:focus,
-.color-blue.inverted:active {
+.btn.color-blue.inverted:hover,
+.btn.color-blue.inverted:focus,
+.btn.color-blue.inverted:active {
   background: var(--color-blue);
   color: var(--color-bg);
 }
 
-.color-green {
+.btn.color-green {
   background: var(--color-green);
 }
-.color-green.inverted {
+.btn.color-green.inverted {
   background: transparent;
   color: var(--color-green);
   border: 2px solid var(--color-green);
 }
-.color-green.inverted:hover,
-.color-green.inverted:focus,
-.color-green.inverted:active {
+.btn.color-green.inverted:hover,
+.btn.color-green.inverted:focus,
+.btn.color-green.inverted:active {
   background: var(--color-green);
   color: var(--color-bg);
 }
 
-.color-yellow {
+.btn.color-yellow {
   background: var(--color-yellow);
 }
-.color-yellow.inverted {
+.btn.color-yellow.inverted {
   background: transparent;
   color: var(--color-yellow);
   border: 2px solid var(--color-yellow);
 }
-.color-yellow.inverted:hover,
-.color-yellow.inverted:focus,
-.color-yellow.inverted:active {
+.btn.color-yellow.inverted:hover,
+.btn.color-yellow.inverted:focus,
+.btn.color-yellow.inverted:active {
   background: var(--color-yellow);
   color: var(--color-bg);
 }
 
-.dark {
+.btn.dark {
   background: var(--color-bg);
   color: var(--color-light);
 }
-.dark.inverted {
+.btn.dark.inverted {
   background: transparent;
   color: var(--color-bg);
   border: 2px solid var(--color-bg);
 }
-.dark.inverted:hover,
-.dark.inverted:focus,
-.dark.inverted:active {
+.btn.dark.inverted:hover,
+.btn.dark.inverted:focus,
+.btn.dark.inverted:active {
   background: var(--color-bg);
   color: var(--color-light);
 }

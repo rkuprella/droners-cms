@@ -14,7 +14,6 @@
             :list="price.list"
             :link="price.link"
             :price="price.tag"
-            :dark="price.dark"
             :inverted="price.inverted"
           />
         </div>
@@ -39,10 +38,10 @@ export default {
           title: "Eisenbahn",
           tag: 89.99,
           list: ["Schnell", "Sicher", "Arithmetisch"],
-          linkText: "Gruppenangebot sichern",
-          link: "/",
+          to: "/",
           icon: "circle",
-          color: "red"
+          color: "red",
+          inverted: true
         },
         {
           title: "Katzenhaus",
@@ -50,30 +49,7 @@ export default {
           list: ["Klein", "Gemütlich", "Zum Rausgucken"],
           link: "Macht die Katze froh",
           to: "/",
-          color: "red"
-        },
-        {
-          title: "Gruppenspaß",
-          tag: 189.99,
-          list: ["Familie", "Günstig", "Mehr vom Geld"],
-          link: "Jetzt reinschnuppern",
-          to: "/"
-        },
-        {
-          title: "Gruppenspaß",
-          tag: 189.99,
-          list: ["Familie", "Günstig", "Mehr vom Geld"],
-          link: "Jetzt reinschnuppern",
-          to: "/",
-          dark: true
-        },
-        {
-          title: "Gruppenspaß",
-          tag: 189.99,
-          list: ["Familie", "Günstig", "Mehr vom Geld"],
-          link: "Jetzt reinschnuppern",
-          to: "/",
-          color: "green",
+          color: "red",
           inverted: true
         },
         {
@@ -82,7 +58,7 @@ export default {
           list: ["Familie", "Günstig", "Mehr vom Geld"],
           link: "Jetzt reinschnuppern",
           to: "/",
-          dark: true,
+          color: "green",
           inverted: true
         }
       ]

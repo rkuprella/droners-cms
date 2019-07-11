@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="[{dark : dark}, 'color-' + color ]">
+  <div class="card" :class="[{inverted: inverted}, 'color-' + color ]">
     <header class="center-v">
       <font-awesome :icon="['fa', icon]" size="3x" v-if="icon" class="card-icon" />
       <h3 v-html="title"></h3>
@@ -17,7 +17,7 @@
       </div>
     </main>
     <footer>
-      <Btn title="Mehr erfahren" :to="to" :inverted="inverted" :dark="dark" />
+      <Btn :title="link" :to="to" :dark="inverted" />
     </footer>
   </div>
 </template>
@@ -50,6 +50,10 @@ export default {
       type: Number,
       default: null
     },
+    link: {
+      type: String,
+      default: "Mehr erfahren"
+    },
     to: {
       type: String,
       default: null
@@ -60,11 +64,7 @@ export default {
     },
     color: {
       type: String,
-      default: "light"
-    },
-    dark: {
-      type: Boolean,
-      default: false
+      default: "blue"
     }
   }
 };
@@ -81,17 +81,32 @@ export default {
   margin-bottom: var(--size-lg);
   border-radius: var(--size-lg);
 }
-.card.dark {
-  background: var(--color-bg-dark);
-}
 .card.color-red {
   color: var(--color-red);
   border: 2px solid var(--color-red);
 }
-.card.color-red-full {
+.card.color-red.inverted {
   color: var(--color-bg);
   border: 2px solid var(--color-red);
   background: var(--color-red);
+}
+.card.color-blue {
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+}
+.card.color-blue.inverted {
+  color: var(--color-bg);
+  border: 2px solid var(--color-blue);
+  background: var(--color-blue);
+}
+.card.color-green {
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+}
+.card.color-green.inverted {
+  color: var(--color-bg);
+  border: 2px solid var(--color-green);
+  background: var(--color-green);
 }
 .card-icon {
   margin-right: var(--size-md);
@@ -105,13 +120,18 @@ export default {
   font-size: 1.4em;
   color: var(--color-light);
 }
-.card.color-red h3:first-line {
+.card.color-red:not(.inverted) h3:first-line {
   color: var(--color-red);
 }
-.card.color-red-full h3 {
-  color: var(--color-bg);
+.card.color-green:not(.inverted) h3:first-line {
+  color: var(--color-green);
 }
-.card.color-red-full p {
+.card.color-blue:not(.inverted) h3:first-line {
+  color: var(--color-blue);
+}
+.card.inverted h3,
+.card.inverted p,
+.card.inverted li {
   color: var(--color-bg);
 }
 .card-content {

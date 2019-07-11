@@ -4,24 +4,16 @@
       <section class="hero-section">
         <Title headline="Mal tanzen gehen" />
         <div class="card-wrapper">
-          <div
-            class="selection"
+          <Card
             v-for="selection in selections"
             :key="selection.title"
-            :class="[ 'color-' + selection.color ]"
-          >
-            <header class="center-v">
-              <font-awesome :icon="['fa', selection.icon]" size="3x" />
-              <h3>{{ selection.title }}</h3>
-            </header>
-            <p>{{ selection.content }}</p>
-            <Btn
-              title="Mehr erfahren"
-              :to="to"
-              :inverted="selection.color == 'green-full' || selection.color == 'red-full' "
-              :dark="selection.color == 'green-full' || selection.color == 'red-full' "
-            />
-          </div>
+            :title="selection.title"
+            :color="selection.color"
+            :to="selection.to"
+            :icon="selection.icon"
+            :content="selection.content"
+            :inverted="selection.inverted"
+          />
         </div>
         <p
           class="selection-outro center-h"
@@ -33,12 +25,12 @@
 
 <script>
 import Title from "~/components/UI/Title";
-import Btn from "~/components/UI/Btn";
+import Card from "~/components/UI/Card";
 
 export default {
   components: {
     Title,
-    Btn
+    Card
   },
   data() {
     return {
@@ -64,7 +56,8 @@ export default {
           content: "Meistere unseren Parcours.",
           icon: "circle",
           to: "/",
-          color: "green-full"
+          color: "green",
+          inverted: true
         }
       ]
     };
