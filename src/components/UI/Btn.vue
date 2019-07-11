@@ -1,9 +1,7 @@
 <template>
-  <g-link
-    class="btn"
-    :class="[{inverted : inverted, dark: dark}, 'color-' + color]"
-    :to="to"
-  >{{ title }}</g-link>
+  <g-link class="btn" :class="[{inverted : inverted, dark: dark}, 'color-' + color]" :to="to">
+    <span v-html="title"></span>
+  </g-link>
 </template>
 
 <script>
