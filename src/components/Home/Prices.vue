@@ -15,8 +15,12 @@
             :link="price.link"
             :price="price.tag"
             :inverted="price.inverted"
+            :stars="price.stars"
           />
         </div>
+        <p
+          class="prices-outro center-h"
+        >Drohnenfliegen, Virtual Reality und ein aussergewöhnliches Programm.</p>
       </section>
     </div>
   </div>
@@ -39,9 +43,9 @@ export default {
           tag: 89.99,
           list: ["Schnell", "Sicher", "Arithmetisch"],
           to: "/",
-          icon: "circle",
           color: "red",
-          inverted: true
+          inverted: true,
+          stars: 3
         },
         {
           title: "Katzenhaus",
@@ -50,16 +54,18 @@ export default {
           link: "Macht die Katze froh",
           to: "/",
           color: "red",
-          inverted: true
+          inverted: true,
+          stars: 3
         },
         {
           title: "Gruppenspaß",
           tag: 189.99,
-          list: ["Familie", "Günstig", "Mehr vom Geld"],
+          list: ["Familie", "Günstig", "Mehr vom Geld", "Geht doch gut"],
           link: "Jetzt reinschnuppern",
           to: "/",
           color: "green",
-          inverted: true
+          inverted: true,
+          stars: 4
         }
       ]
     };
@@ -68,4 +74,7 @@ export default {
 </script>
 
 <style>
+.prices-outro {
+  margin-top: var(--size-lg);
+}
 </style>

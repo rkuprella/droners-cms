@@ -1,5 +1,10 @@
 <template>
   <div class="card" :class="[{inverted: inverted}, 'color-' + color ]">
+    <ul class="card-stars">
+      <li class="card-star" v-for="star in stars" :key="star">
+        <font-awesome :icon="['fa', 'star']" size="lg" class="card-star-icon" />
+      </li>
+    </ul>
     <header class="center-v">
       <font-awesome :icon="['fa', icon]" size="3x" v-if="icon" class="card-icon" />
       <h3 v-html="title"></h3>
@@ -65,6 +70,10 @@ export default {
     color: {
       type: String,
       default: "blue"
+    },
+    stars: {
+      type: Number,
+      default: 0
     }
   }
 };
@@ -147,6 +156,19 @@ export default {
   margin-top: var(--size-md);
   text-align: center;
   width: 100%;
+}
+.card-stars {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  margin: var(--size-sm) 0 var(--size-md);
+}
+.card-star {
+  list-style: none;
+}
+.card-star-icon {
+  color: var(--color-light);
 }
 
 @media screen and (min-width: 990px) {

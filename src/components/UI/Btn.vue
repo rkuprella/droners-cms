@@ -38,7 +38,7 @@ export default {
   padding: var(--size-md) var(--size-lg);
   text-decoration: none;
   border-radius: 30px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 700;
   text-align: center;
   display: flex;
