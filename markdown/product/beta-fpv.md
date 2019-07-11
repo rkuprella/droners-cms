@@ -4,8 +4,7 @@ title: Beta FPV
 category:
   - Drohnen
   - Sets
-manufacturer: ''
-slug: beta-fpv
+manufacturer: DJI
 price: 24.99
 featuredImage: /uploads/Rihanna-2.jpg
 discount:
