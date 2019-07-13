@@ -18,7 +18,8 @@
         </li>
       </ul>
       <div class="card-price" v-if="price">
-        <span v-html="price"></span> €
+        <span v-html="formatPrice(price)"></span> €
+        <div class="card-price-info" v-html="priceInfo"></div>
       </div>
     </main>
     <footer>
@@ -74,6 +75,16 @@ export default {
     stars: {
       type: Number,
       default: 0
+    },
+    priceInfo: {
+      type: String,
+      default: "Preis inkl. MwSt."
+    }
+  },
+  methods: {
+    formatPrice(value) {
+      let val = (value / 1).toFixed(2).replace(".", ",");
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
   }
 };
@@ -146,6 +157,10 @@ export default {
 .card-content {
   padding: var(--size-md) 0;
   width: 100%;
+}
+.card-price-info {
+  font-size: 0.8rem;
+  text-align: center;
 }
 .card-list {
   list-style: none;

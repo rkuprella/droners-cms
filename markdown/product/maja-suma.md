@@ -5,6 +5,7 @@ category:
   - Drohnen
 slug: maja
 price: 242
+manufacturer: BetaFPV
 featuredImage: /uploads/Rihanna4.jpg
 gallery:
   - description: miu

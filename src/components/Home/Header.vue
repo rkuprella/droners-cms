@@ -1,46 +1,71 @@
 <template>
   <div class="header hero">
     <div class="container center">
-      <div class="svg-text-wrapper center">
-        <video class="svg-text-video" autoplay playsinline muted loop preload>
-          <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
-          />
-        </video>
-        <svg class="svg-text">
-          <defs>
-            <mask id="mask" x="0" y="0" height="100%" width="100%">
-              <rect x="0" y="0" height="100%" width="100%" />
-              <text
-                class="svg-text-top"
-                x="50%"
-                y="30%"
-                fill="red"
-                text-anchor="middle"
-              >Challenge your</text>
-              <text class="svg-text-bottom" x="50%" y="85%" fill="red" text-anchor="middle">Reality</text>
-            </mask>
-          </defs>
-          <rect x="0" y="0" height="100%" width="100%" />
-        </svg>
+      <div
+        class="slider center"
+        v-for="(slide, i) in slider"
+        :key="i"
+        :class="{active : activeSlide(i)}"
+      >
+        <div class="slider-intro" v-if="activeSlide(0) && i == 0">
+          <video class="svg-text-video" autoplay playsinline muted loop preload>
+            <source
+              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+            />
+          </video>
+          <svg class="svg-text">
+            <defs>
+              <mask id="mask" x="0" y="0" height="100%" width="100%">
+                <rect x="0" y="0" height="100%" width="100%" />
+                <text
+                  class="svg-text-top"
+                  x="50%"
+                  y="30%"
+                  fill="red"
+                  text-anchor="middle"
+                >Challenge your</text>
+                <text
+                  class="svg-text-bottom"
+                  x="50%"
+                  y="85%"
+                  fill="red"
+                  text-anchor="middle"
+                >Reality</text>
+              </mask>
+            </defs>
+            <rect x="0" y="0" height="100%" width="100%" />
+          </svg>
+        </div>
+        <div class="slider-basic" v-else :class="['color-' + slide.color ]">
+          <g-image class="slider-image" :src="'/assets/static/src/assets/' + slide.image" />
+        </div>
       </div>
 
       <ul class="menu-wrapper">
         <li>
-          <button class="menu-arrow"></button>
+          <button
+            class="menu-arrow"
+            :class="{active : !activeSlide(0)}"
+            @click="setSlide(currentSlide - 1)"
+            :disabled="activeSlide(0)"
+          ></button>
         </li>
-        <li class="menu-item" v-for="item in slider" :key="item.name">
-          <button class="menu-link">
+        <li class="menu-item" v-for="(item, i) in slider" :key="i">
+          <button class="menu-link" @click="setSlide(i)">
             <g-image
               class="menu-img"
               :class="{ active : item.active }"
               :src="'/assets/static/src/assets/' + item.image"
             />
-            <!-- <div class="menu-title">{{ item.name }}</div> -->
           </button>
         </li>
         <li>
-          <button class="menu-arrow arrow-forward"></button>
+          <button
+            class="menu-arrow arrow-forward"
+            :class="{active : !activeSlide(slider.length - 1)}"
+            @click="setSlide(currentSlide + 1)"
+            :disabled="activeSlide(slider.length - 1)"
+          ></button>
         </li>
       </ul>
     </div>
@@ -51,12 +76,38 @@
 export default {
   data() {
     return {
+      sliderTimer: null,
+      currentSlide: 0,
       slider: [
-        { name: "One", image: "img/copter.png", active: true },
-        { name: "Two whats up yo", image: "img/copter.png", active: false },
-        { name: "Three", image: "img/copter.png", active: false }
+        { title: "One", image: "img/copter.png", active: true },
+        {
+          title: "Two whats up yo",
+          image: "img/imagination-1.jpg",
+          color: "blue",
+          content: "Was geht ab",
+          active: false
+        },
+        {
+          title: "Three",
+          image: "img/imagination-2.jpg",
+          color: "red",
+          content: "Was geht ab",
+          active: false
+        }
       ]
     };
+  },
+  methods: {
+    setSlide(i) {
+      for (let j = 0; j < this.slider.length; j++) {
+        this.slider[j].active = false;
+      }
+      this.slider[i].active = true;
+      this.currentSlide = i;
+    },
+    activeSlide(i) {
+      return this.slider[i].active;
+    }
   }
 };
 </script>
@@ -69,11 +120,33 @@ export default {
   padding: 150px 0;
 }
 
-/* svg-text */
-.svg-text-wrapper {
-  flex-direction: column;
+/* slider */
+.slider {
   width: 100%;
   height: 30vw;
+  display: none;
+}
+.slider.active {
+  display: block;
+}
+.slider-basic {
+  height: 100%;
+  width: 100%;
+}
+.slider-basic.color-red {
+  border: 2px solid var(--color-red);
+}
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* svg-text */
+.slider-intro {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -109,7 +182,7 @@ export default {
 /* menu */
 .menu-wrapper {
   position: absolute;
-  bottom: -100px;
+  bottom: -110px;
   left: 5%;
   display: flex;
   flex-direction: row;
@@ -125,6 +198,11 @@ export default {
   border: none;
   outline: none;
   cursor: pointer;
+  opacity: 0.1;
+  transition: opacity 0.3s ease-out;
+}
+.menu-arrow.active {
+  opacity: 1;
 }
 .arrow-forward {
   background: url("../../assets/img/chevron-right.png") 50% 50% no-repeat;
@@ -132,7 +210,8 @@ export default {
 }
 .menu-item {
   width: 20%;
-  max-width: 140px;
+  max-width: var(--size-xl);
+  height: var(--size-xl);
 }
 .menu-link {
   border: none;
@@ -144,38 +223,31 @@ export default {
 }
 .menu-img {
   width: 100%;
-  height: 32px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
 }
 .menu-img.active {
   border: 2px solid var(--color-red);
-}
-.menu-title {
-  width: 100%;
-  height: 32px;
-  color: var(--color-light);
-  text-align: center;
-  margin-top: var(--size-sm);
-}
-.menu-item:hover .menu-title {
-  color: var(--color-red);
 }
 
 @media screen and (min-width: 990px) {
   .header {
     padding: 0;
     height: 90vh;
-    min-height: 660px;
+    min-height: 760px;
   }
   .menu-wrapper {
-    bottom: 10%;
+    bottom: 8%;
     left: 0;
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .svg-text-wrapper,
+  .slider,
   .svg-text {
     height: 450px;
   }

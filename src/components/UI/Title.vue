@@ -43,8 +43,8 @@ export default {
 }
 .title-flower {
   display: flex;
-  width: 40px;
-  height: 16px;
+  width: var(--size-lg);
+  height: var(--size-md);
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -57,9 +57,7 @@ export default {
 .size-0 {
   width: 35%;
 }
-.size-1 {
-  width: 45%;
-}
+.size-1,
 .size-2 {
   width: 45%;
 }
@@ -71,11 +69,12 @@ export default {
 .color-3,
 .color-4,
 .color-5,
+.color-6,
 .color-7 {
   background: var(--color-light);
 }
 .color-6 {
-  background: var(--color-red);
+  visibility: hidden;
 }
 .title-headline {
   color: var(--color-light);

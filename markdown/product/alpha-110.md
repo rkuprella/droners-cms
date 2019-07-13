@@ -6,6 +6,7 @@ category:
 slug: alpha-110
 price: 98.99
 featuredImage: /uploads/Rihanna-2.jpg
+video: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4
 components:
   - header: Test 2
     template: Test 2

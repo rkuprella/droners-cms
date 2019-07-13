@@ -81,12 +81,10 @@ p {
   align-items:center;
   justify-content:center;
 }
-
 .center-v {
   display:flex;
   align-items:center;
 }
-
 .center-h {
   display:flex;
   justify-content:center;

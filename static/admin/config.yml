@@ -195,6 +195,7 @@ collections:
         displayFields: ["title"]
         required: false
       - {label: "Preis", name: "price", widget: "number", valueType: "float"}
+      - {label: "Video URL", name: "video", widget: "string"}
       - label: "Produktbild"
         name: "featuredImage"
         widget: "image"

@@ -1,50 +1,33 @@
 <template>
   <Layout>
-    <div class="container" style="padding-top:100px; min-height:90vh">
-      <h2 class="is-size-3 has-text-info">Shop</h2>
-      <a href="#" class="button is-info snipcart-checkout">
-        <font-awesome :icon="['fa', 'shopping-cart']" size="lg" />
-        <div class="snipcart-summary">
-          <span class="snipcart-total-items" style="margin-left:10px"></span>
-        </div>
-      </a>
+    <div class="shop hero">
+      <div class="container center-v">
+        <section class="hero-section">
+          <h2>Shop</h2>
+          <a href="#" class="snipcart-checkout">
+            <font-awesome :icon="['fa', 'shopping-cart']" size="lg" />
+            <div class="snipcart-summary">
+              <span class="snipcart-total-items" style="margin-left:10px"></span>
+            </div>
+          </a>
 
-      <div class="columns is-multiline">
-        <div class="column" v-for="product in $static.allProduct.edges" :key="product.node.slug">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-square">
-                <g-image :src="product.node.featuredImage" :alt="product.node.title" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                <h2>{{ product.node.title }}</h2>
-                <div v-show="!product.node.available" style="color:red">Out of stock</div>
-                <div v-show="product.node.category">
-                  <ul>
-                    <li v-for="(category, i) in product.node.category" :key="i">{{ category }}</li>
-                  </ul>
-                </div>
-                <div
-                  style="color:blue"
-                >{{ product.node.discount.active }} - {{ product.node.price }}</div>
-                <div>{{ addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage) }} €</div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-                <button
-                  :disabled="!product.node.available"
-                  class="button is-success snipcart-add-item"
-                  :data-item-id="product.node.id"
-                  :data-item-name="product.node.title"
-                  :data-item-image="product.node.featuredImage"
-                  :data-item-price="addDiscount(product.node.price, product.node.discount.active, product.node.discount.percentage)"
-                  :data-item-url="product.node.slug"
-                >In den Warenkorb</button>
-                <v-btn color="success">Success</v-btn>
-              </div>
-            </div>
+          <div class="card-wrapper">
+            <ShopCard
+              v-for="product in $static.allProduct.edges"
+              :key="product.node.slug"
+              :id="product.node.id"
+              :title="product.node.title"
+              :image="product.node.featuredImage"
+              :price="product.node.price"
+              :discount="product.node.discount"
+              :to="product.node.slug"
+              :video="product.node.video"
+              :categories="product.node.category"
+              :manufacturer="product.node.manufacturer"
+              :available="product.node.available"
+            />
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </Layout>
@@ -62,6 +45,7 @@ query {
         price
         available
         category
+        video
         manufacturer
         discount {
           active
@@ -76,9 +60,16 @@ query {
 </static-query>
 
 <script>
+import Title from "~/components/UI/Title";
+import ShopCard from "~/components/UI/ShopCard";
+
 export default {
   metaInfo: {
     title: "Shop"
+  },
+  components: {
+    Title,
+    ShopCard
   },
   methods: {
     addDiscount(price, active, percentage) {

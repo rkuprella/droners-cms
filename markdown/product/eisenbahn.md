@@ -5,6 +5,7 @@ category:
   - RC Cars
   - Drohnen
 slug: eisenbahn
+manufacturer: DJI
 price: 11.99
 featuredImage: /uploads/Rihanna.jpg
 discount:
