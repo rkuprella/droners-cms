@@ -18,7 +18,8 @@
         </li>
       </ul>
       <div class="card-price" v-if="price">
-        <span v-html="formatPrice(price)"></span> €
+        <span v-html="formatPrice(price)"></span>
+        <span class="card-euro">€</span>
         <div class="card-price-info" v-html="priceInfo"></div>
       </div>
     </main>
@@ -184,6 +185,10 @@ export default {
 }
 .card-star-icon {
   color: var(--color-light);
+}
+.card-euro {
+  margin-left: var(--size-sm);
+  font-size: 0.6em;
 }
 
 @media screen and (min-width: 990px) {

@@ -1,34 +1,46 @@
 <template>
-  <div class="shop-card">
-    <g-image class="shop-card-image" :src="image" :alt="title" />
+  <g-link :to="slugify(title)" class="shop-card">
+    <g-image
+      class="shop-card-image"
+      :src="image"
+      :alt="title"
+      :class="{'not-available' : !available}"
+    />
+
     <div class="shop-card-wrapper">
-      <div class="shop-card-manufacturer">{{ manufacturer }}</div>
-      <h2>{{ title }}</h2>
-      <div v-show="available" style="color:red">Out of stock</div>
-      <div v-show="categories">
-        <ul>
-          <li v-for="(category, i) in categories" :key="i">{{ category }}</li>
-        </ul>
+      <h3 class="shop-card-title">{{ title }}</h3>
+      <div v-show="!available" class="shop-card-available">Zur Zeit nicht lieferbar</div>
+      <div class="shop-card-price-wrapper">
+        <span
+          class="shop-card-price"
+          v-html="formatPrice(addDiscount(price, discount.active, discount.percentage))"
+        >
+          <span class="shop-card-euro">€</span>
+        </span>
+        <span class="shop-card-price-old" v-if="discount.active">
+          <span v-html="price"></span>
+          <span class="shop-card-euro">€</span>
+        </span>
       </div>
-      <div style="color:blue">{{ discount.active }} - {{ price }}</div>
-      <div>{{ addDiscount(price, discount.active, discount.percentage) }} €</div>
-      <button
-        :disabled="!available"
-        class="snipcart-add-item"
-        :data-item-id="id"
-        :data-item-name="title"
-        :data-item-image="image"
-        :data-item-price="addDiscount(price, discount.active, discount.percentage)"
-        :data-item-url="to"
-      >In den Warenkorb</button>
     </div>
+    <!-- <button
+      :disabled="!available"
+      class="snipcart-add-item"
+      :data-item-id="id"
+      :data-item-name="title"
+      :data-item-image="image"
+      :data-item-price="addDiscount(price, discount.active, discount.percentage)"
+      :data-item-url="to"
+    >In den Warenkorb</button>-->
+
+    <div class="shop-card-manufacturer" v-if="manufacturer" v-html="manufacturer"></div>
     <div class="shop-card-info" v-if="video">
       <video class="shop-card-video" autoplay playsinline muted loop preload>
         <source :src="video" />
       </video>
       <font-awesome :icon="['fa', 'video']" size="sm" class="shop-card-video-icon" />
     </div>
-  </div>
+  </g-link>
 </template>
 
 <script>
@@ -89,6 +101,23 @@ export default {
       return active && percentage != null
         ? ((price * (100 - percentage)) / 100).toFixed(2)
         : price.toFixed(2);
+    },
+    slugify(string) {
+      const a =
+        "àáäâãåăæąçćčđďèéěėëêęǵḧìíïîįłḿǹńňñòóöôœøṕŕřßśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;";
+      const b =
+        "aaaaaaaaacccddeeeeeeeghiiiiilmnnnnooooooprrssssttuuuuuuuuuwxyyzzz------";
+      const p = new RegExp(a.split("").join("|"), "g");
+      return string
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, "-") // Replace spaces with -
+        .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+        .replace(/&/g, "-and-") // Replace & with 'and'
+        .replace(/[^\w\-]+/g, "") // Remove all non-word characters
+        .replace(/\-\-+/g, "-") // Replace multiple - with single -
+        .replace(/^-+/, "") // Trim - from start of text
+        .replace(/-+$/, ""); // Trim - from end of text
     }
   }
 };
@@ -101,16 +130,15 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  text-decoration: none;
 }
 .shop-card-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 250px;
-  padding: var(--size-lg);
+  padding: var(--size-md) 0;
 }
 .shop-card-image {
   width: 100%;
@@ -118,7 +146,15 @@ export default {
   min-height: 160px;
   max-height: 280px;
   object-fit: cover;
-  z-index: 2;
+  z-index: 1;
+}
+.shop-card-image.not-available {
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+.shop-card-title {
+  color: white;
+  font-size: 1.1em;
 }
 .shop-card-info {
   display: none;
@@ -133,7 +169,33 @@ export default {
   color: var(--color-bg);
 }
 .shop-card-manufacturer {
-  color: grey;
+  position: absolute;
+  top: var(--size-md);
+  left: var(--size-md);
+  z-index: 2;
+  background: white;
+  padding: var(--size-sm) var(--size-md);
+  color: var(--color-bg);
+}
+.shop-card-price-wrapper {
+  width: 100%;
+}
+.shop-card-price {
+  color: white;
+  font-size: 1.5em;
+}
+.shop-card-price-old {
+  margin-left: var(--size-md);
+  color: white;
+  font-size: 1.1em;
+  text-decoration: line-through;
+}
+.shop-card-euro {
+  margin-left: var(--size-sm);
+  font-size: 0.6em;
+}
+.shop-card-available {
+  color: var(--color-red);
 }
 
 @media screen and (min-width: 990px) {
