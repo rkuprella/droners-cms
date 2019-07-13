@@ -16,6 +16,7 @@
             :price="price.tag"
             :inverted="price.inverted"
             :stars="price.stars"
+            rows="4"
           />
         </div>
         <p
@@ -52,6 +53,15 @@ export default {
           tag: 45.99,
           list: ["Klein", "Gemütlich", "Zum Rausgucken"],
           link: "Macht die Katze froh",
+          to: "/",
+          color: "red",
+          inverted: true,
+          stars: 3
+        },
+        {
+          title: "Hexenhaus",
+          tag: 129.99,
+          list: ["Schnell", "Sicher", "Arithmetisch"],
           to: "/",
           color: "red",
           inverted: true,

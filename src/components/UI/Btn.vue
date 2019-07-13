@@ -33,11 +33,11 @@ export default {
 
 <style scoped>
 .btn {
-  padding: var(--size-md) var(--size-lg);
+  padding: var(--size-sm) var(--size-md);
   text-decoration: none;
   border-radius: 30px;
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="slugify(title)" class="shop-card">
+  <g-link :to="'/shop/' + slugify(title)" class="shop-card">
     <g-image
       class="shop-card-image"
       :src="image"
@@ -21,15 +21,6 @@
         <span class="shop-card-price-old" v-if="discount.active" v-html="price"></span>
       </div>
     </div>
-    <!-- <button
-      :disabled="!available"
-      class="snipcart-add-item"
-      :data-item-id="id"
-      :data-item-name="title"
-      :data-item-image="image"
-      :data-item-price="addDiscount(price, discount.active, discount.percentage)"
-      :data-item-url="to"
-    >In den Warenkorb</button>-->
 
     <div class="shop-card-manufacturer" v-if="manufacturer" v-html="manufacturer"></div>
     <div class="shop-card-info" v-if="video">
@@ -178,6 +169,9 @@ export default {
 }
 .shop-card-price-wrapper {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 .shop-card-price {
   font-size: 1.5em;

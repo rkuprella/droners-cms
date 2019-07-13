@@ -3,7 +3,7 @@ available: true
 title: Maja Suma
 category:
   - Drohnen
-slug: maja
+slug: maja-suma
 price: 242
 manufacturer: BetaFPV
 featuredImage: /uploads/Rihanna4.jpg

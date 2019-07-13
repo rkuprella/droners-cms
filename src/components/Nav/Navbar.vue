@@ -6,7 +6,7 @@
         <div class="center-v">
           <a href="tel:+49019292938923" class="call-now">
             <font-awesome :icon="['fa', 'phone']" size="md" class="call-now-icon" />
-            <div class="call-now-number">0291 982782932</div>
+            <div class="call-now-number">0123 456789</div>
           </a>
           <ul class="topbar-item-wrapper">
             <li class="topbar-item" v-for="page in $static.topMenu.edges" :key="page.node.slug">

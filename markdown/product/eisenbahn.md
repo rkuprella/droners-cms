@@ -4,7 +4,7 @@ title: Eisenbahn mit schneller Tutut
 category:
   - RC Cars
   - Drohnen
-slug: eisenbahn
+slug: eisenbahn-mit-schneller-tutut
 manufacturer: DJI
 price: 11.99
 featuredImage: /uploads/Rihanna.jpg

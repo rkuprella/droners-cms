@@ -28,7 +28,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'markdown/product/**/*.md',
-        route: '/:slug',
+        route: '/shop/:slug',
         typeName: 'Product',
         remark: {
           // remark options

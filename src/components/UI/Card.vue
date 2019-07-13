@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="[{inverted: inverted}, 'color-' + color ]">
+  <div class="card" :class="[{inverted: inverted}, 'color-' + color, 'rows-' + rows ]">
     <ul class="card-stars">
       <li class="card-star" v-for="star in stars" :key="star">
         <font-awesome :icon="['fa', 'star']" size="lg" class="card-star-icon" />
@@ -80,6 +80,10 @@ export default {
     priceInfo: {
       type: String,
       default: "Preis inkl. MwSt."
+    },
+    rows: {
+      type: Number,
+      default: 3
     }
   },
   methods: {
@@ -93,7 +97,7 @@ export default {
 
 <style>
 .card {
-  padding: var(--size-lg);
+  padding: var(--size-md);
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -191,9 +195,28 @@ export default {
   font-size: 0.6em;
 }
 
+@media screen and (min-width: 540px) {
+  .card.rows-4,
+  .card.rows-6 {
+    width: 49%;
+  }
+}
+
 @media screen and (min-width: 990px) {
-  .card {
+  .card.rows-6 {
+    width: 15%;
+  }
+  .card.rows-4 {
+    width: 24%;
+  }
+  .card.rows-3 {
     width: 32%;
+  }
+  .card.rows-2 {
+    width: 49%;
+  }
+  .card.rows-1 {
+    width: 100%;
   }
 }
 </style>
