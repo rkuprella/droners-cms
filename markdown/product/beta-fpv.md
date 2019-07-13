@@ -4,10 +4,8 @@ title: Beta FPV
 category:
   - Drohnen
   - Sets
-<<<<<<< HEAD
 manufacturer: BetaFPV
 slug: beta-fpv
-=======
 price: 24.99
 featuredImage: /uploads/Rihanna-2.jpg
 discount:
