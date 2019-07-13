@@ -90,13 +90,16 @@ query {
   color: var(--color-light);
   text-decoration: none;
   width: 200px;
-  border-radius: 30px;
 }
 .mobile-link:not(:last-of-type) {
   margin-bottom: var(--size-sm);
 }
 .mobile-link:active {
   background: var(--color-bg-accent);
+}
+.mobile-link.active {
+  padding-left: calc(var(--size-md) - 2px);
+  border-left: 2px solid var(--color-blue);
 }
 .btn-booking:active {
   background: var(--color-blue);

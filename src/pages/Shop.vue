@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :shop="true">
     <Header />
     <Shopping />
   </Layout>

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Source+Sans+Pro:300,400,700');
 
 :root {
+  --color-white: #eee;
+  --color-white-accent: #e8e8e8;
   --color-light: #fff1d8;
   --color-light-accent: #f0dab3;
   --color-blue: #42b6ea;

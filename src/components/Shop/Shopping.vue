@@ -3,12 +3,6 @@
     <div class="container center-v">
       <section class="hero-section">
         <h2>Shop</h2>
-        <a href="#" class="snipcart-checkout">
-          <font-awesome :icon="['fa', 'shopping-cart']" size="lg" />
-          <div class="snipcart-summary">
-            <span class="snipcart-total-items" style="margin-left:10px"></span>
-          </div>
-        </a>
 
         <div class="card-wrapper">
           <ShopCard

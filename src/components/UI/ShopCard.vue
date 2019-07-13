@@ -11,16 +11,14 @@
       <h3 class="shop-card-title">{{ title }}</h3>
       <div v-show="!available" class="shop-card-available">Zur Zeit nicht lieferbar</div>
       <div class="shop-card-price-wrapper">
+        <span class="shop-card-discount" v-if="discount.active">
+          <span v-html="discount.percentage" class="shop-card-discount-percent"></span>
+        </span>
         <span
           class="shop-card-price"
           v-html="formatPrice(addDiscount(price, discount.active, discount.percentage))"
-        >
-          <span class="shop-card-euro">€</span>
-        </span>
-        <span class="shop-card-price-old" v-if="discount.active">
-          <span v-html="price"></span>
-          <span class="shop-card-euro">€</span>
-        </span>
+        ></span>
+        <span class="shop-card-price-old" v-if="discount.active" v-html="price"></span>
       </div>
     </div>
     <!-- <button
@@ -131,6 +129,7 @@ export default {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  color: var(--color-bg);
 }
 .shop-card-wrapper {
   display: flex;
@@ -153,7 +152,7 @@ export default {
   filter: grayscale(100%);
 }
 .shop-card-title {
-  color: white;
+  color: var(--color-bg);
   font-size: 1.1em;
 }
 .shop-card-info {
@@ -173,7 +172,7 @@ export default {
   top: var(--size-md);
   left: var(--size-md);
   z-index: 2;
-  background: white;
+  background: var(--color-blue);
   padding: var(--size-sm) var(--size-md);
   color: var(--color-bg);
 }
@@ -181,21 +180,37 @@ export default {
   width: 100%;
 }
 .shop-card-price {
-  color: white;
   font-size: 1.5em;
 }
 .shop-card-price-old {
   margin-left: var(--size-md);
-  color: white;
   font-size: 1.1em;
+  color: var(--color-red);
   text-decoration: line-through;
 }
-.shop-card-euro {
-  margin-left: var(--size-sm);
+.shop-card-price::after,
+.shop-card-price-old::after {
+  content: "€";
+  margin-left: var(--size-xs);
   font-size: 0.6em;
 }
 .shop-card-available {
   color: var(--color-red);
+}
+.shop-card-discount {
+  padding: var(--size-xs) var(--size-sm);
+  background: var(--color-red);
+  color: var(--color-light);
+  font-size: 1.1em;
+  margin-right: var(--size-sm);
+  border-radius: var(--size-xl);
+}
+.shop-card-discount-percent::before {
+  content: "-";
+}
+.shop-card-discount-percent::after {
+  content: "%";
+  margin-left: var(--size-xs);
 }
 
 @media screen and (min-width: 990px) {
