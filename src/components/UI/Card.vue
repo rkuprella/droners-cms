@@ -105,6 +105,10 @@ export default {
   justify-content: space-between;
   margin-bottom: var(--size-lg);
   border-radius: var(--size-lg);
+  transition: transform 0.25s ease-out;
+}
+.card:hover {
+  transform: translateY(-4px);
 }
 .card.color-red {
   color: var(--color-red);
