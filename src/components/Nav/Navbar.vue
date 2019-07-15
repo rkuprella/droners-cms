@@ -3,13 +3,13 @@
     <nav class="topbar" v-if="topbar">
       <div class="nav-wrapper container center-v">
         <div class="openings">
-          <font-awesome :icon="['fa', 'clock']" size="md" class="openings-icon" />
           <span
             class="openings-drawer"
             @click="showOpenings = !showOpenings"
             @mouseover="showOpenings = true"
             @mouseleave="showOpenings = false"
           >
+            <font-awesome :icon="['fa', 'clock']" size="md" class="openings-icon" />
             <span>FR: 15-22 Uhr</span>
             <font-awesome
               :icon="['fa', 'chevron-up']"
@@ -21,13 +21,13 @@
           <span class="open-now">Jetzt geöffnet</span>
         </div>
         <div class="openings-details" v-if="showOpenings">
-          <ul class="openings-details-list">
-            <li class="openings-details-title">Unsere Öffnungszeiten</li>
-            <li>Mo-Mi: geschlossen</li>
-            <li>Do: 16-22 Uhr</li>
-            <li class="active">Fr: 15-22 Uhr</li>
-            <li>Sa: 11-22 Uhr</li>
-            <li>So &amp; Feiertags: 11-21 Uhr</li>
+          <ul>
+            <li class="openings-details-item openings-details-title">Unsere Öffnungszeiten</li>
+            <li class="openings-details-item">Mo-Mi: geschlossen</li>
+            <li class="openings-details-item">Do: 16-22 Uhr</li>
+            <li class="openings-details-item active">Fr: 15-22 Uhr</li>
+            <li class="openings-details-item">Sa: 11-22 Uhr</li>
+            <li class="openings-details-item">So &amp; Feiertags: 11-21 Uhr</li>
           </ul>
         </div>
         <div class="center-v">
@@ -210,24 +210,30 @@ export default {
 }
 .openings-details {
   padding: var(--size-lg);
-  background: var(--color-blue-accent);
-  color: var(--color-blue-dark);
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-blue);
+  border-top: none;
+  color: var(--color-blue);
   position: absolute;
   top: var(--size-xl);
   left: 0;
   z-index: 9;
 }
-.openings-details-list {
+.openings-details-item {
   list-style: none;
+  padding: 0 var(--size-sm);
 }
-.openings-details-list li.active {
+.openings-details-item.active {
   font-weight: 700;
+  background: var(--color-blue);
+  color: var(--color-bg);
 }
 .openings-details-title {
   font-weight: 700;
   font-size: 1.2em;
   color: var(--color-light);
   margin-bottom: var(--size-md);
+  padding: 0;
 }
 
 /* navbar */
