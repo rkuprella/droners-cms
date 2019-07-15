@@ -33,11 +33,11 @@ export default {
 
 <style scoped>
 .btn {
-  padding: var(--size-sm) var(--size-md);
+  padding: 8px 14px;
   text-decoration: none;
   border-radius: 30px;
-  font-size: 1.1em;
-  font-weight: 400;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-align: center;
   display: flex;
   align-items: center;
@@ -46,6 +46,7 @@ export default {
   color: var(--color-bg);
   white-space: nowrap;
   margin: var(--size-sm) 0;
+  border: 2px solid transparent;
 }
 .btn:not(:last-of-type) {
   margin-right: var(--size-md);
@@ -135,5 +136,12 @@ export default {
 .btn.dark.inverted:active {
   background: var(--color-bg);
   color: var(--color-light);
+}
+
+@media screen and (min-width: 990px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
 }
 </style>

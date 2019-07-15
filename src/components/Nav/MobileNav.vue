@@ -2,7 +2,21 @@
   <div class="mobile-nav">
     <nav class="mobile-wrapper center-v">
       <g-link class="mobile-brand" to="/">
-        <g-image class="brand-logo" src="~/assets/img/logo.png" :alt="$static.metaData.siteName" />
+        <g-image class="brand-icon" src="~/assets/img/droners-icon.svg" alt="DRONERS Swoosh Icon" />
+        <g-image
+          class="brand-logo"
+          src="~/assets/img/droners-text.svg"
+          v-if="shop"
+          alt="DRONERS Logo"
+        />
+        <g-image
+          class="brand-logo"
+          src="~/assets/img/droners-text-light.svg"
+          width="185"
+          alt="DRONERS Logo"
+          color="white"
+          v-else
+        />
       </g-link>
       <g-link
         class="mobile-link"

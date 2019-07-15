@@ -246,10 +246,14 @@ export default {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   .slider,
   .svg-text {
     height: 450px;
+  }
+  .slider-basic {
+    margin-top: 25px;
+    height: 80%;
   }
   .svg-text-top {
     font-size: 149px;

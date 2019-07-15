@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Source+Sans+Pro:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Source+Sans+Pro:300,400,700|Titillium+Web:900');
 
 :root {
   --color-white: #eee;
@@ -48,10 +48,17 @@ time, mark, audio, video, button {
 }
 p {
   color:var(--color-light);
-  line-height:1.6em;
+  line-height:1.4em;
   font-weight:300;
-  font-size:1.15em;
+  font-size:1em;
   text-align:justify;
+}
+.brand-logo {
+  margin-left:9px;
+  width:152px;
+}
+.brand-icon {
+  width:42px;
 }
 .container {
   margin:0 var(--size-lg);
@@ -93,12 +100,18 @@ p {
 }
 
 @media screen and (min-width: 990px) {
+  .brand-logo {
+    margin-left:12px;
+    width:180px;
+  }
+  .brand-icon {
+    width:52px;
+  }
   .container {
     width:80%;
     max-width:1200px;
     margin:0 auto;
   }
-
   .hero {
     /* height:100vh;
     min-height:640px; */

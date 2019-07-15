@@ -7,7 +7,7 @@
     </ul>
     <header class="center-v">
       <font-awesome :icon="['fa', icon]" size="3x" v-if="icon" class="card-icon" />
-      <h3 v-html="title"></h3>
+      <h4 v-html="title" />
     </header>
     <main class="card-content">
       <p v-if="content" v-html="content"></p>
@@ -97,7 +97,7 @@ export default {
 
 <style>
 .card {
-  padding: var(--size-md);
+  padding: var(--size-md) calc(var(--size-md) + 4px);
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -143,22 +143,22 @@ export default {
 .card-check {
   margin-right: var(--size-sm);
 }
-.card h3 {
+.card h4 {
   font-weight: 700;
   font-family: "Quicksand", sans-serif;
   font-size: 1.4em;
   color: var(--color-light);
 }
-.card.color-red:not(.inverted) h3:first-line {
+.card.color-red:not(.inverted) h4:first-line {
   color: var(--color-red);
 }
-.card.color-green:not(.inverted) h3:first-line {
+.card.color-green:not(.inverted) h4:first-line {
   color: var(--color-green);
 }
-.card.color-blue:not(.inverted) h3:first-line {
+.card.color-blue:not(.inverted) h4:first-line {
   color: var(--color-blue);
 }
-.card.inverted h3,
+.card.inverted h4,
 .card.inverted p,
 .card.inverted li {
   color: var(--color-bg);

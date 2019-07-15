@@ -21,7 +21,7 @@ export default {};
   right: var(--size-lg);
   top: 16px;
   z-index: 5;
-  right: 20px;
+  right: 78px;
   justify-content: center;
   align-items: center;
 }
@@ -34,7 +34,7 @@ export default {};
   border-radius: 50%;
 }
 .snipcart-checkout:active {
-  background: var(--color-white-accent);
+  background: rgba(0, 0, 0, 0.05);
 }
 .snipcart-summary {
   position: absolute;
@@ -53,6 +53,8 @@ export default {};
 @media screen and (min-width: 990px) {
   .shopping-cart {
     position: fixed;
+    top: 36px;
+    right: 20px;
   }
 }
 </style>

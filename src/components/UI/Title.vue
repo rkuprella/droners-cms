@@ -7,7 +7,12 @@
         :class="['size-' + flower.size, 'color-' + flower.color]"
       ></span>
     </div>
-    <div class="title-headline">{{ headline }}</div>
+    <h1 class="title-headline" v-if="level == 1" v-html="headline" />
+    <h2 class="title-headline" v-if="level == 2" v-html="headline" />
+    <h3 class="title-headline" v-if="level == 3" v-html="headline" />
+    <h4 class="title-headline" v-if="level == 4" v-html="headline" />
+    <h5 class="title-headline" v-if="level == 5" v-html="headline" />
+    <h6 class="title-headline" v-if="level == 6" v-html="headline" />
   </div>
 </template>
 
@@ -17,6 +22,10 @@ export default {
     headline: {
       type: String,
       required: true
+    },
+    level: {
+      type: Number,
+      default: 3
     }
   },
   data() {
@@ -72,9 +81,6 @@ export default {
 .color-6,
 .color-7 {
   background: var(--color-light);
-}
-.color-6 {
-  visibility: hidden;
 }
 .title-headline {
   color: var(--color-light);

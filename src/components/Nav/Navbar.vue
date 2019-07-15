@@ -6,7 +6,7 @@
         <div class="center-v">
           <a href="tel:+49019292938923" class="call-now">
             <font-awesome :icon="['fa', 'phone']" size="md" class="call-now-icon" />
-            <div class="call-now-number">0123 456789</div>
+            <div class="call-now-number">+49 (0123) 456789</div>
           </a>
           <ul class="topbar-item-wrapper">
             <li class="topbar-item" v-for="page in $static.topMenu.edges" :key="page.node.slug">
@@ -19,8 +19,25 @@
     <nav class="navbar">
       <div class="nav-wrapper container center-v">
         <g-link to="/">
-          <g-image class="brand-logo" src="~/assets/img/logo-dark.png" v-if="shop" />
-          <g-image class="brand-logo" src="~/assets/img/logo.png" v-else />
+          <g-image
+            class="brand-icon"
+            src="~/assets/img/droners-icon.svg"
+            alt="DRONERS Swoosh Icon"
+          />
+          <g-image
+            class="brand-logo"
+            src="~/assets/img/droners-text.svg"
+            alt="DRONERS Logo"
+            v-if="shop"
+          />
+          <g-image
+            class="brand-logo"
+            src="~/assets/img/droners-text-light.svg"
+            width="185"
+            alt="DRONERS Logo"
+            color="white"
+            v-else
+          />
         </g-link>
         <div class="center-v">
           <g-link
@@ -43,7 +60,7 @@
 </template>
 
 <static-query>
-query  {
+query {
 
   mainMenu: allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "main" }}) {
     edges {
@@ -127,10 +144,15 @@ export default {
 }
 .call-now {
   text-decoration: none;
-  color: var(--color-blue);
-  background: var(--color-bg);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-bg);
+  opacity: 0.8;
   border-radius: 30px;
   padding: var(--size-sm) var(--size-md);
+}
+.call-now:hover {
+  opacity: 1;
 }
 .call-now-icon {
   transform: rotate(100deg);
@@ -168,7 +190,6 @@ export default {
   border: 2px solid var(--color-blue);
   padding: var(--size-sm) var(--size-md);
   border-radius: 30px;
-  font-size: 1.2em;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -188,22 +209,19 @@ export default {
   outline: none;
   color: var(--color-blue);
   cursor: pointer;
-  z-index: 10;
+  z-index: 11;
   border-radius: 50%;
 }
 .btn-menu:active {
-  background: var(--color-bg-accent);
-}
-.nav.shop .btn-menu:active {
-  background: var(--color-white-accent);
-}
-.nav.shop .btn-menu {
-  margin-right: var(--size-xl);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (min-width: 990px) {
   .btn-menu {
     display: none;
+  }
+  .navbar {
+    height: 120px;
   }
   .navbar-link {
     display: inline;
