@@ -2,7 +2,34 @@
   <div class="nav" :class="{shop : shop}">
     <nav class="topbar" v-if="topbar">
       <div class="nav-wrapper container center-v">
-        <div>Open now</div>
+        <div class="openings">
+          <font-awesome :icon="['fa', 'clock']" size="md" class="openings-icon" />
+          <span
+            class="openings-drawer"
+            @click="showOpenings = !showOpenings"
+            @mouseover="showOpenings = true"
+            @mouseleave="showOpenings = false"
+          >
+            <span>FR: 15-22 Uhr</span>
+            <font-awesome
+              :icon="['fa', 'chevron-up']"
+              size="md"
+              class="openings-chevron"
+              :class="{active : showOpenings}"
+            />
+          </span>
+          <span class="open-now">Jetzt geöffnet</span>
+        </div>
+        <div class="openings-details" v-if="showOpenings">
+          <ul class="openings-details-list">
+            <li class="openings-details-title">Unsere Öffnungszeiten</li>
+            <li>Mo-Mi: geschlossen</li>
+            <li>Do: 16-22 Uhr</li>
+            <li class="active">Fr: 15-22 Uhr</li>
+            <li>Sa: 11-22 Uhr</li>
+            <li>So &amp; Feiertags: 11-21 Uhr</li>
+          </ul>
+        </div>
         <div class="center-v">
           <a href="tel:+49019292938923" class="call-now">
             <font-awesome :icon="['fa', 'phone']" size="md" class="call-now-icon" />
@@ -104,7 +131,8 @@ export default {
   },
   data() {
     return {
-      mobile: false
+      mobile: false,
+      showOpenings: false
     };
   }
 };
@@ -122,7 +150,6 @@ export default {
 .topbar {
   height: var(--size-xl);
   background: var(--color-blue);
-  font-size: 0.8em;
 }
 .topbar-item-wrapper {
   display: none;
@@ -140,26 +167,67 @@ export default {
 .topbar-link {
   padding: var(--size-xs) var(--size-sm);
   text-decoration: none;
-  color: var(--color-bg);
+  color: var(--color-blue-dark);
 }
 .call-now {
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
-  color: var(--color-bg);
-  opacity: 0.8;
+  color: var(--color-blue-dark);
   border-radius: 30px;
   padding: var(--size-sm) var(--size-md);
-}
-.call-now:hover {
-  opacity: 1;
-}
-.call-now-icon {
-  transform: rotate(100deg);
 }
 .call-now-number {
   margin-left: var(--size-sm);
   display: none;
+}
+.openings {
+  font-weight: 700;
+  color: var(--color-blue-dark);
+}
+.openings-drawer {
+  cursor: pointer;
+  padding: var(--size-md) 0;
+}
+.open-now {
+  padding: var(--size-sm) var(--size-md);
+  font-size: 0.75em;
+  background: var(--color-bg);
+  margin-left: var(--size-md);
+  border-radius: 30px;
+  color: var(--color-green);
+}
+.openings-icon {
+  margin-right: var(--size-sm);
+}
+.openings-chevron {
+  margin-left: var(--size-md);
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+}
+.openings-chevron.active {
+  transform: rotate(360deg);
+}
+.openings-details {
+  padding: var(--size-lg);
+  background: var(--color-blue-accent);
+  color: var(--color-blue-dark);
+  position: absolute;
+  top: var(--size-xl);
+  left: 0;
+  z-index: 9;
+}
+.openings-details-list {
+  list-style: none;
+}
+.openings-details-list li.active {
+  font-weight: 700;
+}
+.openings-details-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--color-light);
+  margin-bottom: var(--size-md);
 }
 
 /* navbar */

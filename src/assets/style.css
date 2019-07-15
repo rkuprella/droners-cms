@@ -7,6 +7,7 @@
   --color-light-accent: #f0dab3;
   --color-blue: #42b6ea;
   --color-blue-accent: #65c6f2;
+  --color-blue-dark: #236785;
   --color-green: #65e6b4;
   --color-green-accent: #8bf1c9;
   --color-red:#ff8f80;
@@ -54,11 +55,11 @@ p {
   text-align:justify;
 }
 .brand-logo {
-  margin-left:11px;
-  width:152px;
+  margin-left:10px;
+  width:132px;
 }
 .brand-icon {
-  width:42px;
+  width:40px;
 }
 .container {
   margin:0 var(--size-lg);

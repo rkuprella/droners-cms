@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheck, faClock, faEnvelope, faMobile, faMapMarkerAlt, faPhone, faShoppingCart, faCircle, faBars, faStar, faVideo, faMobileAlt, faCar, faSubway } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faClock, faEnvelope, faMobile, faMapMarkerAlt, faPhone, faShoppingCart, faCircle, faBars, faStar, faVideo, faMobileAlt, faCar, faSubway, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faCheck, faClock, faEnvelope, faMobile, faMapMarkerAlt, faPhone, faFacebookF, faTwitter, faYoutube, faInstagram, faShoppingCart, faCircle, faBars, faStar, faVideo, faMobileAlt, faCar, faSubway)
+library.add(faCheck, faClock, faEnvelope, faMobile, faMapMarkerAlt, faPhone, faFacebookF, faTwitter, faYoutube, faInstagram, faShoppingCart, faCircle, faBars, faStar, faVideo, faMobileAlt, faCar, faSubway, faChevronUp)
 
 export default function (Vue) {
   Vue.component('font-awesome', FontAwesomeIcon)
