@@ -38,7 +38,7 @@
                 :class="{ active : currentTile == 2}"
               >
                 <font-awesome :icon="['fa', 'subway']" size="3x" class="map-tile-icon" />
-                <span class="map-tile-text" v-if="currentTile == 2">Mit öffentlichen Verkehrsmitteln</span>
+                <span class="map-tile-text" v-if="currentTile == 2">Mit Bus und Bahn</span>
               </li>
             </ul>
             <div class="map-tile-content" v-if="currentTile == 1">
@@ -105,7 +105,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: var(--size-md);
+  margin-top: var(--size-lg);
 }
 .map-tile {
   margin-top: var(--size-xl);
@@ -115,7 +115,7 @@ export default {
 .map-tile-item {
   cursor: pointer;
   border-bottom: 2px solid var(--color-light);
-  padding: var(--size-sm) var(--size-md) 0;
+  padding: var(--size-md) var(--size-md) 0;
   display: flex;
   align-items: center;
 }
@@ -124,7 +124,7 @@ export default {
   border-bottom: none;
 }
 .map-tile-icon {
-  opacity: 0.4;
+  opacity: 0.25;
 }
 .map-tile-item.active .map-tile-icon {
   opacity: 1;
