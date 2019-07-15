@@ -54,7 +54,7 @@ p {
   text-align:justify;
 }
 .brand-logo {
-  margin-left:9px;
+  margin-left:11px;
   width:152px;
 }
 .brand-icon {
@@ -101,7 +101,7 @@ p {
 
 @media screen and (min-width: 990px) {
   .brand-logo {
-    margin-left:12px;
+    margin-left:15px;
     width:180px;
   }
   .brand-icon {
@@ -113,8 +113,6 @@ p {
     margin:0 auto;
   }
   .hero {
-    /* height:100vh;
-    min-height:640px; */
     padding:140px 0;
   }
   .hero-wrapper {

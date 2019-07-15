@@ -52,7 +52,8 @@ export default {
     width: auto;
   }
   .imagination-image {
-    max-height: 100%;
+    min-height: 400px;
+    max-height: 70vh;
   }
 }
 </style>
