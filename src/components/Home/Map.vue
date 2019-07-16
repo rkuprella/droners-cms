@@ -72,16 +72,16 @@ export default {
 </script>
 
 <style>
-.map {
-}
 .map-content {
   padding: var(--size-xl) 0;
   align-items: flex-start;
+  flex-direction: column-reverse;
 }
 .map-title {
   color: var(--color-light);
   font-size: 2rem;
   text-align: center;
+  margin-top: var(--size-xl);
 }
 .map-links {
   color: var(--color-light);
@@ -117,6 +117,9 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
+  .map-content {
+    flex-direction: row;
+  }
   .map-divider {
     display: block;
   }
@@ -125,7 +128,7 @@ export default {
     flex-direction: row;
     margin-top: 0;
   }
-  .map-links a {
+  .map-title {
     margin: 0;
   }
   .map-booking {

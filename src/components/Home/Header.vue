@@ -36,7 +36,7 @@
             <rect x="0" y="0" height="100%" width="100%" />
           </svg>
         </div>
-        <div class="slider-basic" v-else :class="['color-' + slide.color ]">
+        <div class="slider-basic" v-else>
           <g-image class="slider-image" :src="'/assets/static/src/assets/' + slide.image" />
         </div>
       </div>
@@ -51,13 +51,7 @@
           ></button>
         </li>
         <li class="menu-item" v-for="(item, i) in slider" :key="i">
-          <button class="menu-link" @click="setSlide(i)">
-            <g-image
-              class="menu-img"
-              :class="{ active : item.active }"
-              :src="'/assets/static/src/assets/' + item.image"
-            />
-          </button>
+          <button class="menu-link" @click="setSlide(i)" :class="{ active : item.active }"></button>
         </li>
         <li>
           <button
@@ -83,14 +77,12 @@ export default {
         {
           title: "Two whats up yo",
           image: "img/imagination-1.jpg",
-          color: "blue",
           content: "Was geht ab",
           active: false
         },
         {
           title: "Three",
           image: "img/imagination-2.jpg",
-          color: "red",
           content: "Was geht ab",
           active: false
         }
@@ -132,9 +124,6 @@ export default {
 .slider-basic {
   height: 100%;
   width: 100%;
-}
-.slider-basic.color-red {
-  border: 2px solid var(--color-red);
 }
 .slider-image {
   width: 100%;
@@ -209,28 +198,22 @@ export default {
   margin-right: 0;
 }
 .menu-item {
-  width: 20%;
-  max-width: var(--size-xl);
+  width: var(--size-xl);
   height: var(--size-xl);
 }
 .menu-link {
   border: none;
   outline: none;
-  background: transparent;
+  background: var(--color-bg-accent);
   cursor: pointer;
   width: 100%;
   height: 100%;
-}
-.menu-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid transparent;
 }
-.menu-img.active {
-  border: 2px solid var(--color-red);
+.menu-link.active {
+  border: 2px solid var(--color-light);
 }
 
 @media screen and (min-width: 990px) {

@@ -36,7 +36,6 @@ export default {
 
 <style>
 .tabs-menu {
-  margin-top: var(--size-xl);
   list-style: none;
   color: var(--color-light);
 }
@@ -66,11 +65,5 @@ export default {
 .tabs-content {
   margin-top: var(--size-lg);
   color: var(--color-light);
-}
-
-@media screen and (min-width: 990px) {
-  .tabs-menu {
-    margin: 0;
-  }
 }
 </style>
