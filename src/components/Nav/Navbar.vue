@@ -44,27 +44,7 @@
     </nav>
     <nav class="navbar">
       <div class="nav-wrapper container center-v">
-        <g-link to="/">
-          <g-image
-            class="brand-icon"
-            src="~/assets/img/droners-icon.svg"
-            alt="DRONERS Swoosh Icon"
-          />
-          <g-image
-            class="brand-logo"
-            src="~/assets/img/droners-text.svg"
-            alt="DRONERS Logo"
-            v-if="shop"
-          />
-          <g-image
-            class="brand-logo"
-            src="~/assets/img/droners-text-light.svg"
-            width="185"
-            alt="DRONERS Logo"
-            color="white"
-            v-else
-          />
-        </g-link>
+        <Logo :shop="shop" />
         <div class="center-v">
           <g-link
             class="navbar-link"
@@ -113,10 +93,12 @@ query {
 
 <script>
 import MobileNav from "~/components/Nav/MobileNav";
+import Logo from "~/components/UI/Logo";
 
 export default {
   components: {
-    MobileNav
+    MobileNav,
+    Logo
   },
   props: {
     topbar: {
@@ -162,6 +144,7 @@ export default {
 .topbar-item:not(:last-of-type)::after {
   content: "|";
   margin: 0 var(--size-xs);
+  color: var(--color-blue-dark);
 }
 .topbar-link {
   padding: var(--size-xs) var(--size-sm);
@@ -198,6 +181,7 @@ export default {
   margin-left: var(--size-md);
   border-radius: 30px;
   color: var(--color-green);
+  display: none;
 }
 .openings-icon {
   margin-right: var(--size-sm);
@@ -290,6 +274,12 @@ export default {
 }
 .btn-menu:active {
   background: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 370px) {
+  .open-now {
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 990px) {

@@ -2,7 +2,7 @@
   <div class="map hero">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Kontakt &amp; Anfahrt" level="2" />
+        <Title headline="Kontakt und Anfahrt" level="2" />
         <div class="hero-content center-v">
           <GMap />
         </div>

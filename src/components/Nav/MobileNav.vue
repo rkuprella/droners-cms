@@ -1,23 +1,7 @@
 <template>
   <div class="mobile-nav">
     <nav class="mobile-wrapper center-v">
-      <g-link class="mobile-brand" to="/">
-        <g-image class="brand-icon" src="~/assets/img/droners-icon.svg" alt="DRONERS Swoosh Icon" />
-        <g-image
-          class="brand-logo"
-          src="~/assets/img/droners-text.svg"
-          v-if="shop"
-          alt="DRONERS Logo"
-        />
-        <g-image
-          class="brand-logo"
-          src="~/assets/img/droners-text-light.svg"
-          width="185"
-          alt="DRONERS Logo"
-          color="white"
-          v-else
-        />
-      </g-link>
+      <Logo class="mobile-brand" />
       <g-link
         class="mobile-link"
         v-for="page in $static.mainMenu.edges"
@@ -70,6 +54,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+import Logo from "~/components/UI/Logo";
+
+export default {
+  components: {
+    Logo
+  }
+};
+</script>
 
 <style>
 .mobile-nav {

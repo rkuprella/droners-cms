@@ -2,9 +2,8 @@
   <div class="outro hero">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Unsere Partner" level="2" />
-        <div class="hero-content center-v"></div>
-        <div class="hero-content center-v">
+        <Title headline="Presse und Partner" level="2" />
+        <div class="hero-content center">
           <div class="lasermaxx-wrapper">
             <a href="https://www.lasermaxx.info/" class="lasermaxx">
               <span class="lasermaxx-title">Erlebt Lasertag am Standort</span>
@@ -20,6 +19,7 @@
             <div class="laser-beam laser-blue"></div>
             <div class="laser-beam laser-green"></div>
           </div>
+          <g-image src="~/assets/img/press.png" class="press-image" />
         </div>
       </section>
     </div>
@@ -59,16 +59,20 @@ export default {
   text-decoration: none;
   z-index: 4;
 }
+.lasermaxx-title {
+  margin-left: var(--size-md);
+}
 .lasermaxx-logo {
   width: 30vw;
   max-width: 200px;
+  margin: 0 var(--size-md);
 }
 .lasermaxx-icon {
   transition: transform 0.15s ease-out;
-  transform-origin: right;
+  margin-right: var(--size-md);
 }
 .lasermaxx:hover .lasermaxx-icon {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 /* laser */
@@ -114,6 +118,10 @@ export default {
   object-fit: cover;
   object-position: bottom;
   max-height: 450px;
+}
+.press-image {
+  margin-top: var(--size-xl);
+  max-width: 100%;
 }
 
 @keyframes laser {
