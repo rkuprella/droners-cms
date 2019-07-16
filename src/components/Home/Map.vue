@@ -73,7 +73,7 @@ export default {
 
 <style>
 .map-content {
-  padding: var(--size-xl) 0;
+  padding: var(--size-xl) 0 0;
   align-items: flex-start;
   flex-direction: column-reverse;
 }

@@ -9,9 +9,7 @@
       >
         <div class="slider-intro" v-if="activeSlide(0) && i == 0">
           <video class="svg-text-video" autoplay playsinline muted loop preload>
-            <source
-              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
-            />
+            <source src="../../assets/video/Racing.mp4" />
           </video>
           <svg class="svg-text">
             <defs>
