@@ -6,6 +6,7 @@
     <Imagination />
     <Prices />
     <Map />
+    <Outro />
   </Layout>
 </template>
 
@@ -16,6 +17,7 @@ import Selection from "~/components/Home/Selection";
 import Imagination from "~/components/Home/Imagination";
 import Prices from "~/components/Home/Prices";
 import Map from "~/components/Home/Map";
+import Outro from "~/components/Home/Outro";
 
 export default {
   components: {
@@ -24,7 +26,8 @@ export default {
     Selection,
     Imagination,
     Prices,
-    Map
+    Map,
+    Outro
   },
   metaInfo: {
     title: "DRONERS"

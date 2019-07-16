@@ -23,30 +23,7 @@
             </div>
           </div>
           <div class="hero-wrapper">
-            <ul class="map-tile center-v">
-              <li
-                class="map-tile-item"
-                @click="currentTile = 1"
-                :class="{ active : currentTile == 1}"
-              >
-                <font-awesome :icon="['fa', 'car']" size="3x" class="map-tile-icon" />
-                <span class="map-tile-text" v-if="currentTile == 1">Mit dem Auto</span>
-              </li>
-              <li
-                class="map-tile-item"
-                @click="currentTile = 2"
-                :class="{ active : currentTile == 2}"
-              >
-                <font-awesome :icon="['fa', 'subway']" size="3x" class="map-tile-icon" />
-                <span class="map-tile-text" v-if="currentTile == 2">Mit Bus und Bahn</span>
-              </li>
-            </ul>
-            <div class="map-tile-content" v-if="currentTile == 1">
-              <p>Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt optio, asperiores delectus voluptatem nisi id temporibus quod amet perferendis.</p>
-            </div>
-            <div class="map-tile-content" v-if="currentTile == 2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt quisquam totam qui optio.</p>
-            </div>
+            <Tabs :tabs="tabs" />
           </div>
         </div>
       </section>
@@ -58,16 +35,37 @@
 import Title from "~/components/UI/Title";
 import Btn from "~/components/UI/Btn";
 import GMap from "~/components/UI/GMap";
+import Tabs from "~/components/UI/Tabs";
 
 export default {
   components: {
     Title,
     Btn,
-    GMap
+    GMap,
+    Tabs
   },
   data() {
     return {
-      currentTile: 1
+      tabs: [
+        {
+          title: "Mit dem Auto",
+          icon: "car",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt quisquam totam qui optio."
+        },
+        {
+          title: "Mit der Bahn",
+          icon: "subway",
+          content:
+            "Dolor sit amet consectetur adipisicing elit. Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt quisquam totam qui optio."
+        },
+        {
+          title: "Mit dem Volocopter",
+          icon: "helicopter",
+          content:
+            "Ipsum dolor sit amet consectetur adipisicing elit. Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt quisquam totam qui optio. Quasi, quisquam totam qui ipsa in necessitatibus minus deserunt quisquam totam qui optio."
+        }
+      ]
     };
   }
 };
@@ -75,10 +73,10 @@ export default {
 
 <style>
 .map {
-  background: var(--color-bg-dark);
 }
 .map-content {
   padding: var(--size-xl) 0;
+  align-items: flex-start;
 }
 .map-title {
   color: var(--color-light);
@@ -90,58 +88,48 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: var(--size-sm);
+  align-items: center;
+  flex-direction: column;
 }
 .map-links a {
   color: var(--color-light);
   text-decoration: none;
+  padding: var(--size-sm);
+  margin: var(--size-sm) 0;
+}
+.map-links a:hover,
+.map-links a:focus,
+.map-links a:active {
+  text-decoration: underline;
 }
 .map-icon {
   margin-right: var(--size-sm);
 }
 .map-divider {
   margin: 0 var(--size-sm);
+  display: none;
 }
 .map-booking {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: var(--size-lg);
-}
-.map-tile {
-  margin-top: var(--size-xl);
-  list-style: none;
-  color: var(--color-light);
-}
-.map-tile-item {
-  cursor: pointer;
-  border-bottom: 2px solid var(--color-light);
-  padding: var(--size-md) var(--size-md) 0;
-  display: flex;
-  align-items: center;
-}
-.map-tile-item.active {
-  border: 2px solid var(--color-light);
-  border-bottom: none;
-}
-.map-tile-icon {
-  opacity: 0.25;
-}
-.map-tile-item.active .map-tile-icon {
-  opacity: 1;
-}
-.map-tile-text {
-  margin-left: var(--size-md);
-  font-size: 700;
-  font-style: italic;
-}
-.map-tile-content {
-  margin-top: var(--size-lg);
-  color: var(--color-light);
+  margin-top: var(--size-sm);
 }
 
 @media screen and (min-width: 990px) {
-  .map-tile {
+  .map-divider {
+    display: block;
+  }
+  .map-links {
+    align-items: center;
+    flex-direction: row;
+    margin-top: 0;
+  }
+  .map-links a {
     margin: 0;
+  }
+  .map-booking {
+    margin-top: var(--size-lg);
   }
 }
 </style>

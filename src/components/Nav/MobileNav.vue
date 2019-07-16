@@ -95,7 +95,7 @@ query {
   max-width: 400px;
   min-width: 240px;
   background: var(--color-bg);
-  opacity: 0.92;
+  opacity: 0.9;
 }
 .mobile-brand {
   margin: var(--size-xl) 0 var(--size-lg);

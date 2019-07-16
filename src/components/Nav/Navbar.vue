@@ -5,7 +5,6 @@
         <div class="openings">
           <span
             class="openings-drawer"
-            @click="showOpenings = !showOpenings"
             @mouseover="showOpenings = true"
             @mouseleave="showOpenings = false"
           >
@@ -177,6 +176,9 @@ export default {
   border-radius: 30px;
   padding: var(--size-sm) var(--size-md);
 }
+.call-now:active {
+  background: rgba(0, 0, 0, 0.1);
+}
 .call-now-number {
   margin-left: var(--size-sm);
   display: none;
@@ -287,7 +289,7 @@ export default {
   border-radius: 50%;
 }
 .btn-menu:active {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 990px) {

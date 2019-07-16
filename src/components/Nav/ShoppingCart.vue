@@ -34,7 +34,7 @@ export default {};
   border-radius: 50%;
 }
 .snipcart-checkout:active {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
 }
 .snipcart-summary {
   position: absolute;

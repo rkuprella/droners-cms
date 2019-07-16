@@ -38,7 +38,6 @@ export default {
 <style>
 .intro {
   /* background: url("../../assets/img/bg-intro.jpg") 50% 50% no-repeat / cover; */
-  background: var(--color-bg-dark);
 }
 .intro-title {
   font-family: "Quicksand", sans-serif;
