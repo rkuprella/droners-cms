@@ -50,6 +50,7 @@ export default {
   max-width: 300px;
   margin-bottom: var(--size-lg);
 }
+
 .btn-wrapper {
   display: flex;
   flex-wrap: wrap;

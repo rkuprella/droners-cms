@@ -4,6 +4,8 @@
     <Intro />
     <Selection />
     <Imagination />
+    <Video />
+    <ImageTabs />
     <Prices />
     <Map />
     <Outro />
@@ -18,6 +20,8 @@ import Imagination from "~/components/Home/Imagination";
 import Prices from "~/components/Home/Prices";
 import Map from "~/components/Home/Map";
 import Outro from "~/components/Home/Outro";
+import ImageTabs from "~/components/Home/ImageTabs";
+import Video from "~/components/Home/Video";
 
 export default {
   components: {
@@ -27,7 +31,9 @@ export default {
     Imagination,
     Prices,
     Map,
-    Outro
+    Outro,
+    ImageTabs,
+    Video
   },
   metaInfo: {
     title: "DRONERS"
