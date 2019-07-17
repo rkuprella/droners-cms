@@ -155,7 +155,7 @@ export default {
   }
   .imagination-image {
     min-height: 400px;
-    max-height: 70vh;
+    max-height: 60vh;
   }
   .imagination-swiper {
     display: none;

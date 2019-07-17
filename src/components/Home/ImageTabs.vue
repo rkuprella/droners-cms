@@ -3,7 +3,7 @@
     <section class="hero-section hero-imagination">
       <div class="hero-content center-v">
         <div class="hero-wrapper center">
-          <g-image class="imagination-image" :src="tabs[currentTab].image" />
+          <g-image class="image-tabs-image" :src="tabs[currentTab].image" />
         </div>
         <div class="hero-wrapper center">
           <div class="image-tabs-wrapper">
@@ -144,6 +144,13 @@ export default {
   margin-top: var(--size-lg);
   display: inline-block;
 }
+.image-tabs-image {
+  width: 100%;
+  height: 100%;
+  max-height: 40vw;
+  object-fit: cover;
+  vertical-align: middle;
+}
 
 @media screen and (min-width: 990px) {
   .image-tabs-wrapper {
@@ -160,6 +167,13 @@ export default {
   }
   .image-tabs-title {
     padding: var(--size-md) calc(var(--size-lg) + var(--size-md));
+  }
+  .image-tabs-image {
+    width: 100%;
+    min-height: 400px;
+    max-height: 60vh;
+    object-fit: cover;
+    vertical-align: middle;
   }
 }
 </style>
