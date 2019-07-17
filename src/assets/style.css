@@ -103,9 +103,6 @@ p {
 ::-webkit-scrollbar-thumb {
   background: var(--color-blue); 
 }
-::-webkit-scrollbar-thumb:hover {
-
-}
 
 @media screen and (min-width: 990px) {
   .container {

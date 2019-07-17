@@ -57,7 +57,6 @@ export default {
   padding: var(--size-md);
   color: var(--color-blue);
   text-decoration: none;
-  z-index: 4;
 }
 .lasermaxx-title {
   margin-left: var(--size-md);
@@ -78,7 +77,6 @@ export default {
 /* laser */
 .laser-beam {
   position: absolute;
-  z-index: 3;
   left: 50%;
   bottom: -20px;
   width: 2px;

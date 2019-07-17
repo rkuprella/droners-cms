@@ -82,7 +82,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   flex-direction: column;
   height: 100%;
   width: 80%;
