@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container footer-wrapper">
-      <Logo />
+      <Logo size="sm" />
       <ul>
         <li class="footer-link" v-for="page in $static.allContentPage.edges" :key="page.node.slug">
           <g-link :to="'/' + page.node.slug">{{ page.node.title }}</g-link>

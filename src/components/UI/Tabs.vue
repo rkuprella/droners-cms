@@ -9,7 +9,7 @@
         :key="i"
       >
         <font-awesome :icon="['fa', tab.icon]" size="2x" class="tabs-icon" />
-        <span class="tabs-text" v-if="currentTab == i" v-html="tab.title" />
+        <span class="tabs-title" v-if="currentTab == i" v-html="tab.title" />
       </li>
     </ul>
     <div class="tabs-content">
@@ -57,7 +57,7 @@ export default {
   opacity: 1;
   transform: translate(-2px, -2px);
 }
-.tabs-text {
+.tabs-title {
   margin-left: var(--size-md);
   font-size: 700;
   font-style: italic;

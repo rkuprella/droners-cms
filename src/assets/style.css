@@ -54,13 +54,6 @@ p {
   font-size:1em;
   text-align:justify;
 }
-.brand-logo {
-  margin-left:10px;
-  width:132px;
-}
-.brand-icon {
-  width:40px;
-}
 .container {
   margin:0 var(--size-lg);
   height:100%;
@@ -101,13 +94,6 @@ p {
 }
 
 @media screen and (min-width: 990px) {
-  .brand-logo {
-    margin-left:15px;
-    width:180px;
-  }
-  .brand-icon {
-    width:52px;
-  }
   .container {
     width:80%;
     max-width:1200px;
