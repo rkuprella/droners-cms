@@ -108,7 +108,7 @@ export default {
 }
 .image-tabs-icon {
   color: var(--color-light);
-  height: 60px;
+  margin-bottom: var(--size-md);
 }
 .image-tabs-item.color-red.active .image-tabs-icon {
   color: var(--color-red);

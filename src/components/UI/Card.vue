@@ -198,7 +198,7 @@ export default {
   font-size: 0.6em;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 450px) {
   .card.rows-4,
   .card.rows-6 {
     width: 49%;
