@@ -4,11 +4,20 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/style.css'
 import moment from 'moment'
-
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.prototype.$moment = moment
+  Vue.use(VueGoogleMaps, {
+    load: {
+      key: process.env.GOOGLE_MAPS_API,
+      libraries: 'places',
+      region: 'de',
+      language: 'de',
+    }
+  })
+
   head.htmlAttrs = { lang: "de" }
 
   head.link.push({

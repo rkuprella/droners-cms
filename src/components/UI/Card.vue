@@ -104,7 +104,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: var(--size-lg);
-  border-radius: var(--size-lg);
   transition: transform 0.25s ease-out;
 }
 .card:hover {
