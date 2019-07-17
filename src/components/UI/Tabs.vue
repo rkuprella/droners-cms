@@ -38,6 +38,8 @@ export default {
 .tabs-menu {
   list-style: none;
   color: var(--color-light);
+  max-width: 100%;
+  overflow: hidden;
 }
 .tabs-item {
   cursor: pointer;
@@ -65,5 +67,8 @@ export default {
 .tabs-content {
   margin-top: var(--size-lg);
   color: var(--color-light);
+}
+
+@media screen and (min-width: 990px) {
 }
 </style>

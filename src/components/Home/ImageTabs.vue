@@ -97,6 +97,8 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 .image-tabs-item {
   cursor: pointer;
@@ -120,7 +122,7 @@ export default {
 .image-tabs-title {
   font-size: 700;
   color: var(--color-light);
-  padding: var(--size-md) calc(var(--size-lg) + var(--size-md));
+  padding: var(--size-md) var(--size-md);
 }
 .image-tabs-item.color-red.active .image-tabs-title {
   color: var(--color-bg);
@@ -147,7 +149,7 @@ export default {
   .image-tabs-wrapper {
     margin: 0;
     padding: 0 var(--size-md);
-    width: 60%;
+    width: 70%;
     min-width: 380px;
   }
   .image-tabs-item:nth-child(2) {
@@ -155,6 +157,9 @@ export default {
   }
   .image-tabs-btn-wrapper {
     margin-top: var(--size-lg);
+  }
+  .image-tabs-title {
+    padding: var(--size-md) calc(var(--size-lg) + var(--size-md));
   }
 }
 </style>

@@ -80,7 +80,6 @@ export default {
 .map-title {
   color: var(--color-light);
   font-size: 2rem;
-  text-align: center;
   margin-top: var(--size-xl);
 }
 .map-links {
@@ -88,7 +87,7 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: var(--size-sm);
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 .map-links a {
@@ -111,9 +110,12 @@ export default {
 }
 .map-booking {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   margin-top: var(--size-sm);
+}
+.map-content .hero-wrapper {
+  justify-content: flex-start;
 }
 
 @media screen and (min-width: 990px) {
@@ -130,9 +132,11 @@ export default {
   }
   .map-title {
     margin: 0;
+    text-align: center;
   }
   .map-booking {
     margin-top: var(--size-lg);
+    justify-content: center;
   }
 }
 </style>

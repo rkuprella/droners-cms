@@ -22,8 +22,8 @@ export default {
       required: true
     },
     level: {
-      type: Number,
-      default: 3
+      type: String,
+      default: "3"
     }
   },
   data() {
@@ -74,7 +74,8 @@ export default {
   width: 50%;
 }
 .size-1 {
-  width: 75%;
+  width: 100%;
+  animation: enlarge 7.5s linear infinite;
 }
 .size-2,
 .size-3 {
@@ -96,5 +97,50 @@ export default {
   color: var(--color-light);
   margin-left: var(--size-md);
   font-weight: 300;
+}
+
+@keyframes enlarge {
+  0% {
+    width: 100%;
+  }
+  20% {
+    width: 100%;
+  }
+  22% {
+    width: 50%;
+  }
+  35% {
+    width: 50%;
+  }
+  37% {
+    width: 75%;
+  }
+  50% {
+    width: 75%;
+  }
+  52% {
+    width: 25%;
+  }
+  61% {
+    width: 25%;
+  }
+  63% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  82% {
+    width: 75%;
+  }
+  89% {
+    width: 75%;
+  }
+  91% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 </style>

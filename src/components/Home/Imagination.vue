@@ -66,17 +66,18 @@ export default {
   top: 0;
   height: 100%;
   width: calc(var(--size-xl) + var(--size-lg));
-  background: var(--color-red);
+  background: var(--color-bg);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-red);
   transition: transform 0.3s ease-in-out;
 }
 .imagination-swiper-right {
   right: 0;
   left: auto;
-  background: var(--color-green);
+  color: var(--color-green);
 }
 .imagination-swiper.active {
   transform: translateX(-100%);
@@ -88,7 +89,7 @@ export default {
   transform: translateX(-10px) rotate(-90deg);
   white-space: nowrap;
   position: absolute;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -96,7 +97,6 @@ export default {
   transform: translateX(10px) rotate(90deg);
 }
 .imagination-chevron {
-  color: var(--color-bg);
   transform: translateX(20px) rotate(90deg);
 }
 .imagination-chevron-right {
@@ -139,7 +139,7 @@ export default {
   right: var(--size-lg);
 }
 .imagination-title {
-  font-size: 2.4em;
+  font-size: 1.6em;
   font-weight: 700;
   font-family: "Quicksand", sans-serif;
   margin-bottom: var(--size-md);
@@ -171,6 +171,9 @@ export default {
     left: var(--size-xl);
     right: var(--size-xl);
     bottom: var(--size-xl);
+  }
+  .imagination-title {
+    font-size: 2.3em;
   }
 }
 </style>

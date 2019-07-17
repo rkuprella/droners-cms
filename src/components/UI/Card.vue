@@ -82,8 +82,8 @@ export default {
       default: "Preis inkl. MwSt."
     },
     rows: {
-      type: Number,
-      default: 3
+      type: String,
+      default: "3"
     }
   },
   methods: {
