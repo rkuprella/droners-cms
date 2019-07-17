@@ -106,9 +106,6 @@ export default {
   margin-bottom: var(--size-lg);
   transition: transform 0.25s ease-out;
 }
-.card:hover {
-  transform: translateY(-6px);
-}
 .card.color-red {
   color: var(--color-red);
   border: 2px solid var(--color-red);
@@ -220,6 +217,9 @@ export default {
   }
   .card.rows-1 {
     width: 100%;
+  }
+  .card:hover {
+    transform: translateY(-6px);
   }
 }
 </style>

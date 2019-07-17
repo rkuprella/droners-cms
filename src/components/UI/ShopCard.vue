@@ -121,6 +121,7 @@ export default {
   flex-direction: column;
   text-decoration: none;
   color: var(--color-bg);
+  transition: transform 0.25s ease-out;
 }
 .shop-card-wrapper {
   display: flex;
@@ -163,7 +164,7 @@ export default {
   top: var(--size-md);
   left: var(--size-md);
   z-index: 2;
-  background: var(--color-blue);
+  background: var(--color-white-accent);
   padding: var(--size-sm) var(--size-md);
   color: var(--color-bg);
 }
@@ -210,6 +211,9 @@ export default {
 @media screen and (min-width: 990px) {
   .shop-card {
     width: 24%;
+  }
+  .shop-card:hover {
+    transform: translateY(-6px);
   }
   .shop-card-info {
     display: block;
