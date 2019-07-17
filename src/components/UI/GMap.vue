@@ -5,27 +5,188 @@
       class="gmap"
       allowfullscreen
   ></iframe>-->
-  <GmapMap :center="{lat:10, lng:10}" :zoom="7" map-type-id="terrain" class="gmap">
+  <GmapMap :center="center" :zoom="zoom" :options="options" map-type-id="roadmap" class="gmap">
     <GmapMarker
       :key="index"
       v-for="(m, index) in markers"
       :position="m.position"
       :clickable="true"
-      :draggable="true"
-      @click="center=m.position"
+      :draggable="false"
+      :icon="{ url: require('../../assets/img/gmap-marker.png')}"
     />
   </GmapMap>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      center: { lat: 51.537718, lng: 7.673155 },
+      zoom: 14,
+      markers: [
+        {
+          position: { lat: 51.537718, lng: 7.673155 }
+        }
+      ],
+      options: {
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: false,
+        disableDefaultUi: false,
+        styles: [
+          {
+            featureType: "all",
+            elementType: "labels.text.fill",
+            stylers: [
+              {
+                color: "#6c656c"
+              }
+            ]
+          },
+          {
+            featureType: "all",
+            elementType: "labels.text.stroke",
+            stylers: [
+              {
+                visibility: "on"
+              },
+              {
+                color: "#fff1d8"
+              }
+            ]
+          },
+          {
+            featureType: "all",
+            elementType: "labels.icon",
+            stylers: [
+              {
+                visibility: "off"
+              }
+            ]
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry.fill",
+            stylers: [
+              {
+                color: "#f0dab3"
+              }
+            ]
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry.stroke",
+            stylers: [
+              {
+                color: "#f0dab3"
+              },
+              {
+                weight: 1.2
+              }
+            ]
+          },
+          {
+            featureType: "administrative.neighborhood",
+            elementType: "labels.text",
+            stylers: [
+              {
+                visibility: "simplified"
+              },
+              {
+                color: "#ffffff"
+              }
+            ]
+          },
+          {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#fff1d8"
+              }
+            ]
+          },
+          {
+            featureType: "poi",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f0dab3"
+              }
+            ]
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.fill",
+            stylers: [
+              {
+                color: "#f0dab3"
+              }
+            ]
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.stroke",
+            stylers: [
+              {
+                color: "#f0dab3"
+              },
+              {
+                weight: 0.2
+              }
+            ]
+          },
+          {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f0dab3"
+              }
+            ]
+          },
+          {
+            featureType: "road.local",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f0dab3"
+              }
+            ]
+          },
+          {
+            featureType: "transit",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#65e6b4"
+              }
+            ]
+          },
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#42b6ea"
+              }
+            ]
+          }
+        ]
+      }
+    };
+  }
+};
 </script>
 
 <style>
 .gmap {
   width: 100%;
   height: 180px;
-  border: 2px solid var(--color-blue);
+  border: 2px solid var(--color-green);
 }
 
 @media screen and (min-width: 990px) {

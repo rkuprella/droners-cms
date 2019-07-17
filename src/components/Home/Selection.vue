@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Mal tanzen gehen" />
+        <Title headline="Freizeitgestaltung neu erleben" />
         <div class="card-wrapper">
           <Card
             v-for="selection in selections"

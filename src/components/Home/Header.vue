@@ -202,7 +202,7 @@ export default {
 .menu-link {
   border: none;
   outline: none;
-  background: var(--color-bg-accent);
+  background: var(--color-bg-dark);
   cursor: pointer;
   width: 100%;
   height: 100%;

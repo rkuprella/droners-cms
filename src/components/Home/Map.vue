@@ -19,7 +19,7 @@
               </a>
             </div>
             <div class="map-booking">
-              <Btn title="Jetzt buchen" to="/" inverted color="blue" />
+              <Btn title="Jetzt buchen" to="/" inverted color="green" />
             </div>
           </div>
           <div class="hero-wrapper">

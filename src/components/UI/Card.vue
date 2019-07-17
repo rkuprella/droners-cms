@@ -107,7 +107,7 @@ export default {
   transition: transform 0.25s ease-out;
 }
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 .card.color-red {
   color: var(--color-red);

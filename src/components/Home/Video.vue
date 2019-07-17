@@ -2,7 +2,7 @@
   <div class="video hero">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Kontakt und Anfahrt" level="2" />
+        <Title headline="Was Dich im DRONERS erwartet" level="2" />
         <div class="hero-content center-v">
           <iframe
             class="video-youtube"

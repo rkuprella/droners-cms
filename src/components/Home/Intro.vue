@@ -2,7 +2,7 @@
   <div class="intro hero">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Wer geht in die Disco" level="2" />
+        <Title headline="Drohnenfliegen in Unna" level="2" />
         <div class="hero-content center-v">
           <div class="hero-wrapper center">
             <g-image class="hero-image" src="~/assets/img/copter.png" alt="Copter" />

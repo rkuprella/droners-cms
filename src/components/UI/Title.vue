@@ -1,11 +1,9 @@
 <template>
   <div class="title center">
-    <div class="title-flower">
-      <span
-        v-for="flower in flowers"
-        :key="flower"
-        :class="['size-' + flower.size, 'color-' + flower.color]"
-      ></span>
+    <div class="title-flower-wrapper">
+      <span v-for="(flower, i) in flowers" :key="i" class="title-flower">
+        <span class="title-flower-inner" :class="['size-' + flower.size, 'color-' + flower.color]"></span>
+      </span>
     </div>
     <h1 class="title-headline" v-if="level == 1" v-html="headline" />
     <h2 class="title-headline" v-if="level == 2" v-html="headline" />
@@ -36,7 +34,7 @@ export default {
   mounted() {
     for (let i = 0; i < 6; i++) {
       this.flowers.push({
-        size: Math.floor(Math.random() * Math.floor(3)),
+        size: Math.floor(Math.random() * Math.floor(4)),
         color: Math.floor(Math.random() * Math.floor(8))
       });
     }
@@ -50,25 +48,37 @@ export default {
   flex-direction: row;
   margin-bottom: var(--size-xl);
 }
-.title-flower {
+.title-flower-wrapper {
   display: flex;
-  width: var(--size-lg);
-  height: var(--size-md);
+  width: 32px;
+  height: 18px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.title-flower span {
-  grid-template: "span";
-  height: 20%;
+.title-flower {
+  height: 4px;
+  width: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.title-flower:nth-child(even) {
+  justify-content: flex-start;
+}
+.title-flower-inner {
   border-radius: 6px;
+  height: 100%;
+  width: 100%;
 }
 .size-0 {
-  width: 35%;
+  width: 50%;
 }
-.size-1,
-.size-2 {
-  width: 45%;
+.size-1 {
+  width: 75%;
+}
+.size-2,
+.size-3 {
+  width: 100;
 }
 .color-0,
 .color-2 {

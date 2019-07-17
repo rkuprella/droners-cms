@@ -45,6 +45,12 @@ module.exports = {
           // remark options
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-17909030-13'
+      }
     }
   ]
 }
