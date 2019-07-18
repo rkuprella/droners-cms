@@ -24,6 +24,11 @@ export default {
       type: String,
       default: "md"
     }
+  },
+  data() {
+    return {
+      showDownload: false
+    };
   }
 };
 </script>
@@ -40,6 +45,7 @@ export default {
   transform: scale(0.7);
   transform-origin: left;
 }
+
 @media screen and (min-width: 990px) {
   .brand-logo {
     margin-left: 15px;

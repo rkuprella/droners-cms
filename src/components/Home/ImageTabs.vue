@@ -52,16 +52,16 @@ export default {
       currentTab: 0,
       tabs: [
         {
-          title: "Workshops",
+          title: "Events",
           content:
             "Lorem ipsum dolor sit amet, colectequer elidit est. Lorem ipsum dolor sit amet, colectequer elidit est.",
           icon: "circle",
           to: "/",
-          image: "/uploads/slider-three.jpg",
+          image: "/uploads/slider-one.jpg",
           color: "red"
         },
         {
-          title: "Lounge",
+          title: "Workshops",
           content:
             "Ipsum dolor sit amet. Lorem ipsum dolor sit amet, colectequer elidit est.",
           icon: "circle",
@@ -70,12 +70,12 @@ export default {
           color: "blue"
         },
         {
-          title: "Events",
+          title: "Shop",
           content:
             "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, colectequer elidit est.",
           icon: "circle",
           to: "/",
-          image: "/uploads/slider-one.jpg",
+          image: "/uploads/slider-four.jpg",
           color: "green"
         }
       ]
@@ -164,9 +164,6 @@ export default {
   }
   .image-tabs-btn-wrapper {
     margin-top: var(--size-lg);
-  }
-  .image-tabs-title {
-    padding: var(--size-md) calc(var(--size-lg) + var(--size-md));
   }
   .image-tabs-image {
     width: 100%;

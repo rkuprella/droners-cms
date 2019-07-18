@@ -25,7 +25,7 @@
                 <text
                   class="svg-text-bottom"
                   x="50%"
-                  y="85%"
+                  y="88%"
                   fill="red"
                   text-anchor="middle"
                 >Reality</text>
@@ -153,10 +153,10 @@ export default {
   font-family: "Titillium Web", sans-serif;
 }
 .svg-text-top {
-  font-size: 9.9vw;
+  font-size: 10.5vw;
 }
 .svg-text-bottom {
-  font-size: 21.3vw;
+  font-size: 22.5vw;
 }
 .svg-text mask rect {
   fill: white;
@@ -224,6 +224,12 @@ export default {
     bottom: 8%;
     left: 0;
     width: 100%;
+  }
+  .svg-text-top {
+    font-size: 9.9vw;
+  }
+  .svg-text-bottom {
+    font-size: 21.3vw;
   }
 }
 
