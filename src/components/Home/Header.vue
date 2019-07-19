@@ -63,14 +63,15 @@
 
       <ul class="slider-bottom">
         <li class="slider-bottom-item">
-          <strong>Drohnenfliegen</strong> und Virtual Reality
-          <em>in Unna</em>
+          <strong>Drohnenfliegen</strong>
+          und Virtual Reality
         </li>
         <li class="slider-bottom-item">
           Fliegen
           <span class="slider-slash">/</span> Testen
-          <span class="slider-slash">/</span> Erleben
           <span class="slider-slash">/</span> Lernen
+          <span class="slider-slash">/</span> Erleben
+          <span class="slider-new">Neu in Unna</span>
         </li>
       </ul>
     </div>
@@ -245,9 +246,10 @@ export default {
 }
 .slider-bottom-item:nth-child(2) {
   text-transform: inherit;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: var(--color-light);
   font-weight: 400;
+  line-height: 1.8em;
 }
 .slider-slash {
   color: var(--color-blue);
@@ -255,13 +257,12 @@ export default {
 .slider-bottom-item strong {
   font-weight: 700;
 }
-.slider-bottom-item em {
-  padding: var(--size-sm) var(--size-md);
+.slider-new {
+  padding: var(--size-xs) var(--size-md);
   background: var(--color-light);
   color: var(--color-bg);
   font-weight: 700;
   border-radius: 30px;
-  font-size: 1.4rem;
   white-space: nowrap;
 }
 
@@ -283,7 +284,10 @@ export default {
     font-size: 21.3vw;
   }
   .slider-bottom-item:nth-child(1) {
-    font-size: 3em;
+    font-size: 3rem;
+  }
+  .slider-bottom-item:nth-child(2) {
+    font-size: 1.5rem;
   }
 }
 

@@ -166,6 +166,9 @@ export default {
   margin-left: var(--size-sm);
   display: none;
 }
+.call-now-icon {
+  font-size: 1.2rem;
+}
 .openings {
   font-weight: 700;
   color: var(--color-blue-dark);
@@ -185,11 +188,13 @@ export default {
 }
 .openings-icon {
   margin-right: var(--size-sm);
+  font-size: 1.2rem;
 }
 .openings-chevron {
   margin-left: var(--size-md);
   transform: rotate(180deg);
   transition: transform 0.3s ease-out;
+  font-size: 1.2rem;
 }
 .openings-chevron.active {
   transform: rotate(360deg);

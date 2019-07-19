@@ -3,7 +3,7 @@
     <ul>
       <li class="social-item" v-for="social in $static.socialMedia.edges" :key="social.id">
         <a class="social-link center" :href="social.node.link" :title="social.node.title">
-          <font-awesome :icon="['fab', social.node.icon]" size="lg" />
+          <font-awesome :icon="['fab', social.node.icon]" size="lg" class="social-icon" />
         </a>
       </li>
     </ul>
@@ -58,7 +58,9 @@ export default {};
   background: transparent;
   border: 2px solid var(--color-blue);
 }
-
+.social-icon {
+  font-size: 1.2rem;
+}
 @media screen and (min-width: 990px) {
   .social-media {
     display: block;

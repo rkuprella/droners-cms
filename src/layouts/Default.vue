@@ -38,6 +38,9 @@ export default {
 </script>
 
 <style>
+body {
+  background: var(--color-bg);
+}
 .layout {
   background: var(--color-bg);
 }
