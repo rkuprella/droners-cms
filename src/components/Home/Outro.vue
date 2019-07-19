@@ -142,6 +142,7 @@ export default {
     top: 0;
     transform: translateX(-50%);
     z-index: 9;
+    padding-top: var(--size-gap);
   }
   .outro-video-wrapper {
     width: calc(100% - 176px);

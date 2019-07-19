@@ -34,7 +34,7 @@ export default {
   mounted() {
     for (let i = 0; i < 6; i++) {
       this.flowers.push({
-        size: Math.floor(Math.random() * Math.floor(4)),
+        size: Math.floor(Math.random() * Math.floor(6)),
         color: Math.floor(Math.random() * Math.floor(8))
       });
     }
@@ -75,10 +75,14 @@ export default {
 }
 .size-1 {
   width: 100%;
-  animation: enlarge 7.5s linear infinite;
+  animation: enlarge 10s linear infinite;
 }
-.size-2,
-.size-3 {
+.size-2 {
+  animation: enlarge 10s linear infinite alternate;
+}
+.size-3,
+.size-4,
+.size-5 {
   width: 100;
 }
 .color-0,

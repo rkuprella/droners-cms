@@ -85,6 +85,9 @@ export default {
 </script>
 
 <style>
+.image-tabs {
+  padding: var(--size-gap) 0;
+}
 .image-tabs-wrapper {
   margin-top: var(--size-xl);
   width: 100%;
@@ -150,6 +153,9 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
+  .image-tabs {
+    padding: var(--size-gap) 0;
+  }
   .it-img-wrapper {
     width: 75%;
   }

@@ -22,6 +22,7 @@
   --size-md: 12px;
   --size-lg: 24px;
   --size-xl: 48px;
+  --size-gap: 120px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -60,7 +61,7 @@ p {
   position:relative;
 }
 .hero {
-  padding:60px 0;
+  padding:calc(var(--size-gap) / 2) 0;
 }
 .hero-section {
   width:100%;
@@ -111,7 +112,7 @@ p {
     margin:0 auto;
   }
   .hero {
-    padding:140px 0;
+    padding:var(--size-gap) 0;
   }
   .hero-wrapper {
     width:50%;

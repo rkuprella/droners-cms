@@ -59,6 +59,7 @@ export default {
 .imagination {
   overflow: hidden;
   position: relative;
+  padding: calc(var(--size-gap) / 2) 0;
 }
 .imagination-swiper {
   position: absolute;
@@ -149,6 +150,9 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
+  .imagination {
+    padding: var(--size-gap) 0;
+  }
   .hero-imagination {
     margin: 0 88px;
     width: auto;

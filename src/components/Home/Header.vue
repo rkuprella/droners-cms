@@ -121,7 +121,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:900");
 
 .header {
-  padding: 150px 0 50px;
+  padding: 150px 0 calc(var(--size-gap) / 2);
 }
 .header .container {
   overflow: hidden;
@@ -274,6 +274,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 150px 0 var(--size-gap);
   }
   .menu-wrapper {
     bottom: 8%;
