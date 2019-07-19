@@ -11,7 +11,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.prototype.$moment = moment
   Vue.use(VueGoogleMaps, {
     load: {
-      key: process.env.GRIDSOME_GOOGLE_MAPS_API,
+      key: 'AIzaSyAP_X-DUtIyhgYAu-Aes4SeztgeQCdPdG4',
       libraries: 'places',
       region: 'de',
       language: 'de',
