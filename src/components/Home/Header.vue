@@ -1,6 +1,6 @@
 <template>
   <div class="header hero">
-    <div class="container center">
+    <div class="container">
       <div
         class="slider center"
         v-for="(slide, i) in slider"
@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <ul class="menu-wrapper">
+      <ul class="menu-wrapper" v-if="slider.length > 1">
         <li>
           <button
             class="menu-arrow"
@@ -60,6 +60,19 @@
           ></button>
         </li>
       </ul>
+
+      <ul class="slider-bottom">
+        <li class="slider-bottom-item">
+          <strong>Drohnenfliegen</strong> und Virtual Reality
+          <em>in Unna</em>
+        </li>
+        <li class="slider-bottom-item">
+          Fliegen
+          <span class="slider-slash">/</span> Testen
+          <span class="slider-slash">/</span> Erleben
+          <span class="slider-slash">/</span> Lernen
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -71,19 +84,19 @@ export default {
       sliderTimer: null,
       currentSlide: 0,
       slider: [
-        { title: "One", image: "img/copter.png", active: true },
-        {
-          title: "Two whats up yo",
-          image: "img/imagination-1.jpg",
-          content: "Was geht ab",
-          active: false
-        },
-        {
-          title: "Three",
-          image: "img/imagination-2.jpg",
-          content: "Was geht ab",
-          active: false
-        }
+        { title: "One", image: "img/copter.png", active: true }
+        // {
+        //   title: "Two whats up yo",
+        //   image: "img/imagination-1.jpg",
+        //   content: "Was geht ab",
+        //   active: false
+        // },
+        // {
+        //   title: "Three",
+        //   image: "img/imagination-2.jpg",
+        //   content: "Was geht ab",
+        //   active: false
+        // }
       ]
     };
   },
@@ -107,7 +120,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:900");
 
 .header {
-  padding: 150px 0;
+  padding: 150px 0 50px;
 }
 
 /* slider */
@@ -214,11 +227,49 @@ export default {
   border: 2px solid var(--color-light);
 }
 
+/* slider text */
+.slider-bottom {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.slider-bottom-item {
+  color: var(--color-blue);
+  font-size: 2.3em;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: var(--size-md);
+}
+.slider-bottom-item:nth-child(2) {
+  text-transform: inherit;
+  font-size: 1.4em;
+  color: var(--color-light);
+  font-weight: 400;
+}
+.slider-slash {
+  color: var(--color-blue);
+}
+.slider-bottom-item strong {
+  font-weight: 700;
+}
+.slider-bottom-item em {
+  padding: var(--size-sm) var(--size-md);
+  background: var(--color-light);
+  color: var(--color-bg);
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
 @media screen and (min-width: 990px) {
   .header {
-    padding: 0;
-    height: 90vh;
-    min-height: 760px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .menu-wrapper {
     bottom: 8%;
@@ -231,9 +282,12 @@ export default {
   .svg-text-bottom {
     font-size: 21.3vw;
   }
+  .slider-bottom-item:nth-child(1) {
+    font-size: 3em;
+  }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1512px) {
   .slider,
   .svg-text {
     height: 450px;
@@ -243,10 +297,10 @@ export default {
     height: 80%;
   }
   .svg-text-top {
-    font-size: 149px;
+    font-size: 150px;
   }
   .svg-text-bottom {
-    font-size: 320px;
+    font-size: 321px;
   }
 }
 </style>

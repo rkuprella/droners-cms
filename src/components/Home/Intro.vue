@@ -39,7 +39,7 @@ export default {
 .intro-title {
   font-family: "Quicksand", sans-serif;
   font-size: 2.3em;
-  color: var(--color-blue);
+  color: var(--color-light);
   font-weight: 700;
   margin-bottom: var(--size-md);
   text-transform: uppercase;

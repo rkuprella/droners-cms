@@ -39,7 +39,7 @@ export default {
           title: "Parcours & Racing mit Micro-Coptern",
           content:
             "Drohnenfliegen in Cockpit-Perspektive neu erleben. Meistere unseren Parcours.",
-          icon: "flag-checkered",
+          icon: "gamepad",
           to: "/",
           color: "red"
         },
