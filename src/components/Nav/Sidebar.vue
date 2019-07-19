@@ -15,6 +15,7 @@
   left: var(--size-lg);
   top: 50%;
   transform: translateY(-50%);
+  z-index: 15;
 }
 .sidebar-wrapper {
   transform: rotate(-90deg) translate(-50%, 20px);

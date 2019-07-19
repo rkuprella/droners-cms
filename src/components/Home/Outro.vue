@@ -1,6 +1,6 @@
 <template>
   <div class="outro hero">
-    <div class="container center-v">
+    <div class="container center-v outro-wrapper">
       <section class="hero-section">
         <Title headline="Presse und Partner" level="2" />
         <div class="hero-content center">
@@ -23,11 +23,11 @@
         </div>
       </section>
     </div>
-    <!-- <div class="outro-video-wrapper">
+    <div class="outro-video-wrapper">
       <video class="outro-video" autoplay playsinline muted loop preload>
-        <source src="../../assets/video/grid16.mp4" />
+        <source src="../../assets/video/Grid.mp4" />
       </video>
-    </div>-->
+    </div>
   </div>
 </template>
 
@@ -109,13 +109,8 @@ export default {
   left: 30%;
 }
 
-.outro-video {
-  width: 100%;
-  box-sizing: border-box;
-  height: 50vw;
-  object-fit: cover;
-  object-position: bottom;
-  max-height: 450px;
+.outro-video-wrapper {
+  display: none;
 }
 .press-image {
   margin-top: var(--size-xl);
@@ -135,5 +130,34 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
+  .outro {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0;
+  }
+  .outro-wrapper {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 9;
+  }
+  .outro-video-wrapper {
+    width: calc(100% - 176px);
+    margin: 0 88px;
+    z-index: 2;
+    display: block;
+  }
+  .outro-video {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    height: 30vw;
+    max-height: 450px;
+    vertical-align: middle;
+  }
 }
 </style>

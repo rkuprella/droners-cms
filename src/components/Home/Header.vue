@@ -123,6 +123,9 @@ export default {
 .header {
   padding: 150px 0 50px;
 }
+.header .container {
+  overflow: hidden;
+}
 
 /* slider */
 .slider {

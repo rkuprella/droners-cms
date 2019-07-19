@@ -37,6 +37,7 @@ export default {};
   right: var(--size-lg);
   top: 50%;
   transform: translateY(-50%);
+  z-index: 15;
 }
 .social-item {
   list-style: none;
