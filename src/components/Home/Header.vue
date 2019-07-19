@@ -11,7 +11,7 @@
           <video class="svg-text-video" autoplay playsinline muted loop preload>
             <source src="../../assets/video/Racing.mp4" />
           </video>
-          <svg class="svg-text">
+          <svg class="svg-text svg-text-animated">
             <defs>
               <mask id="mask" x="0" y="0" height="100%" width="100%">
                 <rect x="0" y="0" height="100%" width="100%" />
@@ -32,6 +32,38 @@
               </mask>
             </defs>
             <rect x="0" y="0" height="100%" width="100%" />
+          </svg>
+          <svg class="svg-text">
+            <defs>
+              <linearGradient
+                id="rainbow"
+                x1="100%"
+                x2="0"
+                y1="0"
+                y2="100%"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#a5bdaa" offset="0%" />
+                <stop stop-color="#78e3d5" offset="15%" />
+                <stop stop-color="#42b6ea" offset="40%" />
+                <stop stop-color="#78e3d5" offset="70%" />
+                <stop stop-color="#205770" offset="100%" />
+              </linearGradient>
+            </defs>
+            <text
+              class="svg-text-top"
+              x="50%"
+              y="30%"
+              fill="url(#rainbow)"
+              text-anchor="middle"
+            >Challenge your</text>
+            <text
+              class="svg-text-bottom"
+              x="50%"
+              y="88%"
+              fill="url(#rainbow)"
+              text-anchor="middle"
+            >Reality</text>
           </svg>
         </div>
         <div class="slider-basic" v-else>
@@ -146,43 +178,6 @@ export default {
   object-fit: cover;
 }
 
-/* svg-text */
-.slider-intro {
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.svg-text-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.svg-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30vw;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: "Titillium Web", sans-serif;
-}
-.svg-text-top {
-  font-size: 10.5vw;
-}
-.svg-text-bottom {
-  font-size: 22.5vw;
-}
-.svg-text mask rect {
-  fill: white;
-}
-.svg-text > rect {
-  fill: var(--color-bg);
-  mask: url(#mask);
-}
-
 /* menu */
 .menu-wrapper {
   position: absolute;
@@ -230,8 +225,41 @@ export default {
 .menu-link.active {
   border: 2px solid var(--color-light);
 }
+.slider-intro {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.svg-text-video {
+  display: none;
+}
+.svg-text rect {
+  display: none;
+}
+.svg-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vw;
+  color: var(--color-light);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+}
+.svg-text-animated {
+  display: none;
+}
+.svg-text-top {
+  font-size: 10.5vw;
+}
+.svg-text-bottom {
+  font-size: 22.5vw;
+}
 
-/* slider text */
+/* slider bottom */
 .slider-bottom {
   display: flex;
   flex-direction: column;
@@ -276,6 +304,31 @@ export default {
     justify-content: center;
     padding: 150px 0 var(--size-gap);
   }
+
+  /* svg-text */
+
+  .svg-text-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .svg-text {
+    display: none;
+  }
+  .svg-text-animated {
+    display: inherit;
+  }
+  .svg-text mask rect {
+    fill: white;
+    display: inherit;
+  }
+  .svg-text > rect {
+    fill: var(--color-bg);
+    display: inherit;
+    mask: url(#mask);
+  }
+
   .menu-wrapper {
     bottom: 8%;
     left: 0;
