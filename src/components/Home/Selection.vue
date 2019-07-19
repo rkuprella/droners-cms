@@ -39,7 +39,7 @@ export default {
           title: "Parcours & Racing mit Micro-Coptern",
           content:
             "Drohnenfliegen in Cockpit-Perspektive neu erleben. Meistere unseren Parcours.",
-          icon: "circle",
+          icon: "flag-checkered",
           to: "/",
           color: "red"
         },
@@ -47,14 +47,14 @@ export default {
           title: "Im Team gemeinsam abheben",
           content:
             "Mit 90 Sachen abheben. Erlebe Drohnenfliegen auf ganz neue Art und Weise.",
-          icon: "circle",
+          icon: "grin-tears",
           to: "/",
           color: "green"
         },
         {
           title: "Get your DRONERS Merch",
           content: "Meistere unseren Parcours.",
-          icon: "circle",
+          icon: "tshirt",
           to: "/",
           color: "green",
           inverted: true

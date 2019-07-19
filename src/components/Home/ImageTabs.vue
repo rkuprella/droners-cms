@@ -2,10 +2,10 @@
   <div class="image-tabs">
     <section class="hero-section hero-imagination">
       <div class="hero-content center-v">
-        <div class="hero-wrapper center">
+        <div class="hero-wrapper center it-img-wrapper">
           <g-image class="image-tabs-image" :src="tabs[currentTab].image" />
         </div>
-        <div class="hero-wrapper center">
+        <div class="hero-wrapper center it-content-wrapper">
           <div class="image-tabs-wrapper">
             <ul class="image-tabs-menu">
               <li
@@ -55,7 +55,7 @@ export default {
           title: "Events",
           content:
             "Lorem ipsum dolor sit amet, colectequer elidit est. Lorem ipsum dolor sit amet, colectequer elidit est.",
-          icon: "circle",
+          icon: "flag-checkered",
           to: "/",
           image: "/uploads/slider-one.jpg",
           color: "red"
@@ -64,7 +64,7 @@ export default {
           title: "Workshops",
           content:
             "Ipsum dolor sit amet. Lorem ipsum dolor sit amet, colectequer elidit est.",
-          icon: "circle",
+          icon: "wrench",
           to: "/",
           image: "/uploads//slider-two.jpg",
           color: "blue"
@@ -73,7 +73,7 @@ export default {
           title: "Shop",
           content:
             "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, colectequer elidit est.",
-          icon: "circle",
+          icon: "shopping-cart",
           to: "/",
           image: "/uploads/slider-four.jpg",
           color: "green"
@@ -95,10 +95,9 @@ export default {
   color: var(--color-light);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
 }
 .image-tabs-item {
   cursor: pointer;
@@ -106,18 +105,16 @@ export default {
   align-items: center;
   flex-direction: column;
 }
+.image-tabs-item:nth-child(2) {
+  margin: 0 var(--size-md);
+}
 .image-tabs-icon {
   color: var(--color-light);
   margin-bottom: var(--size-md);
+  transition: transform 0.15s ease-in-out;
 }
-.image-tabs-item.color-red.active .image-tabs-icon {
-  color: var(--color-red);
-}
-.image-tabs-item.color-blue.active .image-tabs-icon {
-  color: var(--color-blue);
-}
-.image-tabs-item.color-green.active .image-tabs-icon {
-  color: var(--color-green);
+.image-tabs-item.active .image-tabs-icon {
+  transform: translateY(-3px);
 }
 .image-tabs-title {
   font-size: 700;
@@ -153,14 +150,20 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
-  .image-tabs-wrapper {
-    margin: 0;
-    padding: 0 var(--size-md);
-    width: 70%;
-    min-width: 380px;
+  .it-img-wrapper {
+    width: 75%;
   }
-  .image-tabs-item:nth-child(2) {
-    margin: 0 var(--size-sm);
+  .it-content-wrapper {
+    width: 25%;
+  }
+  .image-tabs-wrapper {
+    position: absolute;
+    margin: 0;
+    min-height: 280px;
+    left: -100%;
+    padding: var(--size-md);
+    width: calc(50vw - 50%);
+    max-width: 600px;
   }
   .image-tabs-btn-wrapper {
     margin-top: var(--size-lg);
@@ -171,6 +174,12 @@ export default {
     max-height: 60vh;
     object-fit: cover;
     vertical-align: middle;
+  }
+  .image-tabs-title {
+    padding: var(--size-md) var(--size-lg);
+  }
+  .image-tabs-item:not(.active):hover .image-tabs-icon {
+    transform: translateY(-3px);
   }
 }
 </style>
