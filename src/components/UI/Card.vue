@@ -219,7 +219,8 @@ export default {
     width: 100%;
   }
   .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-2px);
+    box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.5);
   }
 }
 </style>
