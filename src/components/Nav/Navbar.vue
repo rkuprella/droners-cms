@@ -272,10 +272,13 @@ export default {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--color-blue);
+  color: var(--color-light);
   cursor: pointer;
   z-index: 11;
   border-radius: 50%;
+}
+.nav.shop .btn-menu {
+  color: var(--color-bg);
 }
 .btn-menu:active {
   background: rgba(0, 0, 0, 0.1);

@@ -6,7 +6,7 @@
         <div class="hero-content center-v">
           <iframe
             class="video-youtube"
-            src="https://www.youtube.com/embed/Reqo9h7RZDQ?rel=0?version=3&autoplay=0&controls=0&loop=1​"
+            src="https://www.youtube.com/embed/Reqo9h7RZDQ?rel=0?version=3&autoplay=0&controls=1&loop=1​"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

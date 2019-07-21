@@ -23,11 +23,11 @@
         </div>
       </section>
     </div>
-    <div class="outro-video-wrapper">
+    <!-- <div class="outro-video-wrapper">
       <video class="outro-video" autoplay playsinline muted loop preload>
         <source src="../../assets/video/Grid.mp4" />
       </video>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -131,18 +131,18 @@ export default {
 
 @media screen and (min-width: 990px) {
   .outro {
-    position: relative;
+    /* position: relative; */
     z-index: 2;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
   }
   .outro-wrapper {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     height: auto;
     top: 0;
     transform: translateX(-50%);
     z-index: 9;
-    padding-top: var(--size-gap);
+    padding-top: var(--size-gap); */
   }
   .outro-video-wrapper {
     width: calc(100% - 176px);
@@ -157,7 +157,8 @@ export default {
     object-fit: cover;
     object-position: bottom;
     height: 30vw;
-    max-height: 450px;
+    min-height: 350px;
+    max-height: 550px;
     vertical-align: middle;
   }
 }

@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  sitename: 'Droners',
-  titleTemplate: '%s - Drone Arena',
+  sitename: 'DRONERS - Drone Arena',
+  titleTemplate: '%s - DRONERS',
   transformers: {
     remark: {
       // global remark options

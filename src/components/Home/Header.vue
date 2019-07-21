@@ -43,11 +43,12 @@
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#a5bdaa" offset="0%" />
-                <stop stop-color="#78e3d5" offset="15%" />
-                <stop stop-color="#42b6ea" offset="40%" />
-                <stop stop-color="#78e3d5" offset="70%" />
-                <stop stop-color="#205770" offset="100%" />
+                <stop stop-color="#273644" offset="0%" />
+                <stop stop-color="#53bfbc" offset="25%" />
+                <stop stop-color="#95f3d1" offset="40%" />
+                <stop stop-color="#95f3d1" offset="60%" />
+                <stop stop-color="#45908e" offset="70%" />
+                <stop stop-color="#273644" offset="100%" />
               </linearGradient>
             </defs>
             <text
@@ -248,6 +249,7 @@ export default {
   font-weight: 900;
   text-transform: uppercase;
   font-family: "Titillium Web", sans-serif;
+  opacity: 0.5;
 }
 .svg-text-animated {
   display: none;
@@ -318,6 +320,7 @@ export default {
   }
   .svg-text-animated {
     display: inherit;
+    opacity: 1;
   }
   .svg-text mask rect {
     fill: white;

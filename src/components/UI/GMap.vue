@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       center: { lat: 51.537718, lng: 7.673155 },
-      zoom: 14,
+      zoom: 11,
       markers: [
         {
           position: { lat: 51.537718, lng: 7.673155 }
@@ -114,7 +114,7 @@ export default {
             elementType: "geometry",
             stylers: [
               {
-                color: "#f0dab3"
+                color: "#fff1d8"
               }
             ]
           },

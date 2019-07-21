@@ -104,7 +104,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: var(--size-lg);
-  transition: transform 0.25s ease-out;
+  transition: transform 0.1s ease-out;
 }
 .card.color-red {
   color: var(--color-red);
@@ -219,7 +219,7 @@ export default {
     width: 100%;
   }
   .card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.5);
   }
 }

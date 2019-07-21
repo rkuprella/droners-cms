@@ -86,7 +86,7 @@ export default {
 
 <style>
 .image-tabs {
-  padding: var(--size-gap) 0;
+  padding: calc(var(--size-gap) / 2) 0;
 }
 .image-tabs-wrapper {
   margin-top: var(--size-xl);
@@ -114,10 +114,6 @@ export default {
 .image-tabs-icon {
   color: var(--color-light);
   margin-bottom: var(--size-md);
-  transition: transform 0.15s ease-in-out;
-}
-.image-tabs-item.active .image-tabs-icon {
-  transform: translateY(-3px);
 }
 .image-tabs-title {
   font-size: 700;
@@ -183,9 +179,6 @@ export default {
   }
   .image-tabs-title {
     padding: var(--size-md) var(--size-lg);
-  }
-  .image-tabs-item:not(.active):hover .image-tabs-icon {
-    transform: translateY(-3px);
   }
 }
 </style>

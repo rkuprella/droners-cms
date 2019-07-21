@@ -46,8 +46,8 @@ export default {
 }
 .hero-image {
   object-fit: contain;
-  width: 80%;
-  max-width: 300px;
+  width: 75%;
+  max-width: 420px;
   margin-bottom: var(--size-lg);
 }
 
