@@ -8,7 +8,7 @@
         <p v-html="content" class="page-header-content" />
       </div>
     </div>
-    <div class="page-header-image-wrapper">
+    <div class="page-header-image-wrapper" v-if="image">
       <g-image class="page-header-image" :src="image" />
     </div>
   </div>
@@ -35,14 +35,13 @@ export default {
 
 <style>
 .page-header {
-  padding: 150px 0 calc(var(--size-gap) / 2);
-  min-height: 300px;
+  padding: 160px 0 calc(var(--size-gap) / 2);
   position: relative;
 }
 .page-header-title {
   font-family: "Quicksand", sans-serif;
   font-size: 2.3em;
-  color: var(--color-light);
+  color: var(--color-green);
   font-weight: 700;
   margin-bottom: var(--size-md);
   text-transform: uppercase;
@@ -59,7 +58,7 @@ export default {
   left: 0;
   width: 100%;
   height: 50vw;
-  max-height: 600px;
+  max-height: 660px;
 }
 .page-header-image-wrapper::before,
 .page-header-image-wrapper::after {
@@ -97,16 +96,31 @@ export default {
 .page-header-content h4 {
   color: var(--color-light);
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: var(--size-lg);
+  text-transform: uppercase;
 }
 .page-header-content p {
+}
+.page-header-content img {
+  max-width: 100%;
+}
+.page-header-content ul {
+  list-style: none;
 }
 
 @media screen and (min-width: 990px) {
   .page-header {
-    padding: 150px 0 var(--size-gap);
+    padding: 180px 0 var(--size-gap);
   }
   .page-header-title {
     font-size: 3.5em;
+    margin-bottom: var(--size-xl);
+  }
+  .page-header-content {
+    padding: var(--size-xl) 30%;
   }
 }
 </style>

@@ -110,38 +110,17 @@ collections:
         name: "components"
         widget: "list"
         types:
-          - label: "Carousel"
-            name: "carousel"
-            widget: object
-            fields:
-              - {label: "Template", name: "template", widget: "hidden", default: "carousel"}
-              - label: "Images"
-                name: "images"
-                widget: "list"
-                field: {label: "Image", name: "image", widget: "image"}
           - label: "FAQ"
             name: "faq"
             widget: object
             fields:
               - {label: "Template", name: "template", widget: "hidden", default: "faq"}
-              - label: "Fragen"
-                name: "questions"
+              - label: "Frage"
+                name: "question"
                 widget: "list"
                 fields: 
                   - {label: "Frage", name: "question", widget: "string"}
                   - {label: "Antwort", name: "answer", widget: "text"}
-          - label: "Spotlight"
-            name: "spotlight"
-            widget: object
-            fields:
-              - {label: "Template", name: "template", widget: "hidden", default: "spotlight"}
-              - {label: "Text", name: "text", widget: "text", default: "Hello World"}
-          - label: "Content"
-            name: "content"
-            widget: object
-            fields:
-              - {label: "Template", name: "template", widget: "hidden", default: "markdown"}
-              - {label: "Markdown", name: "content", widget: "string", default: "Markdown wird an dieser Position angezeigt."}
       - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI

@@ -14,7 +14,8 @@ components:
   - content: nope
     type: content
 ---
-## Awesome Content for **page one**. Lorem ipsum dolor sit amet.
+## This is a headline
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum inventore consequatur error dignissimos. Animi pariatur odit eos magni vero fuga labore a, officia, consequuntur iste nostrum commodi odio quae. 
 
 * Lego Star Wars
 * Lego Ninjago

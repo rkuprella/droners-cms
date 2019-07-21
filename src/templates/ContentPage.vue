@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Header
+    <Content
       :title="$page.contentPage.title"
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
@@ -19,11 +19,11 @@ query ContentPage ($path: String!) {
 </page-query>
 
 <script>
-import Header from "~/components/Page/Header";
+import Content from "~/components/Page/Content";
 
 export default {
   components: {
-    Header
+    Content
   },
   metaInfo() {
     return {
