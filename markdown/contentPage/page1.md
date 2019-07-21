@@ -14,7 +14,7 @@ components:
   - content: nope
     type: content
 ---
-Awesome Content for **page one**. Lorem ipsum dolor sit amet.
+## Awesome Content for **page one**. Lorem ipsum dolor sit amet.
 
 * Lego Star Wars
 * Lego Ninjago
