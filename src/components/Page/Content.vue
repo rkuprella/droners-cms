@@ -85,7 +85,7 @@ export default {
   vertical-align: middle;
   z-index: 1;
   position: relative;
-  opacity: 0.25;
+  opacity: 0.4;
 }
 .page-header-content {
   padding: var(--size-xl) 0;

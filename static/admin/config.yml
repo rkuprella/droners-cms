@@ -17,6 +17,7 @@ collections:
         name: "impressum"
         file: "markdown/settings/impressum.yml"
         fields:
+          - {label: "ID", name: "id", widget: "hidden", default: "impressum"}
           - {label: "Inhaber", name: "owner", widget: "string", required: false}
           - {label: "E-Mail", name: "email", widget: "string", required: false}
           - label: "Geschäftsadresse"
@@ -47,6 +48,7 @@ collections:
         name: "location"
         file: "markdown/settings/location.yml"
         fields:
+          - {label: "ID", name: "id", widget: "hidden", default: "location"}
           - {label: "Firma", name: "company", widget: "string", required: false}
           - {label: "Slogan", name: "slogan", widget: "string", required: false}
           - {label: "Öffentliche Telefonnummer", name: "phone", widget: "string", required: false}
@@ -83,6 +85,7 @@ collections:
         name: "socialMedia"
         file: "markdown/settings/social-media.yml"
         fields: 
+          - {label: "ID", name: "id", widget: "hidden", default: "socialMedia"}
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
           - {label: "Instagram", name: "instagram", widget: "string", required: false}
           - {label: "Youtube", name: "youtube", widget: "string", required: false}

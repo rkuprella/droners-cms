@@ -20,8 +20,8 @@ export default {
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 40vh 40vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25vh 25vh 25vh;
   width: 100%;
   background: var(--color-bg);
 }
@@ -30,10 +30,17 @@ export default {
   vertical-align: middle;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: opacity 0.3s ease-out;
 }
 .page-gallery-image:hover {
-  opacity: 0.5;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 990px) {
+  .page-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40vh 40vh;
+  }
 }
 </style>

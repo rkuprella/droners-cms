@@ -24,10 +24,10 @@
             <div class="faq-outro">
               <span class="faq-o">Noch Fragen?</span>
 
-              <Btn icon="phone" type="tel" to="02018398293" inverted />
+              <Btn icon="phone" type="tel" dark to="02018398293" inverted />
 
               <span class="faq-o">oder</span>
-              <Btn title="Kontaktformular" to="/" />
+              <Btn title="Kontaktformular" dark to="/" />
             </div>
           </div>
         </li>
@@ -87,8 +87,8 @@ export default {
   margin-bottom: var(--size-md);
 }
 .faq-item.active {
-  border: 2px solid var(--color-blue);
-  background: var(--color-blue);
+  border: 2px solid var(--color-green);
+  background: var(--color-green);
   color: var(--color-bg);
 }
 .faq-question {

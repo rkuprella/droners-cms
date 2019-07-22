@@ -5,6 +5,7 @@
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
+    <InfoCards />
     <Gallery
       :images="$page.contentPage.gallery.image"
       v-if="$page.contentPage.gallery.image.length > 0"
@@ -41,13 +42,15 @@ import Content from "~/components/Page/Content";
 import FAQ from "~/components/Page/FAQ";
 import Banner from "~/components/Page/Banner";
 import Gallery from "~/components/Page/Gallery";
+import InfoCards from "~/components/Page/InfoCards";
 
 export default {
   components: {
     Content,
     FAQ,
     Banner,
-    Gallery
+    Gallery,
+    InfoCards
   },
   metaInfo() {
     return {

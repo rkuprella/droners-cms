@@ -1,9 +1,9 @@
 <template>
-  <nav class="social-media">
+  <nav class="social-media" :class="{mobile:mobile}">
     <ul>
-      <li class="social-item" v-for="social in $static.socialMedia.edges" :key="social.id">
-        <a class="social-link center" :href="social.node.link" :title="social.node.title">
-          <font-awesome :icon="['fab', social.node.icon]" size="lg" class="social-icon" />
+      <li class="social-item" v-for="social in socialMedia" :key="social.id">
+        <a class="social-link center" :href="social.link" :title="social.title">
+          <font-awesome :icon="['fab', social.icon]" size="lg" class="social-icon" />
         </a>
       </li>
     </ul>
@@ -11,22 +11,58 @@
 </template>
 
 <static-query>
-query SocialMedia {
-  socialMedia: allSocialMedia (sortBy: "id" order: ASC) {
-    edges {
-      node {
-        id
-        title
-        link
-        icon
-      }
-    }
+query {
+  socialMedia: settings (id:"socialMedia") {
+   	facebook
+    twitter
+    youtube
+    instagram
   }
 }
 </static-query>
 
 <script>
-export default {};
+export default {
+  props: {
+    mobile: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      socialMedia: []
+    };
+  },
+  created() {
+    this.socialMedia.push(
+      {
+        id: 1,
+        title: "Facebook",
+        link: this.$static.socialMedia.facebook,
+        icon: "facebook-f"
+      },
+      {
+        id: 2,
+        title: "Instagram",
+        link: this.$static.socialMedia.instagram,
+        icon: "instagram"
+      },
+      {
+        id: 3,
+        title: "Twitter",
+        link: this.$static.socialMedia.twitter,
+        icon: "twitter"
+      },
+      {
+        id: 4,
+        title: "Youtube",
+        link: this.$static.socialMedia.youtube,
+        icon: "youtube"
+      }
+    );
+  }
+};
 </script>
 
 
@@ -39,10 +75,25 @@ export default {};
   transform: translateY(-50%);
   z-index: 15;
 }
+.social-media.mobile {
+  margin-top: var(--size-lg);
+  position: static;
+  transform: none;
+  display: block;
+}
+.social-media.mobile ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .social-item {
   list-style: none;
 }
-.social-item:not(:last-of-type) {
+.social-media.mobile .social-item {
+  margin: 0 var(--size-xs);
+}
+.social-media:not(.mobile) .social-item:not(:last-of-type) {
   margin-bottom: var(--size-md);
 }
 .social-link {
@@ -63,7 +114,7 @@ export default {};
   font-size: 1.2rem;
 }
 @media screen and (min-width: 990px) {
-  .social-media {
+  .social-media:not(.mobile) {
     display: block;
   }
 }

@@ -10,17 +10,7 @@
       >{{ page.node.title }}</g-link>
       <g-link class="mobile-link" to="/shop">Shop</g-link>
       <g-link class="mobile-link btn-booking" to="/booking">Buchen</g-link>
-      <ul class="social-wrapper">
-        <li
-          class="social-item mobile-social-item"
-          v-for="social in $static.socialMedia.edges"
-          :key="social.id"
-        >
-          <a class="social-link center" :href="social.node.link" :title="social.node.title">
-            <font-awesome :icon="['fab', social.node.icon]" size="lg" />
-          </a>
-        </li>
-      </ul>
+      <SocialMedia mobile />
     </nav>
     <div class="mobile-drawer" @click="$emit('close')"></div>
   </div>
@@ -41,26 +31,17 @@ query {
       }
     }
   }
-
-  socialMedia: allSocialMedia (sortBy: "id" order: ASC) {
-    edges {
-      node {
-        id
-        title
-        link
-        icon
-      }
-    }
-  }
 }
 </static-query>
 
 <script>
 import Logo from "~/components/UI/Logo";
+import SocialMedia from "~/components/Nav/SocialMedia";
 
 export default {
   components: {
-    Logo
+    Logo,
+    SocialMedia
   }
 };
 </script>
@@ -113,14 +94,6 @@ export default {
 .btn-booking:active {
   background: var(--color-blue);
   color: var(--color-bg);
-}
-.social-wrapper {
-  margin-top: var(--size-xl);
-  display: flex;
-  flex-direction: row;
-}
-.mobile-social-item {
-  margin: 0 var(--size-xs);
 }
 
 @media screen and (min-width: 990px) {
