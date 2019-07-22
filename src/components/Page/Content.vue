@@ -45,6 +45,8 @@ export default {
   font-weight: 700;
   margin-bottom: var(--size-md);
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
 }
 .page-header-wrapper {
   position: relative;
@@ -53,7 +55,7 @@ export default {
 .page-header-image-wrapper {
   position: absolute;
   z-index: 1;
-  top: 260px;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 50vw;

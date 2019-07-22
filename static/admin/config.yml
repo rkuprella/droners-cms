@@ -119,6 +119,28 @@ collections:
             fields: 
               - {label: "Frage", name: "question", widget: "string"}
               - {label: "Antwort", name: "answer", widget: "text"}
+      - label: "Info"
+        name: "cards"
+        widget: object
+        fields:
+          - label: "Blatt"
+            name: "card"
+            widget: "list"
+            fields: 
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Text", name: "content", widget: "text"}
+              - {label: "Auflistung (durch Komma getrennt)", name: "list", widget: "string"}
+              - {label: "Link-Text", name: "link", widget: "string"}
+              - {label: "Link-Url", name: "to", widget: "string"}
+              - label: "Sterne"
+                name: "stars"
+                widget: "select"
+                options:
+                  - { label: "1 Stern", value: 1 }
+                  - { label: "2 Sterne", value: 2 }
+                  - { label: "3 Sterne", value: 3 }
+                  - { label: "4 Sterne", value: 4 }
+                  - { label: "5 Sterne", value: 5 }
       - label: "Galerie"
         name: "gallery"
         widget: object
