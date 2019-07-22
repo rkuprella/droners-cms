@@ -1,5 +1,13 @@
 <template>
   <Layout>
+    <div class="container">
+      <ul style="color:white">
+        <li
+          v-for="(question, i) in $page.contentPage.questions"
+          :key="i"
+        >{{ question.question }} {{ question.answer }}</li>
+      </ul>
+    </div>
     <Content
       :title="$page.contentPage.title"
       :image="$page.contentPage.featuredImage"
@@ -14,6 +22,10 @@ query ContentPage ($path: String!) {
     title
     content
     featuredImage (width: 200, height: 200, quality: 90)
+    questions {
+      answer
+      question
+    }
   }
 }
 </page-query>
