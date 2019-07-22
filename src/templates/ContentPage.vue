@@ -5,7 +5,7 @@
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
-    <Gallery images />
+    <!-- <Gallery images /> -->
     <Banner title="Jetzt unverbindlich dein Event anfragen" />
     <FAQ :list="$page.contentPage.faq" v-if="$page.contentPage.faq.length > 0" />
   </Layout>
@@ -16,7 +16,7 @@ query ContentPage ($path: String!) {
   contentPage: contentPage (path: $path) {
     title
     content
-    featuredImage (width: 200, height: 200, quality: 80)
+    featuredImage
     faq {
       answer
       question
