@@ -128,13 +128,15 @@ collections:
             widget: "list"
             fields: 
               - {label: "Titel", name: "title", widget: "string"}
-              - {label: "Text", name: "content", widget: "text"}
-              - {label: "Auflistung (durch Komma getrennt)", name: "list", widget: "string"}
-              - {label: "Link-Text", name: "link", widget: "string"}
-              - {label: "Link-Url", name: "to", widget: "string"}
+              - {label: "Text", name: "content", widget: "text", required: false}
+              - {label: "Auflistung (durch Komma getrennt)", name: "list", widget: "string", required: false}
+              - {label: "Preis", name: "price", widget: "number", valueType: "float", required: false}
+              - {label: "Link-Text", name: "link", widget: "string", required: false}
+              - {label: "Link-Url", name: "to", widget: "string", required: false}
               - label: "Sterne"
                 name: "stars"
                 widget: "select"
+                required: false
                 options:
                   - { label: "1 Stern", value: 1 }
                   - { label: "2 Sterne", value: 2 }
@@ -144,6 +146,7 @@ collections:
               - label: "Farbe"
                 name: "color"
                 widget: "select"
+                required: false
                 options:
                   - { label: "Rot", value: "red" }
                   - { label: "Blau", value: "blue" }
