@@ -4,7 +4,10 @@ slug: gutscheine
 menu: top
 position: 2
 featuredImage: /uploads/Rihanna4.jpg
-components: []
+faq:
+  question:
+    - answer: asd
+      question: asd
 ---
 
 Content for **page two**. Lorem ipsum dolor sit amet.
