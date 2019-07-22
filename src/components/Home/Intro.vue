@@ -14,6 +14,7 @@
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatem obcaecati harum numquam esse non saepe illum sapiente ipsum. Tempora totam alias consequuntur molestias minima officiis! Ea ipsum exercitationem aliquid.</p>
             <div class="btn-wrapper">
               <Btn title="Mehr erfahren" to="/" />
+              <span style="margin-right:12px" />
               <Btn title="Jetzt buchen" to="/" inverted color="blue" />
             </div>
           </div>

@@ -110,13 +110,22 @@ collections:
         name: "faq"
         widget: object
         fields:
-          - {label: "Template", name: "template", widget: "hidden", default: "faq"}
           - label: "Frage"
             name: "question"
             widget: "list"
             fields: 
               - {label: "Frage", name: "question", widget: "string"}
               - {label: "Antwort", name: "answer", widget: "text"}
+      - label: "Galerie"
+        name: "gallery"
+        widget: object
+        fields:
+          - label: "Bild"
+            name: "image"
+            widget: "list"
+            fields: 
+              - {label: "Bild", name: "galleryImage", widget: "image"}
+              - {label: "Copyright", name: "copyright", widget: "text", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI

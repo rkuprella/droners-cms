@@ -1,7 +1,31 @@
 <template>
-  <g-link class="btn" :class="[{inverted : inverted, dark: dark}, 'color-' + color]" :to="to">
-    <span v-html="title"></span>
+  <g-link
+    class="btn"
+    :class="[{inverted : inverted, dark: dark}, 'color-' + color]"
+    :to="to"
+    v-if="type == 'link'"
+  >
+    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <span v-html="title" v-show="title"></span>
   </g-link>
+  <a
+    class="btn"
+    :class="[{inverted : inverted, dark: dark}, 'color-' + color]"
+    :href="'tel:+49' + to.substr(1)"
+    v-else-if="type == 'tel'"
+  >
+    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <span v-html="title" v-show="title"></span>
+  </a>
+  <a
+    class="btn"
+    :class="[{inverted : inverted, dark: dark}, 'color-' + color]"
+    :href="'mailto:' + to"
+    v-else-if="type == 'email'"
+  >
+    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <span v-html="title" v-show="title"></span>
+  </a>
 </template>
 
 <script>
@@ -26,6 +50,14 @@ export default {
     dark: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: null
+    },
+    type: {
+      type: String,
+      default: "link"
     }
   }
 };
@@ -47,9 +79,7 @@ export default {
   white-space: nowrap;
   margin: var(--size-sm) 0;
   border: 2px solid transparent;
-}
-.btn:not(:last-of-type) {
-  margin-right: var(--size-md);
+  display: inline-block;
 }
 .btn.inverted {
   background: transparent;

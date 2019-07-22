@@ -47,6 +47,8 @@ export default {
 .footer {
   background: var(--color-bg-dark);
   padding: 60px 0;
+  z-index: 3;
+  position: relative;
 }
 .footer-wrapper {
   display: flex;

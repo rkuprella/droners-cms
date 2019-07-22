@@ -47,7 +47,6 @@ export default {
   text-transform: uppercase;
 }
 .page-header-wrapper {
-  min-height: 50vw;
   position: relative;
   z-index: 3;
 }
@@ -58,7 +57,7 @@ export default {
   left: 0;
   width: 100%;
   height: 50vw;
-  max-height: 660px;
+  max-height: 650px;
 }
 .page-header-image-wrapper::before,
 .page-header-image-wrapper::after {
@@ -120,7 +119,7 @@ export default {
     margin-bottom: var(--size-xl);
   }
   .page-header-content {
-    padding: var(--size-xl) 30%;
+    padding: var(--size-xl) 25% 0;
   }
 }
 </style>

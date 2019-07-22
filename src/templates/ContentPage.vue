@@ -1,18 +1,13 @@
 <template>
   <Layout>
-    <div class="container">
-      <ul style="color:white">
-        <li
-          v-for="(question, i) in $page.contentPage.questions"
-          :key="i"
-        >{{ question.question }} {{ question.answer }}</li>
-      </ul>
-    </div>
     <Content
       :title="$page.contentPage.title"
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
+    <Gallery images />
+    <Banner title="Jetzt unverbindlich dein Event anfragen" />
+    <FAQ :list="$page.contentPage.faq" v-if="$page.contentPage.faq.length > 0" />
   </Layout>
 </template>
 
@@ -21,21 +16,28 @@ query ContentPage ($path: String!) {
   contentPage: contentPage (path: $path) {
     title
     content
-    featuredImage (width: 200, height: 200, quality: 90)
-    questions {
+    featuredImage (width: 200, height: 200, quality: 80)
+    faq {
       answer
       question
     }
+
   }
 }
 </page-query>
 
 <script>
 import Content from "~/components/Page/Content";
+import FAQ from "~/components/Page/FAQ";
+import Banner from "~/components/Page/Banner";
+import Gallery from "~/components/Page/Gallery";
 
 export default {
   components: {
-    Content
+    Content,
+    FAQ,
+    Banner,
+    Gallery
   },
   metaInfo() {
     return {

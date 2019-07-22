@@ -4,7 +4,7 @@ slug: page1
 menu: main
 position: 1
 featuredImage: /uploads/Rihanna.jpg
-questions:
+faq:
   - answer: Der FC Bayern München.
     question: Wer wird Weltmeister?
   - answer: Warm.
