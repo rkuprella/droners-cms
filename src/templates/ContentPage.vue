@@ -21,7 +21,6 @@ query ContentPage ($path: String!) {
       answer
       question
     }
-
   }
 }
 </page-query>

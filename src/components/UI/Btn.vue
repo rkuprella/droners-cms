@@ -5,7 +5,7 @@
     :to="to"
     v-if="type == 'link'"
   >
-    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <font-awesome :icon="['fa', icon]" size="lg" v-if="icon" />
     <span v-html="title" v-show="title"></span>
   </g-link>
   <a
@@ -14,7 +14,7 @@
     :href="'tel:+49' + to.substr(1)"
     v-else-if="type == 'tel'"
   >
-    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <font-awesome :icon="['fa', icon]" size="lg" v-if="icon" />
     <span v-html="title" v-show="title"></span>
   </a>
   <a
@@ -23,7 +23,7 @@
     :href="'mailto:' + to"
     v-else-if="type == 'email'"
   >
-    <font-awesome :icon="['fa', icon]" size="lg" v-show="icon" />
+    <font-awesome :icon="['fa', icon]" size="lg" v-if="icon" />
     <span v-html="title" v-show="title"></span>
   </a>
 </template>
@@ -33,7 +33,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: false
     },
     to: {
       type: String,

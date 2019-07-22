@@ -96,7 +96,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Seitenbeschreibung", name: "meta", widget: "text", required: false}
+      - {label: "Seitenbeschreibung", name: "meta", widget: "string", required: false}
       - label: "Menü"
         name: "menu"
         widget: "select"
@@ -115,7 +115,7 @@ collections:
             widget: "list"
             fields: 
               - {label: "Frage", name: "question", widget: "string"}
-              - {label: "Antwort", name: "answer", widget: "text"}
+              - {label: "Antwort", name: "answer", widget: "string"}
       - label: "Galerie"
         name: "gallery"
         widget: object
@@ -125,7 +125,7 @@ collections:
             widget: "list"
             fields: 
               - {label: "Bild", name: "galleryImage", widget: "image"}
-              - {label: "Copyright", name: "copyright", widget: "text", required: false}
+              - {label: "Copyright", name: "copyright", widget: "string", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Produkt | Kategorie" # Used in the UI
