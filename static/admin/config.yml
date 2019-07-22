@@ -124,7 +124,7 @@ collections:
             name: "image"
             widget: "list"
             fields: 
-              - {label: "Bild", name: "galleryImage", widget: "image"}
+              - {label: "Bild", name: "imageUrl", widget: "image"}
               - {label: "Copyright", name: "copyright", widget: "string", required: false}
       - {label: "Content", name: "body", widget: "markdown", required: false}
   - name: "category" # Used in routes, e.g., /admin/collections/blog

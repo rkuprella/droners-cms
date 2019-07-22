@@ -2,7 +2,7 @@
   <div class="card" :class="[{inverted: inverted}, 'color-' + color, 'rows-' + rows ]">
     <ul class="card-stars">
       <li class="card-star" v-for="star in stars" :key="star">
-        <font-awesome :icon="['fa', 'star']" size="lg" class="card-star-icon" />
+        <font-awesome :icon="['fa', 'star']" size="sm" class="card-star-icon" />
       </li>
     </ul>
     <header class="center-v">
@@ -186,9 +186,10 @@ export default {
 }
 .card-star {
   list-style: none;
+  margin: 0 var(--size-xs);
 }
 .card-star-icon {
-  color: var(--color-light);
+  color: rgba(0, 0, 0, 0.3);
 }
 .card-euro {
   margin-left: var(--size-sm);

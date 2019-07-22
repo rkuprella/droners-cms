@@ -5,7 +5,10 @@
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
-    <!-- <Gallery images /> -->
+    <Gallery
+      :images="$page.contentPage.gallery.image"
+      v-if="$page.contentPage.gallery.image.length > 0"
+    />
     <Banner title="Jetzt unverbindlich dein Event anfragen" />
     <FAQ :list="$page.contentPage.faq.question" v-if="$page.contentPage.faq.question.length > 0" />
   </Layout>
@@ -21,6 +24,12 @@ query ContentPage ($path: String!) {
       question {
         question
         answer
+      }
+    }
+    gallery {
+      image {
+        imageUrl
+        copyright
       }
     }
   }
