@@ -11,6 +11,15 @@ faq:
       question: Test
     - answer: Welt
       question: Hallo
+cards:
+  card:
+    - color: blue
+      content: Lorem ipsum
+      link: Wohin genau
+      price: 41
+      stars: 1
+      title: Hase
+      to: www.google.de
 gallery:
   image:
     - copyright: Benjamin Wohlert
