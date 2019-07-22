@@ -15,6 +15,16 @@ gallery:
   image:
     - copyright: Benjamin Wohlert
       galleryImage: /uploads/slider-three.jpg
+    - copyright: Benjamin Wohlert
+      galleryImage: /uploads/slider-one.jpg
+    - copyright: Benjamin Wohlert
+      galleryImage: /uploads/slider-four.jpg
+    - copyright: Benjamin Wohlert
+      galleryImage: /uploads/slider-two.jpg
+    - copyright: Rihanna
+      galleryImage: /uploads/Rihanna.jpg
+    - copyright: Rihanna
+      galleryImage: /uploads/Rihanna4.jpg
 ---
 ## Titel
 
