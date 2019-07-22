@@ -16,8 +16,17 @@ cards:
     - color: blue
       content: Lorem ipsum
       link: Wohin genau
+      list: Items, Mehr, Items, Noch mehr
       price: 41
-      stars: 1
+      stars: 3
+      title: Hase
+      to: www.google.de
+    - color: green
+      content: Lorem ipsum
+      link: Wohin genau
+      list: Items, Mehr, Items, Noch mehr
+      price: 41
+      stars: 3
       title: Hase
       to: www.google.de
 gallery:

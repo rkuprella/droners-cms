@@ -5,9 +5,9 @@
         <font-awesome :icon="['fa', 'star']" size="sm" class="card-star-icon" />
       </li>
     </ul>
-    <header class="center-v">
+    <header class="card-header center-v" :class="{'center': !icon}">
       <font-awesome :icon="['fa', icon]" size="3x" v-if="icon" class="card-icon" />
-      <h4 v-html="title" />
+      <h4 v-html="title" class="card-title" />
     </header>
     <main class="card-content">
       <p v-if="content" v-html="content"></p>
@@ -23,7 +23,7 @@
         <div class="card-price-info" v-html="priceInfo"></div>
       </div>
     </main>
-    <footer>
+    <footer class="card-footer" :class="{'center': !icon}">
       <Btn :title="link" :to="to" :dark="inverted" />
     </footer>
   </div>
@@ -82,8 +82,8 @@ export default {
       default: "Preis inkl. MwSt."
     },
     rows: {
-      type: String,
-      default: "3"
+      type: Number,
+      default: 3
     }
   },
   methods: {
@@ -105,6 +105,7 @@ export default {
   justify-content: space-between;
   margin-bottom: var(--size-lg);
   transition: transform 0.1s ease-out;
+  overflow:hidden;
 }
 .card.color-red {
   color: var(--color-red);
@@ -139,28 +140,32 @@ export default {
 .card-check {
   margin-right: var(--size-sm);
 }
-.card h4 {
+.card-title {
   font-weight: 700;
   font-family: "Quicksand", sans-serif;
   font-size: 1.4em;
   color: var(--color-light);
 }
-.card.color-red:not(.inverted) h4:first-line {
+.card.color-red:not(.inverted) .card-title:first-line {
   color: var(--color-red);
 }
-.card.color-green:not(.inverted) h4:first-line {
+.card.color-green:not(.inverted) .card-title:first-line {
   color: var(--color-green);
 }
-.card.color-blue:not(.inverted) h4:first-line {
+.card.color-blue:not(.inverted) .card-title:first-line {
   color: var(--color-blue);
 }
-.card.inverted h4,
+.card.inverted .card-title,
 .card.inverted p,
 .card.inverted li {
   color: var(--color-bg);
 }
 .card-content {
   padding: var(--size-md) 0;
+  width: 100%;
+}
+.card-header,
+.card-footer {
   width: 100%;
 }
 .card-price-info {

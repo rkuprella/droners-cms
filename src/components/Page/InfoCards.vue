@@ -3,6 +3,7 @@
     <div class="container center-v">
       <section class="hero-section">
         <Title headline="Freizeitgestaltung neu erleben" />
+        {{ cards.list }}
         <div class="card-wrapper">
           <Card
             v-for="card in cards"
@@ -11,7 +12,10 @@
             :color="card.color"
             :to="card.to"
             :content="card.content"
+            :stars="card.stars"
             :rows="rows"
+            :list="splitList(card.list)"
+            inverted
           />
         </div>
         <p
@@ -41,29 +45,10 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      selections: [
-        {
-          title: "Parcours & Racing mit Micro-Coptern",
-          content:
-            "Drohnenfliegen in Cockpit-Perspektive neu erleben. Meistere unseren Parcours.",
-          icon: "gamepad",
-          to: "/",
-          color: "red",
-          inverted: true
-        },
-        {
-          title: "Im Team gemeinsam abheben",
-          content:
-            "Mit 90 Sachen abheben. Erlebe Drohnenfliegen auf ganz neue Art und Weise.",
-          icon: "grin-tears",
-          to: "/",
-          color: "green",
-          inverted: true
-        }
-      ]
-    };
+  methods: {
+    splitList(list) {
+      return list.split(",");
+    }
   }
 };
 </script>
