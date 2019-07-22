@@ -2,7 +2,7 @@
   <div class="info-cards">
     <div class="container center-v">
       <section class="hero-section">
-        <Title headline="Freizeitgestaltung neu erleben" />
+        <Title headline="Übersicht" />
         {{ cards.list }}
         <div class="card-wrapper">
           <Card
@@ -18,9 +18,6 @@
             inverted
           />
         </div>
-        <p
-          class="selection-outro center-h"
-        >Drohnenfliegen, Virtual Reality und ein aussergewöhnliches Programm.</p>
       </section>
     </div>
   </div>

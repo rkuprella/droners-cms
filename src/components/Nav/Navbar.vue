@@ -54,7 +54,7 @@
           >{{ page.node.title }}</g-link>
 
           <g-link class="navbar-link" to="/shop">Shop</g-link>
-          <g-link class="navbar-link btn-booking" to="/booking">Buchen</g-link>
+          <g-link class="navbar-link btn-booking" to="/buchen">Buchen</g-link>
           <button @click="mobile = !mobile" class="btn-menu" :class="{ 'shop-mobile' : shop}">
             <font-awesome :icon="['fa', 'bars']" size="lg" />
           </button>

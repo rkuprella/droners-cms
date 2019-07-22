@@ -27,7 +27,7 @@
               <Btn icon="phone" type="tel" dark to="02018398293" inverted />
 
               <span class="faq-o">oder</span>
-              <Btn title="Kontaktformular" dark to="/" />
+              <Btn icon="envelope" type="email" dark to="/" />
             </div>
           </div>
         </li>

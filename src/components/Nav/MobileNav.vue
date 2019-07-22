@@ -9,7 +9,7 @@
         :to="'/' + page.node.slug"
       >{{ page.node.title }}</g-link>
       <g-link class="mobile-link" to="/shop">Shop</g-link>
-      <g-link class="mobile-link btn-booking" to="/booking">Buchen</g-link>
+      <g-link class="mobile-link btn-booking" to="/buchen">Buchen</g-link>
       <SocialMedia mobile />
     </nav>
     <div class="mobile-drawer" @click="$emit('close')"></div>
