@@ -7,7 +7,7 @@
     />
     <!-- <Gallery images /> -->
     <Banner title="Jetzt unverbindlich dein Event anfragen" />
-    <FAQ :list="$page.contentPage.faq" v-if="$page.contentPage.faq.length > 0" />
+    <FAQ :list="$page.contentPage.faq.question" v-if="$page.contentPage.faq.question.length > 0" />
   </Layout>
 </template>
 
@@ -18,8 +18,10 @@ query ContentPage ($path: String!) {
     content
     featuredImage
     faq {
-      answer
-      question
+      question {
+        question
+        answer
+      }
     }
   }
 }

@@ -96,7 +96,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Seitenbeschreibung", name: "meta", widget: "string", required: false}
+      - {label: "Seitenbeschreibung", name: "meta", widget: "text", required: false}
       - label: "Menü"
         name: "menu"
         widget: "select"
@@ -108,14 +108,14 @@ collections:
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
       - label: "FAQ"
         name: "faq"
-        widget: "list"
+        widget: object
         fields:
           - label: "Frage"
             name: "question"
-            widget: "object"
+            widget: "list"
             fields: 
               - {label: "Frage", name: "question", widget: "string"}
-              - {label: "Antwort", name: "answer", widget: "string"}
+              - {label: "Antwort", name: "answer", widget: "text"}
       - label: "Galerie"
         name: "gallery"
         widget: object
