@@ -5,7 +5,7 @@
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
-    <InfoCards />
+    <InfoCards :cards="$page.contentPage.cards.card" :rows="$page.contentPage.cards.card.length" />
     <Gallery
       :images="$page.contentPage.gallery.image"
       v-if="$page.contentPage.gallery.image.length > 0"
@@ -31,6 +31,18 @@ query ContentPage ($path: String!) {
       image {
         imageUrl
         copyright
+      }
+    }
+    cards {
+      card {
+        title
+        content
+        list
+        price
+        link
+        to
+        color
+        stars
       }
     }
   }
