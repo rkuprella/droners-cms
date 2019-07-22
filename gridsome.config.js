@@ -16,7 +16,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'markdown/pages/**/*.md',
+        path: 'markdown/contentPage/**/*.md',
         route: '/:slug',
         typeName: 'ContentPage',
         remark: {
