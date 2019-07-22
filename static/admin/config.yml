@@ -5,7 +5,7 @@ backend:
 media_folder: "static/uploads"
 public_folder: "uploads"
 site_url: https://jolly-ramanujan-fbfd07.netlify.com
-logo_url: https://jolly-ramanujan-fbfd07.netlify.com/assets/static/logo.7b22250.3ea91e7.png
+logo_url: https://jolly-ramanujan-fbfd07.netlify.com/assets/static/droners-text.e36923f.e87bc16.svg
 
 
 collections:

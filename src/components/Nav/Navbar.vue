@@ -247,7 +247,7 @@ export default {
 .nav.shop .navbar-link {
   color: var(--color-bg);
 }
-.navbar-link.active {
+.navbar-link:not(.btn-booking).active {
   padding-bottom: 8px;
   border-bottom: 2px solid var(--color-blue);
 }
@@ -262,7 +262,8 @@ export default {
 }
 .btn-booking:hover,
 .btn-booking:focus,
-.btn-booking:active {
+.btn-booking:active,
+.btn-booking.active {
   background: var(--color-blue);
   color: var(--color-bg);
 }
