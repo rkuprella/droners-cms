@@ -141,6 +141,13 @@ collections:
                   - { label: "3 Sterne", value: 3 }
                   - { label: "4 Sterne", value: 4 }
                   - { label: "5 Sterne", value: 5 }
+              - label: "Farbe"
+                name: "color"
+                widget: "select"
+                options:
+                  - { label: "Rot", value: "red" }
+                  - { label: "Blau", value: "blue" }
+                  - { label: "Grün", value: "green" }
       - label: "Galerie"
         name: "gallery"
         widget: object

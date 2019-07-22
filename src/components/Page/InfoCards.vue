@@ -5,15 +5,13 @@
         <Title headline="Freizeitgestaltung neu erleben" />
         <div class="card-wrapper">
           <Card
-            v-for="selection in selections"
-            :key="selection.title"
-            :title="selection.title"
-            :color="selection.color"
-            :to="selection.to"
-            :icon="selection.icon"
-            :content="selection.content"
-            :inverted="selection.inverted"
-            :rows="selections.length"
+            v-for="card in cards"
+            :key="card.title"
+            :title="card.title"
+            :color="card.color"
+            :to="card.to"
+            :content="card.content"
+            :rows="rows"
           />
         </div>
         <p
@@ -33,7 +31,16 @@ export default {
     Title,
     Card
   },
-  props: {},
+  props: {
+    cards: {
+      type: Array,
+      required: true
+    },
+    rows: {
+      type: Number,
+      required: true
+    }
+  },
   data() {
     return {
       selections: [
