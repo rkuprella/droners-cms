@@ -1,10 +1,4 @@
 <template>
-  <!-- <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.6586039467647!2d7.67097588693503!3d51.5378212796401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b913477951f1df%3A0xc3ff63a165ba23c5!2sHochstra%C3%9Fe+10%2C+59425+Unna!5e0!3m2!1sen!2sde!4v1563170944292!5m2!1sen!2sde"
-      frameborder="0"
-      class="gmap"
-      allowfullscreen
-  ></iframe>-->
   <GmapMap :center="center" :zoom="zoom" :options="options" map-type-id="roadmap" class="gmap">
     <GmapMarker
       :key="index"
@@ -19,10 +13,14 @@
 
 <script>
 export default {
+  props: {
+    transport: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      center: { lat: 51.537718, lng: 7.673155 },
-      zoom: 11,
       markers: [
         {
           position: { lat: 51.537718, lng: 7.673155 }
@@ -85,18 +83,6 @@ export default {
               },
               {
                 weight: 1.2
-              }
-            ]
-          },
-          {
-            featureType: "administrative.neighborhood",
-            elementType: "labels.text",
-            stylers: [
-              {
-                visibility: "simplified"
-              },
-              {
-                color: "#ffffff"
               }
             ]
           },
@@ -167,6 +153,40 @@ export default {
             ]
           },
           {
+            featureType: "transit.station",
+            elementType: "labels.icon",
+            stylers: [
+              {
+                visibility: "on"
+              },
+              {
+                hue: "#65e6b4"
+              },
+              {
+                gamma: "0.70"
+              },
+              {
+                saturation: "-20"
+              },
+              {
+                lightness: "10"
+              },
+              {
+                weight: "1"
+              }
+            ]
+          },
+          {
+            featureType: "transit.station",
+            elementType: "labels.text.stroke",
+            stylers: [
+              {
+                color: "#fff1d8"
+              },
+              { visibility: "on" }
+            ]
+          },
+          {
             featureType: "water",
             elementType: "geometry",
             stylers: [
@@ -178,6 +198,26 @@ export default {
         ]
       }
     };
+  },
+  computed: {
+    zoom() {
+      if (this.transport == 1) {
+        return 16;
+      } else if (this.transport == 2) {
+        return 12;
+      } else {
+        return 10;
+      }
+    },
+    center() {
+      if (this.transport == 1) {
+        return { lat: 51.538593, lng: 7.674163 };
+      } else if (this.transport == 2) {
+        return { lat: 51.531029, lng: 7.652769 };
+      } else {
+        return { lat: 51.537718, lng: 7.673155 };
+      }
+    }
   }
 };
 </script>
@@ -185,13 +225,13 @@ export default {
 <style>
 .gmap {
   width: 100%;
-  height: 180px;
+  height: 240px;
   border: 2px solid var(--color-green);
 }
 
 @media screen and (min-width: 990px) {
   .gmap {
-    height: 260px;
+    height: 280px;
   }
 }
 </style>

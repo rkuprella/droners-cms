@@ -36,7 +36,7 @@ export default {
     Video
   },
   metaInfo: {
-    titleTemplate: "DRONERS - Drone Arena"
+    titleTemplate: "DRONERS - Drone Arena & VR Arcade"
   }
 };
 </script>

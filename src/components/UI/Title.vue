@@ -70,20 +70,29 @@ export default {
   height: 100%;
   width: 100%;
 }
-.size-0 {
-  width: 50%;
+.title-flower:nth-child(even) .size-0 {
+  transform: scaleX(0.5);
+  transform-origin: left;
 }
-.size-1 {
-  width: 100%;
+.title-flower:nth-child(odd) .size-0 {
+  transform: scaleX(0.5);
+  transform-origin: right;
+}
+.title-flower:nth-child(even) .size-1 {
   animation: enlarge 10s linear infinite;
+  transform-origin: left;
 }
-.size-2 {
+.title-flower:nth-child(odd) .size-1 {
+  animation: enlarge 10s linear infinite;
+  transform-origin: right;
+}
+.title-flower:nth-child(even) .size-2 {
   animation: enlarge 10s linear infinite alternate;
+  transform-origin: left;
 }
-.size-3,
-.size-4,
-.size-5 {
-  width: 100;
+.title-flower:nth-child(odd) .size-2 {
+  animation: enlarge 10s linear infinite alternate;
+  transform-origin: right;
 }
 .color-0,
 .color-2 {
@@ -105,46 +114,46 @@ export default {
 
 @keyframes enlarge {
   0% {
-    width: 100%;
+    transform: scaleX(1);
   }
   20% {
-    width: 100%;
+    transform: scaleX(1);
   }
   22% {
-    width: 50%;
+    transform: scaleX(0.5);
   }
   35% {
-    width: 50%;
+    transform: scaleX(0.5);
   }
   37% {
-    width: 75%;
+    transform: scaleX(0.75);
   }
   50% {
-    width: 75%;
+    transform: scaleX(0.75);
   }
   52% {
-    width: 25%;
+    transform: scaleX(0.25);
   }
   61% {
-    width: 25%;
+    transform: scaleX(0.25);
   }
   63% {
-    width: 100%;
+    transform: scaleX(1);
   }
   80% {
-    width: 100%;
+    transform: scaleX(1);
   }
   82% {
-    width: 75%;
+    transform: scaleX(0.75);
   }
   89% {
-    width: 75%;
+    transform: scaleX(0.75);
   }
   91% {
-    width: 100%;
+    transform: scaleX(1);
   }
   100% {
-    width: 100%;
+    transform: scaleX(1);
   }
 }
 </style>

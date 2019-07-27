@@ -4,7 +4,7 @@
       <section class="hero-section">
         <Title headline="Kontakt und Anfahrt" level="2" />
         <div class="hero-content center-v">
-          <GMap />
+          <GMap :transport="transport" />
         </div>
         <div class="hero-content center-v map-content">
           <div class="hero-wrapper">
@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="hero-wrapper">
-            <Tabs :tabs="tabs" />
+            <Tabs :tabs="tabs" @transport="emitTransport" />
           </div>
         </div>
       </section>
@@ -46,6 +46,7 @@ export default {
   },
   data() {
     return {
+      transport: 0,
       tabs: [
         {
           title: "Mit dem Auto",
@@ -67,6 +68,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    emitTransport(value) {
+      this.transport = value;
+    }
   }
 };
 </script>

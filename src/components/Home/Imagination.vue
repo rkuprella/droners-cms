@@ -23,7 +23,12 @@
 
     <div class="imagination-swiper" @click="slide = false" :class="{active:!slide}">
       <span class="imagination-swiper-info">VR Simulatoren</span>
-      <font-awesome :icon="['fa', 'chevron-up']" size="lg" class="imagination-chevron" />
+      <font-awesome
+        :icon="['fa', 'chevron-up']"
+        size="lg"
+        class="imagination-chevron"
+        :class="{active : !slide}"
+      />
     </div>
     <div
       class="imagination-swiper imagination-swiper-right"
@@ -34,6 +39,7 @@
         :icon="['fa', 'chevron-up']"
         size="lg"
         class="imagination-chevron imagination-chevron-right"
+        :class="{active : slide}"
       />
       <span class="imagination-swiper-info imagination-swiper-info-right">Virtual Reality 2.0</span>
     </div>
@@ -99,9 +105,16 @@ export default {
 }
 .imagination-chevron {
   transform: translateX(20px) rotate(90deg);
+  transition: transform 0.3s ease-out;
 }
 .imagination-chevron-right {
   transform: translateX(-20px) rotate(-90deg);
+}
+.imagination-chevron.active {
+  transform: translateX(20px) rotate(270deg);
+}
+.imagination-chevron-right.active {
+  transform: translateX(-20px) rotate(-270deg);
 }
 .imagination-hero {
   display: flex;

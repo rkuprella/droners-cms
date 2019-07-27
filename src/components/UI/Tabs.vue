@@ -3,7 +3,7 @@
     <ul class="tabs-menu center-v">
       <li
         class="tabs-item"
-        @click="currentTab = i"
+        @click="onClickTab(i)"
         :class="{ active : currentTab == i}"
         v-for="(tab, i) in tabs"
         :key="i"
@@ -30,6 +30,16 @@ export default {
     return {
       currentTab: 0
     };
+  },
+  methods: {
+    onClickTab(i) {
+      this.currentTab = i;
+      if (i == 1 || i == 2) {
+        this.$emit("transport", i);
+      } else {
+        this.$emit("transport", false);
+      }
+    }
   }
 };
 </script>
@@ -44,7 +54,7 @@ export default {
 .tabs-item {
   cursor: pointer;
   border-bottom: 2px solid var(--color-light);
-  padding: var(--size-md) var(--size-md) 0;
+  padding: 0 var(--size-md);
   display: flex;
   align-items: center;
   height: 60px;
