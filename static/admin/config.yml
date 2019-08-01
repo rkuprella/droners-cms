@@ -107,6 +107,15 @@ collections:
           - { label: "Hauptmenü", value: "main" }
           - { label: "Minimenü", value: "top" }
           - { label: "Footermenü", value: "footer" }
+      - label: "Unterseite von"
+        name: "subpage"
+        widget: "relation"
+        multiple: false
+        collection: "contentPage"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+        required: false
       - {label: "Position", name: "position", widget: "number", valueType: "float"}
       - {label: "Hintergrundbild", name: "featuredImage", widget: "image", required: false}
       - label: "FAQ"
