@@ -15,7 +15,7 @@ cards:
     - color: blue
       content: ''
       link: a
-      list: ''
+      list: 'Test, Test'
       price: ''
       stars: 1
       title: 1 Coin
@@ -23,7 +23,7 @@ cards:
     - color: blue
       content: ''
       link: a
-      list: ''
+      list: 'Test, Test'
       price: 10
       stars: 3
       title: 3 Coins
