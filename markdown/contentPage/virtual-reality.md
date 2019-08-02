@@ -43,6 +43,6 @@ gallery:
     - copyright: Rihanna
       imageUrl: /uploads/Rihanna4.jpg
 ---
-## Titel
+## Virtual Reality Erlebnisse
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatem obcaecati harum numquam esse non saepe illum sapiente ipsum. Tempora totam alias consequuntur molestias minima officiis! Ea ipsum exercitationem aliquid.
+Erlebe in unseren VR Simulatoren die verschiedensten Abenteuer. Ob ein realistische Autorennen oder einen futuristischen Spacetripp in unserem Rennsimulator, oder eine Fahrt über die Dächer von Paris auf der Virtuellen Rutsche... alles ist möglich!
