@@ -17,8 +17,8 @@ cards:
       content: ''
       link: Wohin genau
       list: >-
-        60 Minuten Drohenfliegen, 1 VR Coin pro Person, 1 Freigetränk pro Person
-        und eine Tüte Haribo
+        60 Minuten Drohenfliegen, 1 VR Coin pro Person, 1 Freigetränk pro
+        Person, eine Tüte Haribo
       price: 20
       title: Geburtstags-Paket
       to: ''
