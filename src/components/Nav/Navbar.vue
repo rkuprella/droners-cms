@@ -315,8 +315,9 @@ export default {
   transform: translateX(-50%);
   display: none;
   padding: var(--size-md) var(--size-lg);
-  background: var(--color-bg-dark);
+  background: var(--color-bg);
   border: 2px solid var(--color-blue);
+  border-top: none;
 }
 .navbar-item:hover .submenu {
   display: block;
