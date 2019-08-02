@@ -1,8 +1,8 @@
 ---
-layout: blog
 title: Virtual Reality
 slug: virtual-reality
 menu: main
+subpage: null
 position: 2
 featuredImage: /uploads/slider-two.jpg
 faq:

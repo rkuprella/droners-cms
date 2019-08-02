@@ -45,20 +45,37 @@
     <nav class="navbar">
       <div class="nav-wrapper container center-v">
         <Logo :shop="shop" />
-        <div class="center-v">
-          <g-link
-            class="navbar-link"
-            v-for="page in $static.mainMenu.edges"
-            :key="page.node.slug"
-            :to="'/' + page.node.slug"
-          >{{ page.node.title }}</g-link>
+        <ul class="center-v">
+          <li class="navbar-item" v-for="page in menu" :key="page.node.slug">
+            <g-link class="navbar-link" :to="'/' + page.node.slug">{{ page.node.title }}</g-link>
+            <font-awesome
+              :icon="['fa', 'chevron-up']"
+              size="md"
+              class="openings-chevron submenu-chevron"
+            />
+            <ul class="submenu">
+              <li
+                class="submenu-item"
+                v-for="subpage in subMenu(page.node.title)"
+                :key="subpage.node.slug"
+              >
+                <g-link class="submenu-link" :to="'/' + subpage.node.slug">{{ subpage.node.title }}</g-link>
+              </li>
+            </ul>
+          </li>
 
-          <g-link class="navbar-link" to="/shop">Shop</g-link>
-          <g-link class="navbar-link btn-booking" to="/buchen">Buchen</g-link>
-          <button @click="mobile = !mobile" class="btn-menu" :class="{ 'shop-mobile' : shop}">
-            <font-awesome :icon="['fa', 'bars']" size="lg" />
-          </button>
-        </div>
+          <li class="navbar-item">
+            <g-link class="navbar-link" to="/shop">Shop</g-link>
+          </li>
+          <li class="navbar-item navbar-booking-item">
+            <g-link class="navbar-link btn-booking" to="/buchen">Buchen</g-link>
+          </li>
+          <li class="navbar-menu-item">
+            <button @click="mobile = !mobile" class="btn-menu" :class="{ 'shop-mobile' : shop}">
+              <font-awesome :icon="['fa', 'bars']" size="lg" />
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
     <MobileNav v-if="mobile" @close="mobile = false" />
@@ -74,6 +91,7 @@ query {
         title
         slug
         position
+        subpage
       }
     }
   }
@@ -115,6 +133,32 @@ export default {
       mobile: false,
       showOpenings: false
     };
+  },
+  computed: {
+    menu() {
+      let newMenu = this.$static.mainMenu.edges.filter(function(page) {
+        return !page.node.subpage;
+      });
+      return newMenu;
+    }
+  },
+  methods: {
+    subMenu(title) {
+      let subMenu = this.$static.mainMenu.edges.filter(function(page) {
+        return page.node.subpage == title;
+      });
+      return subMenu;
+    },
+    hasSubMenu(title) {
+      let findMenu = this.$static.mainMenu.edges.filter(function(page) {
+        return page.node.subpage == title;
+      });
+      if (findMenu.length > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 };
 </script>
@@ -234,15 +278,19 @@ export default {
 .nav-wrapper {
   justify-content: space-between;
 }
-.navbar-link {
+.navbar-item {
   padding: 10px 0;
-  margin: 0 var(--size-md);
-  color: var(--color-light);
-  text-decoration: none;
   display: none;
+  position: relative;
 }
-.navbar-link:not(:last-of-type) {
-  margin-right: var(--size-sm);
+.navbar-item:not(.navbar-booking-item) {
+  margin-right: var(--size-md);
+}
+.submenu-chevron {
+  font-size: 0.65em;
+  margin-bottom: 1px;
+  margin-left: var(--size-sm);
+  color: var(--color-blue);
 }
 .nav.shop .navbar-link {
   color: var(--color-bg);
@@ -250,6 +298,39 @@ export default {
 .navbar-link:not(.btn-booking).active {
   padding-bottom: 8px;
   border-bottom: 2px solid var(--color-blue);
+}
+.navbar-link {
+  color: var(--color-light);
+  text-decoration: none;
+}
+.navbar-menu-item {
+  list-style: none;
+}
+.submenu {
+  z-index: 9;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  padding: var(--size-md) var(--size-lg);
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-blue);
+}
+.navbar-item:hover .submenu {
+  display: block;
+}
+.submenu-item {
+  list-style: none;
+  margin: var(--size-sm) 0;
+}
+.submenu-link {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+.submenu-link:hover,
+.submenu-link:focus {
+  text-decoration: underline;
 }
 .btn-booking {
   border: 2px solid var(--color-blue);
@@ -292,13 +373,13 @@ export default {
 }
 
 @media screen and (min-width: 990px) {
-  .btn-menu {
+  .navbar-menu-item {
     display: none;
   }
   .navbar {
     height: 120px;
   }
-  .navbar-link {
+  .navbar-item {
     display: inline;
   }
   .topbar-item-wrapper {
