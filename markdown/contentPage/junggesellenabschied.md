@@ -2,8 +2,8 @@
 title: Junggesellenabschied
 slug: junggesellenabschied
 menu: main
-subpage: Preise & Angebote
-position: 1
+subpage: Virtual Reality
+position: 2
 featuredImage: /uploads/Rihanna-2.jpg
 cards:
   card:
