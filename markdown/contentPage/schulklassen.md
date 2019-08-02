@@ -17,5 +17,5 @@ gallery:
 ---
 ### Schulklassen
 
-Schulausflug mal anders...
-Drohenfliegen für Anfänger in unseren Pacours und im Anschluss eine Virtuelle Achterbahnfahrt!
+Schulausflug mal anders!
+Meisert mit der Drohne unsere Hindernisse und im Anschluss testet eine Virtuelle Achterbahnfahrt.
