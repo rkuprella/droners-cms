@@ -8,6 +8,7 @@ featuredImage: /uploads/slider-four.jpg
 cards:
   card:
     - color: blue
+      link: Jetzt Anfragen
       list: '60 Minuten Drohnenfliegen, 1 VR Coin pro Person, max. 25 Personen '
       price: 1900
       title: Gruppenpaket
