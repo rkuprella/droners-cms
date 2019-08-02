@@ -24,7 +24,7 @@ cards:
       content: ''
       link: ''
       list: ''
-      price: ''
+      price: 10
       stars: 3
       title: 3 Coins
       to: ''
