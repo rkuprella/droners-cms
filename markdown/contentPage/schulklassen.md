@@ -4,6 +4,7 @@ slug: schulklassen
 menu: main
 subpage: Preise & Angebote
 position: 4
+featuredImage: /uploads/slider-four.jpg
 cards:
   card:
     - color: blue
@@ -14,4 +15,7 @@ gallery:
   image:
     - imageUrl: /uploads/header-slider-3-4.jpg
 ---
+### Schulklassen
 
+Schulausflug mal anders...
+Drohenfliegen für Anfänger in unseren Pacours und im Anschluss eine Virtuelle Achterbahnfahrt!
