@@ -5,13 +5,14 @@
       :image="$page.contentPage.featuredImage"
       :content="$page.contentPage.content"
     />
-    <InfoCards :cards="$page.contentPage.cards.card" :rows="$page.contentPage.cards.card.length" />
-    <Gallery
-      :images="$page.contentPage.gallery.image"
-      v-if="$page.contentPage.gallery.image.length > 0"
+    <InfoCards
+      :cards="$page.contentPage.cards.card"
+      :rows="$page.contentPage.cards.card.length"
+      v-if="$page.contentPage.cards"
     />
+    <Gallery :images="$page.contentPage.gallery.image" v-if="$page.contentPage.gallery" />
     <Banner title="Jetzt unverbindlich dein Event anfragen" />
-    <FAQ :list="$page.contentPage.faq.question" v-if="$page.contentPage.faq.question.length > 0" />
+    <FAQ :list="$page.contentPage.faq.question" v-if="$page.contentPage.faq" />
   </Layout>
 </template>
 

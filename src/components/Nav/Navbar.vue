@@ -52,8 +52,9 @@
               :icon="['fa', 'chevron-up']"
               size="md"
               class="openings-chevron submenu-chevron"
+              v-if="hasSubMenu(page.node.title)"
             />
-            <ul class="submenu">
+            <ul class="submenu" v-if="hasSubMenu(page.node.title)">
               <li
                 class="submenu-item"
                 v-for="subpage in subMenu(page.node.title)"
@@ -85,7 +86,7 @@
 <static-query>
 query {
 
-  mainMenu: allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "main" }}) {
+  mainMenu: allContentPage(sortBy: "position", order: ASC, filter: { menu: { eq: "main" }}) {
     edges {
       node {
         title
@@ -96,7 +97,7 @@ query {
     }
   }
 
-  topMenu: allContentPage(sortBy: "position", order: DESC, filter: { menu: { eq: "top" }}) {
+  topMenu: allContentPage(sortBy: "position", order: ASC, filter: { menu: { eq: "top" }}) {
     edges {
       node {
         title
