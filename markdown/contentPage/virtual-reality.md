@@ -13,21 +13,21 @@ faq:
 cards:
   card:
     - color: blue
-      content: Lorem ipsum
-      link: Wohin genau
-      list: 'Items, Mehr, Items, Noch mehr'
-      price: 41
+      content: ''
+      link: ''
+      list: ''
+      price: ''
+      stars: 1
+      title: 1 Coin
+      to: ''
+    - color: blue
+      content: ''
+      link: ''
+      list: ''
+      price: ''
       stars: 3
-      title: Hase
-      to: www.google.de
-    - color: green
-      content: Lorem ipsum
-      link: Wohin genau
-      list: 'Items, Mehr, Items, Noch mehr'
-      price: 41
-      stars: 3
-      title: Hase
-      to: www.google.de
+      title: 3 Coins
+      to: ''
 gallery:
   image:
     - copyright: Benjamin Wohlert
