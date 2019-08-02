@@ -13,13 +13,13 @@ faq:
 cards:
   card:
     - color: blue
-      content: test
-      link: a
-      list: 'Test, Test'
+      content: '3,00€'
+      link: ''
+      list: ''
       price: 0
       stars: 1
       title: 1 Coin
-      to: a
+      to: ''
     - color: blue
       content: test
       link: a
