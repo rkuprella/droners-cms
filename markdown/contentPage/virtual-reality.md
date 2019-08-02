@@ -16,7 +16,7 @@ cards:
       content: test
       link: a
       list: 'Test, Test'
-      price: ''
+      price: 0
       stars: 1
       title: 1 Coin
       to: a
