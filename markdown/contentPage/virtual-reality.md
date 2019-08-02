@@ -13,7 +13,7 @@ faq:
 cards:
   card:
     - color: blue
-      content: ''
+      content: test
       link: a
       list: 'Test, Test'
       price: ''
@@ -21,7 +21,7 @@ cards:
       title: 1 Coin
       to: a
     - color: blue
-      content: ''
+      content: test
       link: a
       list: 'Test, Test'
       price: 10
