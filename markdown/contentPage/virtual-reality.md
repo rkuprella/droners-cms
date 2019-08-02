@@ -14,20 +14,20 @@ cards:
   card:
     - color: blue
       content: ''
-      link: ''
+      link: a
       list: ''
       price: ''
       stars: 1
       title: 1 Coin
-      to: ''
+      to: a
     - color: blue
       content: ''
-      link: ''
+      link: a
       list: ''
       price: 10
       stars: 3
       title: 3 Coins
-      to: ''
+      to: a
 gallery:
   image:
     - copyright: Benjamin Wohlert
