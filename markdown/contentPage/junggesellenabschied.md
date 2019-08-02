@@ -9,7 +9,7 @@ cards:
   card:
     - color: red
       link: Reservieren
-      list: '90 Minuten Drohenfliegen, 1 VR Coin und ein Freigetränk pro Person'
+      list: '90 Minuten Drohenfliegen, 1 VR Coin, ein Freigetränk pro Person'
       price: 25
       title: Junggesellenpaket
       to: '#'
