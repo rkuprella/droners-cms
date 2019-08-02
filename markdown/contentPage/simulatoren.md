@@ -4,7 +4,7 @@ slug: kindergeburtstag
 menu: main
 subpage: Preise & Angebote
 position: 1
-featuredImage: /uploads/slider-three.jpg
+featuredImage: /uploads/img_0021.jpg
 faq:
   question:
     - answer: Test
@@ -13,22 +13,15 @@ faq:
       question: Hallo
 cards:
   card:
-    - color: blue
-      content: Lorem ipsum
-      link: Wohin genau
-      list: 'Items, Mehr, Items, Noch mehr'
-      price: 41
-      stars: 3
-      title: Hase
-      to: www.google.de
     - color: green
-      content: Lorem ipsum
+      content: ''
       link: Wohin genau
-      list: 'Items, Mehr, Items, Noch mehr'
-      price: 41
-      stars: 3
-      title: Hase
-      to: www.google.de
+      list: >-
+        60 Minuten Drohenfliegen, 1 VR Coin pro Person, 1 Freigetränk pro Person
+        und eine Tüte Haribo
+      price: 20
+      title: Geburtstags-Paket
+      to: ''
 gallery:
   image:
     - copyright: Benjamin Wohlert
