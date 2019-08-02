@@ -2,9 +2,8 @@
 title: Virtual Reality
 slug: virtual-reality
 menu: main
-subpage: null
 position: 2
-featuredImage: /uploads/slider-two.jpg
+featuredImage: /uploads/vr.jpg
 faq:
   question:
     - answer: Test
@@ -16,7 +15,7 @@ cards:
     - color: blue
       content: Lorem ipsum
       link: Wohin genau
-      list: Items, Mehr, Items, Noch mehr
+      list: 'Items, Mehr, Items, Noch mehr'
       price: 41
       stars: 3
       title: Hase
@@ -24,7 +23,7 @@ cards:
     - color: green
       content: Lorem ipsum
       link: Wohin genau
-      list: Items, Mehr, Items, Noch mehr
+      list: 'Items, Mehr, Items, Noch mehr'
       price: 41
       stars: 3
       title: Hase
