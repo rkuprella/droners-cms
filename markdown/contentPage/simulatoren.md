@@ -22,8 +22,8 @@ cards:
       content: ''
       link: Wohin genau
       list: >-
-        60 Minuten Drohenfliegen, 2 VR Coins pro Person, 1 Freigetränk pro
-        Person, eine Tüte Haribo, auf Wunsch Geburtstagstisch
+        60 Minuten Drohenfliegen, 2 VR Coins pro Person, 1 Slush pro Person,
+        eine Tüte Haribo, auf Wunsch Geburtstagstisch
       price: 22
       title: Geburtstags-Paket
       to: ''
