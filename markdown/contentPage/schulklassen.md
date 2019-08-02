@@ -8,8 +8,8 @@ featuredImage: /uploads/slider-four.jpg
 cards:
   card:
     - color: blue
-      list: '90 Minuten Drohnenfliegen, 1 VR Coin pro Person, max. 25 Personen '
-      price: 2300
+      list: '60 Minuten Drohnenfliegen, 1 VR Coin pro Person, max. 25 Personen '
+      price: 1900
       title: Schul-Paket
 gallery:
   image:
