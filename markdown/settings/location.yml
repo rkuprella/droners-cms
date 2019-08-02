@@ -1,2 +1,8 @@
-email: hund@katze.de
-phone: 9201 929293
+phone: 02303 999363
+email: dronersde@gmail.com
+address:
+  city: Unna
+  street: Hochstr. 10
+  zip: '59425'
+openingHours:
+  closed: false
