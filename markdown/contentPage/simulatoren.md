@@ -1,8 +1,8 @@
 ---
-title: Simulatoren
-slug: simulatoren
+title: Kindergeburtstag
+slug: kindergeburtstag
 menu: main
-subpage: Virtual Reality
+subpage: Preise & Angebote
 position: 1
 featuredImage: /uploads/slider-three.jpg
 faq:
@@ -16,7 +16,7 @@ cards:
     - color: blue
       content: Lorem ipsum
       link: Wohin genau
-      list: Items, Mehr, Items, Noch mehr
+      list: 'Items, Mehr, Items, Noch mehr'
       price: 41
       stars: 3
       title: Hase
@@ -24,7 +24,7 @@ cards:
     - color: green
       content: Lorem ipsum
       link: Wohin genau
-      list: Items, Mehr, Items, Noch mehr
+      list: 'Items, Mehr, Items, Noch mehr'
       price: 41
       stars: 3
       title: Hase
