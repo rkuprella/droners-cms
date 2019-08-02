@@ -31,17 +31,17 @@ cards:
 gallery:
   image:
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-three.jpg
+      imageUrl: /uploads/img_0001.jpg
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-one.jpg
+      imageUrl: /uploads/img_9991.jpg
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-four.jpg
-    - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-two.jpg
-    - copyright: Rihanna
-      imageUrl: /uploads/Rihanna.jpg
-    - copyright: Rihanna
-      imageUrl: /uploads/Rihanna4.jpg
+      imageUrl: /uploads/img_0013.jpg
+    - copyright: Droners
+      imageUrl: /uploads/img_2446.jpg
+    - copyright: Droners
+      imageUrl: /uploads/img_2444.jpg
+    - copyright: Droners
+      imageUrl: /uploads/img_2445.jpg
 ---
 ## VR Erlebnisse
 
