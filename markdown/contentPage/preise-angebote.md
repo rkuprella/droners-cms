@@ -35,6 +35,4 @@ cards:
       price: 30
       title: Profipaket
 ---
-## Preise & Angebote
 
-Lorem ipsum
