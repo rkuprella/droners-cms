@@ -34,5 +34,9 @@ cards:
       list: '2 Beta FPV, 2 FPV Brillen, Akkus'
       price: 30
       title: Profipaket
+    - content: '20,00€ pro Pers.'
+      title: Geburtstagsangebot
+    - title: Junggesellenpaket
+    - title: Schulklassen & Firmenevents
 ---
 
