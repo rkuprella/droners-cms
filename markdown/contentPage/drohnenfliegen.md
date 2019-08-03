@@ -47,7 +47,5 @@ gallery:
     - imageUrl: /uploads/img_0030.jpg
     - imageUrl: /uploads/img_0021.jpg
 ---
-## Drohnenfliegen
-
 Fliegt mit eurer Drohne durch einen Pacour wie beim Minigolf. Für jeden Fehlversuch erhaltet ihr Punkte, der Spieler mit den wenigsten Punkten gewinnt!
 Drohnen könnt ihr vor Ort leien oder ihr bring eure eigene Drohne mit.
