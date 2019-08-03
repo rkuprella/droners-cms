@@ -47,6 +47,6 @@ gallery:
 Wir bieten euch die richtige Location für eure Geburtstagsfeier.
 Ob Drohnenfliegen oder Abenteuer in unseren Virtual Reality Simulatoren.
 Hier kommt keine Langeweile auf!
-In unserer Pilotenhöhle könnt ihr euch einen eigenen Tisch reservieren und euren Kuchen oder Knabbereien mitbringen.
+In unserer Pilotenhöhle könnt kekommt ihr einen eigenen Tisch und könnt euren Kuchen oder Knabbereien mitbringen.
 
  
