@@ -27,6 +27,20 @@ cards:
       list: '1 Beta FPV, 1 FPV Brille, Akkus für ca. 90 Minuten'
       price: ''
       title: Profipaket
+    - color: red
+      content: flieg eine Stunde mit eigener Drohne
+      list: >-
+        Steckdosen zum Laden eines Akkus vorhanden, Fix Area zum schnellen
+        reparieren 
+      price: ''
+      title: Bring Your Own
+    - color: red
+      content: fliegt den ganzen Tag mit eigener Drohne
+      list: >-
+        Steckdosen zum Laden eines Akkus vorhanden, Fix Area zum schnellen
+        reparieren 
+      price: ''
+      title: Bring Your Own
 gallery:
   image:
     - imageUrl: /uploads/header-slider-3-4.jpg
@@ -35,4 +49,5 @@ gallery:
 ---
 ## Drohnenfliegen
 
-Fliegt mit einer Drohne durch einen Pacour wie beim Minigolf. Für jeden Fehlversuch erhaltet ihr Punkte, der Spieler mit den wenigsten Punkten gewinnt!
+Fliegt mit eurer Drohne durch einen Pacour wie beim Minigolf. Für jeden Fehlversuch erhaltet ihr Punkte, der Spieler mit den wenigsten Punkten gewinnt!
+Drohnen könnt ihr vor Ort leien oder ihr bring eure eigene Drohne mit.
