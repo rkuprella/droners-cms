@@ -4,9 +4,34 @@ slug: preise-und-angebote
 menu: main
 position: 3
 featuredImage: /uploads/slider-two.jpg
-faq: null
-cards: null
-gallery: null
+cards:
+  card:
+    - color: blue
+      content: |-
+        90 Minuten Flugspaß
+        1-3 Personen
+      list: '1 Drohne, Akkus'
+      price: 25
+      title: Basispaket
+    - color: blue
+      content: |-
+        90 Minuten Flugspaß
+        ab 4 Personen
+      list: '2 Drohnen, Akkus'
+      price: 20
+      title: Basispaket
+    - content: |-
+        90 Minuten Flugspaß für geübte Drohnenflieger
+        1-3 Personen
+      list: '1 Beta FPV, 1 FPV Brille, Akkus'
+      price: 35
+      title: Profipaket
+    - content: |-
+        90 Minuten Flugspaß für geübte Drohnenflieger
+        ab 4 Personen
+      list: '2 Beta FPV, 2 FPV Brillen, Akkus'
+      price: 30
+      title: Profipaket
 ---
 ## Preise & Angebote
 
