@@ -16,12 +16,14 @@ cards:
       list: '2 Drohnen, Akkus für ca. 90 Minuten Flugzeit'
       price: ''
       title: Basispaket
-    - content: |
+    - color: green
+      content: |
         90 Minuten Flugspaß für geübte Drohnenflieger 1-3 Personen
       list: '1 Beta FPV, 1 FPV Brille, Akkus für 90 Minuten'
       price: ''
       title: Profipaket
-    - content: 90 Minuten Flugspaß für geübte Drohnenflieger ab 4 Personen
+    - color: green
+      content: 90 Minuten Flugspaß für geübte Drohnenflieger ab 4 Personen
       list: '1 Beta FPV, 1 FPV Brille, Akkus für ca. 90 Minuten'
       price: ''
       title: Profipaket
