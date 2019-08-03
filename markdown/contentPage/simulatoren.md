@@ -19,8 +19,8 @@ faq:
 cards:
   card:
     - color: green
-      content: ''
-      link: Wohin genau
+      content: '22,00€ pro Person'
+      link: ''
       list: >-
         60 Minuten Drohenfliegen, 2 VR Coins pro Person, 1 Slush pro Person,
         eine Tüte Haribo, auf Wunsch Geburtstagstisch
