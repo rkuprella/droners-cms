@@ -4,7 +4,7 @@ slug: kindergeburtstag
 menu: main
 subpage: Preise & Angebote
 position: 1
-featuredImage: /uploads/img_0021.jpg
+featuredImage: /uploads/img_0043.jpg
 faq:
   question:
     - answer: >-
