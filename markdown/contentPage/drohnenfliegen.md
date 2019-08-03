@@ -25,6 +25,11 @@ cards:
       list: '1 Beta FPV, 1 FPV Brille, Akkus für ca. 90 Minuten'
       price: ''
       title: Profipaket
+gallery:
+  image:
+    - imageUrl: /uploads/header-slider-3-4.jpg
+    - imageUrl: /uploads/img_0030.jpg
+    - imageUrl: /uploads/img_0021.jpg
 ---
 ## Drohnenfliegen
 
