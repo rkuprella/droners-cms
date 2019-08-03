@@ -30,16 +30,23 @@ cards:
 gallery:
   image:
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-three.jpg
+      imageUrl: /uploads/img_2445.jpg
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-one.jpg
+      imageUrl: /uploads/img_0013.jpg
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-four.jpg
+      imageUrl: /uploads/img_0033.jpg
     - copyright: Benjamin Wohlert
-      imageUrl: /uploads/slider-two.jpg
+      imageUrl: /uploads/img_0022.jpg
     - copyright: Rihanna
-      imageUrl: /uploads/Rihanna.jpg
+      imageUrl: /uploads/img_0025.jpg
     - copyright: Rihanna
-      imageUrl: /uploads/Rihanna4.jpg
+      imageUrl: /uploads/img_2318.jpg
 ---
-## Hallo Welt
+## Geburtstag im Droners
+
+Wir bieten euch die richtige Location für eure Geburtstagsfeier.
+Ob Drohnenfliegen oder Abenteuer in unseren Virtual Reality Simulatoren.
+Hier kommt keine Langeweile auf!
+In unserer Pilotenhöhle könnt ihr euch einen eigenen Tisch reservieren und euren Kuchen oder Knabbereien mitbringen.
+
+ 
