@@ -11,7 +11,7 @@ cards:
         90 Minuten Flugspaß
         1-3 Personen
       list: '1 Drohne, Akkus'
-      price: 25
+      price: ''
       title: Basispaket
     - color: blue
       content: |-
