@@ -10,7 +10,7 @@ faq:
     - answer: >-
         Wir empfeheln ein Mindestalter von 10 Jahren um mit unseren Drohnen zu
         fliegen.
-      question: Ab welchem Alter kann mein Kind Drohnen fliegen?
+      question: Test 123
     - answer: >-
         Wir haben einen extra Raum, in dem ihr euren mitgebrachten Kuchen
         verzehren könnt (bitte bei der Buchung mit angeben). Das Mitbringen von
